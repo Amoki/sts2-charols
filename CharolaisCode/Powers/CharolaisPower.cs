@@ -1,0 +1,13 @@
+﻿using BaseLib.Abstracts;
+using BaseLib.Extensions;
+using Charolais.CharolaisCode.Extensions;
+using Godot;
+
+namespace Charolais.CharolaisCode.Powers;
+
+public abstract class CharolaisPower : CustomPowerModel
+{
+    //Loads from Charolais/images/powers/your_power.png
+    public override string CustomPackedIconPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".PowerImagePath();
+    public override string CustomBigIconPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigPowerImagePath();
+}
