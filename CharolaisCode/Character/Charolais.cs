@@ -2,6 +2,7 @@
 using BaseLib.Utils.NodeFactories;
 using Charolais.CharolaisCode.Cards.Basic;
 using Charolais.CharolaisCode.Extensions;
+using Charolais.CharolaisCode.Relics;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
@@ -19,7 +20,7 @@ public class Charolais : PlaceholderCharacterModel
 
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Neutral;
-    public override int StartingHp => 70;
+    public override int StartingHp => 69;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
@@ -38,7 +39,7 @@ public class Charolais : PlaceholderCharacterModel
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<Tireuse>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<CharolaisCardPool>();
@@ -64,4 +65,3 @@ public class Charolais : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
 }
-
