@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace Charolais.CharolaisCode.Powers;
 
-public class AlcoolPower : CustomPowerModel
+public class PintPower : CustomPowerModel
 {
     public override PowerType Type => PowerType.Buff;
 

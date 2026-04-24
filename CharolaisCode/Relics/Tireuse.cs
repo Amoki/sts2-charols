@@ -22,6 +22,6 @@ public class Tireuse() : CharolaisRelic
         if (player != this.Owner)
             return;
         Flash();
-        await PowerCmd.Apply<AlcoolPower>(choiceContext, this.Owner.Creature, 1, this.Owner.Creature, null);
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, 1, this.Owner.Creature, null);
     }
 }

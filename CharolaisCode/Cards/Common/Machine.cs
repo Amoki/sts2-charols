@@ -22,7 +22,7 @@ public class Machine() : CharolaisCard(1,
         new DamageVar(15, ValueProp.Move),
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
-        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? target) => card.Owner.Creature.GetPowerAmount<AlcoolPower>())
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? target) => card.Owner.Creature.GetPowerAmount<PintPower>())
     ];
     
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
@@ -38,7 +38,7 @@ public class Machine() : CharolaisCard(1,
         
         var players = base.CombatState?.Players;
         if (players == null) { return; }
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<AlcoolPower>();
+        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         if (alcoolPower > 0)
         {
             int index = new Random().Next(players.Count);

@@ -24,7 +24,7 @@ public class Beer() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, Target
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
                     .WithHitFx("vfx/vfx_attack_slash")
                     .Execute(choiceContext);
-        await PowerCmd.Apply<AlcoolPower>(choiceContext, this.Owner.Creature, DynamicVars["Alcool"].IntValue, this.Owner.Creature, null);
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, DynamicVars["Alcool"].IntValue, this.Owner.Creature, null);
     }
 
     protected override void OnUpgrade()
