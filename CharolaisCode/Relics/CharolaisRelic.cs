@@ -4,6 +4,7 @@ using BaseLib.Utils;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Extensions;
 using Godot;
+using MegaCrit.Sts2.Core.Logging;
 
 namespace Charolais.CharolaisCode.Relics;
 
@@ -14,6 +15,6 @@ public abstract class CharolaisRelic : CustomRelicModel
 
     protected override string PackedIconOutlinePath =>
         $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_outline.png".RelicImagePath();
-
+    
     protected override string BigIconPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigRelicImagePath();
 }

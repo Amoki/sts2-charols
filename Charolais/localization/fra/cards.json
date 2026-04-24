@@ -5,6 +5,6 @@
   "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",
   "CHAROLAIS-DEFEND_CHAROLAIS.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].",
   "CHAROLAIS-DEFEND_CHAROLAIS.title": "Défense",
-  "CHAROLAIS-MACHINE.description": "",
+  "CHAROLAIS-MACHINE.description": "Infligez {Damage:diff()} dégâts, Infligez {CalculatedDamage:diff()} dégats à un allié aléatoire",
   "CHAROLAIS-MACHINE.title": "Machine"
 }

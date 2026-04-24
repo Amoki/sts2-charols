@@ -13,8 +13,6 @@ namespace Charolais.CharolaisCode.Relics;
 public class Tireuse() : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
-    protected override string BigIconPath => string.Empty;
-    public override string PackedIconPath => string.Empty;
 
     public override async Task BeforeHandDraw(
         Player player,

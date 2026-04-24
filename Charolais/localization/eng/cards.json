@@ -5,6 +5,6 @@
   "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",
   "CHAROLAIS-DEFEND_CHAROLAIS.description": "",
   "CHAROLAIS-DEFEND_CHAROLAIS.title": "Defend",
-  "CHAROLAIS-MACHINE.description": "",
+  "CHAROLAIS-MACHINE.description": "Infligez {Damage:diff()} dégâts, Infligez {CalculatedDamage:diff()} dégats à un allié aléatoire",
   "CHAROLAIS-MACHINE.title": "Machine"
 }

@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 
 namespace Charolais.CharolaisCode.Character;
 
@@ -16,11 +17,21 @@ namespace Charolais.CharolaisCode.Character;
 public class Charolais : PlaceholderCharacterModel
 {
     public const string CharacterId = "Charolais";
+    
+    public override float AttackAnimDelay => 0.15f;
 
-    public static readonly Color Color = new("ffffff");
+    public override float CastAnimDelay => 0.25f;
 
+    public static readonly Color Color = new("fabb5c");
+    public override Color EnergyLabelOutlineColor => new Color("f26a38ff");
+    public override int BaseOrbSlotCount => 3;
+    public override Color DialogueColor => new Color("13446B");
+    public override VfxColor SpeechBubbleColor => VfxColor.Gold;
+    public override Color MapDrawingColor => new Color("fabb5c");
+    public override Color RemoteTargetingLineColor => new Color("cd9a4eDFF");
+    public override Color RemoteTargetingLineOutline => new Color("cd9a4eFF");
     public override Color NameColor => Color;
-    public override CharacterGender Gender => CharacterGender.Neutral;
+    public override CharacterGender Gender => CharacterGender.Masculine;
     public override int StartingHp => 69;
 
     public override IEnumerable<CardModel> StartingDeck =>
