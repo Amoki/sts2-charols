@@ -4,5 +4,7 @@
   "CHAROLAIS-STRIKE_CHAROLAIS.description": "Infligez {Damage:diff()} dégâts",
   "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",
   "CHAROLAIS-DEFEND_CHAROLAIS.description": "",
-  "CHAROLAIS-DEFEND_CHAROLAIS.title": "Defend"
+  "CHAROLAIS-DEFEND_CHAROLAIS.title": "Defend",
+  "CHAROLAIS-MACHINE.description": "",
+  "CHAROLAIS-MACHINE.title": "Machine"
 }

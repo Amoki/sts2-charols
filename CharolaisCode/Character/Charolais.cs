@@ -1,6 +1,7 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Utils.NodeFactories;
 using Charolais.CharolaisCode.Cards.Basic;
+using Charolais.CharolaisCode.Cards.Common;
 using Charolais.CharolaisCode.Extensions;
 using Charolais.CharolaisCode.Relics;
 using Godot;
@@ -35,6 +36,8 @@ public class Charolais : PlaceholderCharacterModel
         ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<Beer>(),
+        ModelDb.Card<Machine>(),
+        
     ];
     
     
