@@ -29,14 +29,15 @@ public class Charolais : PlaceholderCharacterModel
         ModelDb.Card<StrikeCharolais>(),
         ModelDb.Card<StrikeCharolais>(),
         ModelDb.Card<StrikeCharolais>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
+        ModelDb.Card<DefendCharolais>(),
+        ModelDb.Card<DefendCharolais>(),
+        ModelDb.Card<DefendCharolais>(),
+        ModelDb.Card<DefendCharolais>(),
+        ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<Beer>(),
     ];
-
+    
+    
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
         ModelDb.Relic<Tireuse>()

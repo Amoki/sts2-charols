@@ -1,4 +1,6 @@
-﻿using Charolais.CharolaisCode.Cards;
+﻿using BaseLib.Extensions;
+using Charolais.CharolaisCode.Cards;
+using Charolais.CharolaisCode.Extensions;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;

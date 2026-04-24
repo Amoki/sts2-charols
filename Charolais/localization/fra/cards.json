@@ -2,5 +2,7 @@
   "CHAROLAIS-BEER.description": "Infligez {Damage:diff()} dégâts, buvez {Stars:diff()} bières",
   "CHAROLAIS-BEER.title": "Beer",
   "CHAROLAIS-STRIKE_CHAROLAIS.description": "Infligez {Damage:diff()} dégâts",
-  "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe"
+  "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",
+  "CHAROLAIS-DEFEND_CHAROLAIS.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].",
+  "CHAROLAIS-DEFEND_CHAROLAIS.title": "Défense"
 }
