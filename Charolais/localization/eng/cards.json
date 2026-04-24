@@ -1,5 +1,5 @@
 {
-  "CHAROLAIS-BEER.description": "Infligez {Damage:diff()} dégâts, buvez {Stars:diff()} bières",
+  "CHAROLAIS-BEER.description": "Infligez {Damage:diff()} dégâts, buvez {Alcool:diff()} bières",
   "CHAROLAIS-BEER.title": "Beer",
   "CHAROLAIS-STRIKE_CHAROLAIS.description": "Infligez {Damage:diff()} dégâts",
   "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",

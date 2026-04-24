@@ -35,6 +35,7 @@ public class Machine() : CharolaisCard(1,
             Random random = new Random();
             int index = random.Next(players.Count);
             Player randomPlayer = players[index];
+            await Cmd.Wait(0.5f);
             await DamageCmd.Attack(alcoolPower).FromCard(this).Targeting(randomPlayer.Creature)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
@@ -45,6 +46,6 @@ public class Machine() : CharolaisCard(1,
 
     protected override void OnUpgrade()
     {
-
+        base.DynamicVars.Damage.UpgradeValueBy(3m);
     }
 }
