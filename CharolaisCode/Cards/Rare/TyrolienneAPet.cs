@@ -53,6 +53,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         foreach (var cardToReceive in cardsToReceive)
         {
             var newCard = cardToReceive.CreateClone();
+            newCard.Owner = null;
             await CardPileCmd.AddGeneratedCardToCombat(cardToReceive, PileType.Hand, base.Owner);
         }
     }
