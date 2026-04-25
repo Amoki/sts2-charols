@@ -47,6 +47,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         {
             var newCard = cardToGive.CreateClone();
             newCard.Owner = null;
+            newCard.Owner = cardPlay.Target.Player;
             await CardPileCmd.AddGeneratedCardToCombat(cardToGive, PileType.Hand, cardPlay.Target.Player);
         }
 
@@ -54,6 +55,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         {
             var newCard = cardToReceive.CreateClone();
             newCard.Owner = null;
+            newCard.Owner = cardPlay.Target.Player;
             await CardPileCmd.AddGeneratedCardToCombat(cardToReceive, PileType.Hand, base.Owner);
         }
     }
