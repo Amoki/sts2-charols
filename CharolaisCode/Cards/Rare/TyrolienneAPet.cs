@@ -45,16 +45,16 @@ public class TyrolienneAPet() : CharolaisCard(1,
         
         foreach (var cardToGive in cardsToGive)
         {
+            await CardPileCmd.RemoveFromCombat(cardToGive);
             var createdCard = cardPlay.Target.CombatState.CreateCard(cardToGive, cardPlay.Target.Player);
             await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Hand, cardPlay.Target.Player);
-            await CardPileCmd.RemoveFromCombat(cardToGive);
         }
 
         foreach (var cardToReceive in cardsToReceive)
         {
+            await CardPileCmd.RemoveFromCombat(cardToReceive);
             var createdCard = base.CombatState.CreateCard(cardToReceive, base.Owner);
             await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Hand, base.Owner);
-            await CardPileCmd.RemoveFromCombat(cardToReceive);
         }
     }
 
