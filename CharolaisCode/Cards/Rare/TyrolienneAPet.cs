@@ -34,7 +34,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         if (cardsToGive.Count == 0) { return; }
 
         var cardsToReceive = (
-            await CardSelectCmd.FromHandForDiscard(
+            await CardSelectCmd.FromHand(
                 new BlockingPlayerChoiceContext(),
                 cardPlay.Target.Player,
                 new CardSelectorPrefs(new LocString("card_selection", "TO_TRADE"), base.DynamicVars.Cards.IntValue),
@@ -45,11 +45,14 @@ public class TyrolienneAPet() : CharolaisCard(1,
         
         foreach (var cardToGive in cardsToGive)
         {
+            var newCard = cardToGive.CreateClone();
+            // newCard.Owner = cardPlay.Target.Player;
             await CardPileCmd.AddGeneratedCardToCombat(cardToGive, PileType.Hand, cardPlay.Target.Player);
         }
 
         foreach (var cardToReceive in cardsToReceive)
         {
+            var newCard = cardToReceive.CreateClone();
             await CardPileCmd.AddGeneratedCardToCombat(cardToReceive, PileType.Hand, base.Owner);
         }
     }
