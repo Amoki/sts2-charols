@@ -5,6 +5,8 @@
   "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",
   "CHAROLAIS-DEFEND_CHAROLAIS.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].",
   "CHAROLAIS-DEFEND_CHAROLAIS.title": "Défense",
-  "CHAROLAIS-MACHINE.description": "Infligez {Damage:diff()} dégâts, Infligez {CalculatedDamage:diff()} dégats à un allié aléatoire",
-  "CHAROLAIS-MACHINE.title": "Machine"
+  "CHAROLAIS-MACHINE.description": "Infligez {Damage:diff()} dégâts. \nInfligez {CalculatedDamage:diff()} dégats à un allié aléatoire",
+  "CHAROLAIS-MACHINE.title": "Machine",
+  "CHAROLAIS-BURP.description": "Infligez {Damage:diff()} dégâts. \n Si vous avez des pintes, appliquez [gold]Affaibli[/gold] ({WeakPower:diff()}).",
+  "CHAROLAIS-BURP.title": "Burp"
 }
