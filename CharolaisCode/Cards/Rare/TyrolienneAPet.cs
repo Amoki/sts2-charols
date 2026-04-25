@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace Charolais.CharolaisCode.Cards.Rare;
 
 
-public class TirolienneAPet() : CharolaisCard(1,
+public class TyrolienneAPet() : CharolaisCard(1,
     CardType.Skill, CardRarity.Rare,
     TargetType.AnyAlly)
 {

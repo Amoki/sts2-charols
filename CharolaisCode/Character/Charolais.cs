@@ -22,14 +22,14 @@ public class Charolais : PlaceholderCharacterModel
 
     public override float CastAnimDelay => 0.25f;
 
-    public static readonly Color Color = new("fabb5c");
-    public override Color EnergyLabelOutlineColor => new Color("f26a38ff");
+    public static readonly Color Color = new("BABB5C");
+    public override Color EnergyLabelOutlineColor => new Color("F26A38FF");
     public override int BaseOrbSlotCount => 3;
     public override Color DialogueColor => new Color("13446B");
     public override VfxColor SpeechBubbleColor => VfxColor.Gold;
-    public override Color MapDrawingColor => new Color("fabb5c");
-    public override Color RemoteTargetingLineColor => new Color("cd9a4eDFF");
-    public override Color RemoteTargetingLineOutline => new Color("cd9a4eFF");
+    public override Color MapDrawingColor => new Color("FABB5C");
+    public override Color RemoteTargetingLineColor => new Color("CD94EDFF");
+    public override Color RemoteTargetingLineOutline => new Color("CD94EDFF");
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Masculine;
     public override int StartingHp => 69;

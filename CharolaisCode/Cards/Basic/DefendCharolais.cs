@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Basic;
 
-public class DefendCharolais() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, TargetType.Self)
+public class DefendCharolais() : CharolaisCard(1, CardType.Skill, CardRarity.Basic, TargetType.Self)
 {
     public override bool GainsBlock => true;
 
