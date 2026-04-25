@@ -45,12 +45,14 @@ public class TyrolienneAPet() : CharolaisCard(1,
         
         foreach (var cardToGive in cardsToGive)
         {
+            cardToGive.Owner = null;
             cardToGive.Owner = cardPlay.Target.Player;
             await CardPileCmd.Add(cardToGive, PileType.Hand);
         }
 
         foreach (var cardToReceive in cardsToReceive)
         {
+            cardToReceive.Owner = null;
             cardToReceive.Owner = base.Owner;
             await CardPileCmd.Add(cardToReceive, PileType.Hand);
         }
