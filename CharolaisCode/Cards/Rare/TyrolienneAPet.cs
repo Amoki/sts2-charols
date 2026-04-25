@@ -22,7 +22,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         ArgumentNullException.ThrowIfNull(cardPlay.Target.Player, "cardPlay.Target.Player");
 
         var cardsToGive = (
-            await CardSelectCmd.FromHandForDiscard(
+            await CardSelectCmd.FromHand(
                 choiceContext,
                 base.Owner,
                 new CardSelectorPrefs(new LocString("card_selection", "TO_TRADE"), base.DynamicVars.Cards.IntValue), 
@@ -45,17 +45,13 @@ public class TyrolienneAPet() : CharolaisCard(1,
         
         foreach (var cardToGive in cardsToGive)
         {
-            var newCard = cardToGive.CreateClone();
-            newCard.Owner = null;
-            newCard.Owner = cardPlay.Target.Player;
-            await CardPileCmd.AddGeneratedCardToCombat(cardToGive, PileType.Hand, cardPlay.Target.Player);
+            var createdCard = cardPlay.Target.CombatState.CreateCard(cardToGive, cardPlay.Target.Player);
+            await CardPileCmd.AddGeneratedCardToCombat(createdCard, PileType.Hand, cardPlay.Target.Player);
         }
 
         foreach (var cardToReceive in cardsToReceive)
         {
-            var newCard = cardToReceive.CreateClone();
-            newCard.Owner = null;
-            newCard.Owner = cardPlay.Target.Player;
+            var createdCard = base.CombatState.CreateCard(cardToReceive, base.Owner);
             await CardPileCmd.AddGeneratedCardToCombat(cardToReceive, PileType.Hand, base.Owner);
         }
     }
