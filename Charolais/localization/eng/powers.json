@@ -1,5 +1,8 @@
 {
   "CHAROLAIS-PINT_POWER.description": "Gagner [blue]1[/blue] d'[gold]Armure[/gold] par effet de [gold]Pinte[/gold] à la fin du tour.",
   "CHAROLAIS-PINT_POWER.smartDescription": "Gagner [blue]{Amount}[/blue] d'[gold]Armure[/gold] à la fin du tour.",
-  "CHAROLAIS-PINT_POWER.title": "Pints"
+  "CHAROLAIS-PINT_POWER.title": "Pints",
+  "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.description": "Dans N tours, tout le monde pioche",
+  "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.smartDescription": "Dans [blue]{Amount}[/blue] {Amount:plural:tour|tours}, Piochez {Cards:diff()} {Cards:plural:carte|cartes}.",
+  "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.title": "Loubarde à l'Observatoire"
 }

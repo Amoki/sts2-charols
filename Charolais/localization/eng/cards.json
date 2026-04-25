@@ -14,5 +14,7 @@
   "CHAROLAIS-BOULEENPLASTIQUE.description": "Infligez {Damage:diff()} dégâts.\nPiochez {Cards:diff()} {Cards:plural:carte|cartes}.",
   "CHAROLAIS-BOULEENPLASTIQUE.title": "Boule en Plastique",
   "CHAROLAIS-EMBRASSERFANNY.description": "Gagnez {StrengthPower:diff()} de [gold]Force[/gold] jusqu'à la fin du tour.",
-  "CHAROLAIS-EMBRASSERFANNY.title": "Embrasser Fanny"
+  "CHAROLAIS-EMBRASSERFANNY.title": "Embrasser Fanny",
+  "CHAROLAIS-LOUBARDE_OBSERVATOIRE.description": "Dans 1 à {Turns:diff()} tours, TOUS les joueurs piochent {Cards:diff()} {Cards:plural:carte|cartes}",
+  "CHAROLAIS-LOUBARDE_OBSERVATOIRE.title": "Loubarde à l'Observatoire"
 }

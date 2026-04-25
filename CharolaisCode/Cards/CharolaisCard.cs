@@ -4,6 +4,7 @@ using BaseLib.Utils;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Logging;
 
 namespace Charolais.CharolaisCode.Cards;
 
@@ -14,7 +15,14 @@ public abstract class CharolaisCard(int cost, CardType type, CardRarity rarity, 
     //Image size:
     //Normal art: 1000x760 (Using 500x380 should also work, it will simply be scaled.)
     //Full art: 606x852
-    public override string CustomPortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+    public override string CustomPortraitPath  {
+        get
+        {
+            Log.Debug("Loading image with path: ");
+            Log.Debug($"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath());
+            return $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigCardImagePath();
+        }
+    }
 
     //Smaller variants of card images for efficiency:
     //Smaller variant of fullart: 250x350
