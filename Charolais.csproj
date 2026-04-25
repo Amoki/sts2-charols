@@ -62,6 +62,7 @@
 
     <ItemGroup>
         <Folder Include="Charolais\images\relics\big\"/>
+        <Folder Include="Charolais\images\powers\big\"/>
     </ItemGroup>
 
     <Target Name="CheckDependencyPaths">

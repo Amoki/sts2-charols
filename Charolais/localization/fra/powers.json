@@ -1,5 +1,5 @@
 {
-  "CHAROLAIS-PINT_POWER.description": "description Alcool",
-  "CHAROLAIS-PINT_POWER.smartDescription": "smartDescription Alcool",
-  "CHAROLAIS-PINT_POWER.title": "Pinte"
+  "CHAROLAIS-PINT_POWER.description": "Gagner [blue]1[/blue] d'[gold]Armure[/gold] par effet de [gold]Pinte[/gold] à la fin du tour.",
+  "CHAROLAIS-PINT_POWER.smartDescription": "Gagner [blue]{Amount}[/blue] d'[gold]Armure[/gold] à la fin du tour.",
+  "CHAROLAIS-PINT_POWER.title": "Pints"
 }

@@ -8,5 +8,13 @@
   "CHAROLAIS-MACHINE.description": "Infligez {Damage:diff()} dégâts. \nInfligez {CalculatedDamage:diff()} dégats à un allié aléatoire",
   "CHAROLAIS-MACHINE.title": "Machine",
   "CHAROLAIS-BURP.description": "Infligez {Damage:diff()} dégâts. \n Si vous avez des pintes, appliquez [gold]Affaibli[/gold] ({WeakPower:diff()}).",
-  "CHAROLAIS-BURP.title": "Burp"
+  "CHAROLAIS-BURP.title": "Burp",
+  "CHAROLAIS-MACHINE.description": "Infligez {Damage:diff()} dégâts, Infligez {CalculatedDamage:diff()} dégats à un allié aléatoire",
+  "CHAROLAIS-MACHINE.title": "Machine",
+  "CHAROLAIS-LANCER_DE_BOULES.description": "Infligez {Damage:diff()} dégâts 3 fois.",
+  "CHAROLAIS-LANCER_DE_BOULES.title": "Lancer de Boules",
+  "CHAROLAIS-BOULEENPLASTIQUE.description": "Infligez {Damage:diff()} dégâts.\nPiochez {Cards:diff()} {Cards:plural:carte|cartes}.",
+  "CHAROLAIS-BOULEENPLASTIQUE.title": "Boule en Plastique",
+  "CHAROLAIS-EMBRASSERFANNY.description": "Gagnez {StrengthPower:diff()} de [gold]Force[/gold] jusqu'à la fin du tour.",
+  "CHAROLAIS-EMBRASSERFANNY.title": "Embrasser Fanny"
 }
