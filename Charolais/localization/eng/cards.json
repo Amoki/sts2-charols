@@ -9,8 +9,8 @@
   "CHAROLAIS-MACHINE.title": "Machine",
   "CHAROLAIS-BURP.description": "",
   "CHAROLAIS-BURP.title": "Burp",
-  "CHAROLAIS-LANCER_DE_BOULES.description": "Infligez {Damage:diff()} dégâts 3 fois.",
-  "CHAROLAIS-LANCER_DE_BOULES.title": "Lancer de Boules",
+  "CHAROLAIS-LANCERDEBOULE.description": "Infligez {Damage:diff()} dégâts 3 fois.",
+  "CHAROLAIS-LANCERDEBOULE.title": "Lancer de Boules",
   "CHAROLAIS-BOULEENPLASTIQUE.description": "Infligez {Damage:diff()} dégâts.\nPiochez {Cards:diff()} {Cards:plural:carte|cartes}.",
   "CHAROLAIS-BOULEENPLASTIQUE.title": "Boule en Plastique",
   "CHAROLAIS-EMBRASSERFANNY.description": "Gagnez {StrengthPower:diff()} de [gold]Force[/gold] jusqu'à la fin du tour.",
@@ -18,5 +18,13 @@
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE.description": "Dans 1 à {Turns:diff()} tours, TOUS les joueurs piochent {Cards:diff()} {Cards:plural:carte|cartes}",
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE.title": "Loubarde à l'Observatoire",
   "CHAROLAIS-TYROLIENNE_A_PET.description": "Echangez {Cards:diff()} {Cards:plural:carte|cartes} avec un joueur",
-  "CHAROLAIS-TYROLIENNE_A_PET.title": "Tyrolienne à pet"
+  "CHAROLAIS-TYROLIENNE_A_PET.title": "Tyrolienne à pet",
+  "CHAROLAIS-CONVULSIONS.description": "Infligez {Damage:diff()} dégâts à tous les ennemis.\nInfligez {CalculatedDamage:diff()} {CalculatedDamage:plural:dégât|dégâts} à un allié aléatoire.",
+  "CHAROLAIS-CONVULSIONS.title": "Convulsions",
+  "CHAROLAIS-TETEDEPIOCHE.description": "L'ennemi perd {CalculatedDamage:diff()} PV.",
+  "CHAROLAIS-TETEDEPIOCHE.title": "Tête de Pioche",
+  "CHAROLAIS-LANCERDECOCHONNET.description": "Gagnez {DexterityPower:diff()} de [gold]Dextérité[/gold] jusqu'à la fin du tour.",
+  "CHAROLAIS-LANCERDECOCHONNET.title": "Lancer de Cochonnet",
+  "CHAROLAIS-BISOU.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nGagner cette [gold]Armure[/gold] {Repeat:diff()} fois {Repeat:plural:supplémentaire|supplémentaires}.",
+  "CHAROLAIS-BISOU.title": "Bisou"
 }

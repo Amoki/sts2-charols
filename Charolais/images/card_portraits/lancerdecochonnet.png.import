@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://h8x3h8h5y6t8"
-path="res://.godot/imported/lancerdeboules.jpg-e38386fe62f860557130928aece17d8b.ctex"
+uid="uid://c4jp1pe1stoj0"
+path="res://.godot/imported/lancerdecochonnet.png-d38f270823d451b8460e8af6674022a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/big/lancerdeboules.jpg"
-dest_files=["res://.godot/imported/lancerdeboules.jpg-e38386fe62f860557130928aece17d8b.ctex"]
+source_file="res://Charolais/images/card_portraits/lancerdecochonnet.png"
+dest_files=["res://.godot/imported/lancerdecochonnet.png-d38f270823d451b8460e8af6674022a0.ctex"]
 
 [params]
 

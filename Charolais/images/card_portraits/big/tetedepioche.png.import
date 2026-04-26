@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceylmncmp7fjr"
-path="res://.godot/imported/lancerdeboules.jpg-5b5cacb655a87845b8da9a7c14e2606a.ctex"
+uid="uid://d4esgsbuo1uye"
+path="res://.godot/imported/tetedepioche.png-efca7f1e56620cd91b407eed47350d38.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/lancerdeboules.jpg"
-dest_files=["res://.godot/imported/lancerdeboules.jpg-5b5cacb655a87845b8da9a7c14e2606a.ctex"]
+source_file="res://Charolais/images/card_portraits/big/tetedepioche.png"
+dest_files=["res://.godot/imported/tetedepioche.png-efca7f1e56620cd91b407eed47350d38.ctex"]
 
 [params]
 
