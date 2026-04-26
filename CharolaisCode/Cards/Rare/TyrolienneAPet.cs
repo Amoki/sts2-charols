@@ -1,5 +1,4 @@
-﻿using Charolais.CharolaisCode.Cards;
-using MegaCrit.Sts2.Core.CardSelection;
+﻿using MegaCrit.Sts2.Core.CardSelection;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -22,7 +21,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         ArgumentNullException.ThrowIfNull(cardPlay.Target.Player, "cardPlay.Target.Player");
 
         var cardsToGive = (
-            await CardSelectCmd.FromHandForDiscard(
+            await CardSelectCmd.FromHand(
                 choiceContext,
                 base.Owner,
                 new CardSelectorPrefs(new LocString("card_selection", "TO_TRADE"), base.DynamicVars.Cards.IntValue), 
@@ -34,23 +33,31 @@ public class TyrolienneAPet() : CharolaisCard(1,
         if (cardsToGive.Count == 0) { return; }
 
         var cardsToReceive = (
-            await CardSelectCmd.FromHandForDiscard(
-                new BlockingPlayerChoiceContext(),
+            await CardSelectCmd.FromHand(
+                choiceContext,
                 cardPlay.Target.Player,
                 new CardSelectorPrefs(new LocString("card_selection", "TO_TRADE"), base.DynamicVars.Cards.IntValue),
                 null
                 , this
             )
         ).ToList();
-        
+
         foreach (var cardToGive in cardsToGive)
         {
-            await CardPileCmd.AddGeneratedCardToCombat(cardToGive, PileType.Hand, cardPlay.Target.Player);
+            var serializedCard = cardToGive.ToSerializable();
+            var newCard = CardModel.FromSerializable(serializedCard);
+            cardPlay.Target.CombatState!.AddCard(newCard, cardPlay.Target.Player);
+            await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, cardPlay.Target.Player);
+            await CardPileCmd.RemoveFromCombat(cardToGive);
         }
 
         foreach (var cardToReceive in cardsToReceive)
         {
-            await CardPileCmd.AddGeneratedCardToCombat(cardToReceive, PileType.Hand, base.Owner);
+            var serializedCard = cardToReceive.ToSerializable();
+            var newCard = CardModel.FromSerializable(serializedCard);
+            base.CombatState!.AddCard(newCard, base.Owner);
+            await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, base.Owner);
+            await CardPileCmd.RemoveFromCombat(cardToReceive);
         }
     }
 
