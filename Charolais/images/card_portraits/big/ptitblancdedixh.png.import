@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu1s2t2yfl1nd"
-path="res://.godot/imported/tetedepioche.png-efca7f1e56620cd91b407eed47350d38.ctex"
+uid="uid://nogxunqja3pw"
+path="res://.godot/imported/ptitblancdedixh.png-4e8960addd31d1fa60788822957507a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/big/tetedepioche.png"
-dest_files=["res://.godot/imported/tetedepioche.png-efca7f1e56620cd91b407eed47350d38.ctex"]
+source_file="res://Charolais/images/card_portraits/big/ptitblancdedixh.png"
+dest_files=["res://.godot/imported/ptitblancdedixh.png-4e8960addd31d1fa60788822957507a7.ctex"]
 
 [params]
 
