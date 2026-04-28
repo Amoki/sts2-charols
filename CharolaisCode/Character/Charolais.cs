@@ -32,7 +32,7 @@ public class Charolais : PlaceholderCharacterModel
     public override Color RemoteTargetingLineOutline => new Color("CD94EDFF");
     public override Color NameColor => Color;
     public override CharacterGender Gender => CharacterGender.Masculine;
-    public override int StartingHp => 69;
+    public override int StartingHp => 86;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [

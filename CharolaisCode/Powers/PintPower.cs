@@ -22,27 +22,22 @@ public class PintPower : CharolaisPower
         await CreatureCmd.GainBlock(base.Owner, base.Amount, ValueProp.Unpowered, null);
         
         var alcoolPower = base.Owner.GetPowerAmount<PintPower>();
-        if (alcoolPower > 2)
-        {
-            Flash();
-            await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-        }
-        if (alcoolPower > 5)
-        {
-            Flash();
-            await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-        }
-        if (alcoolPower > 8)
-        {
-            Flash();
-            await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-        }
-        if (alcoolPower > 11)
+        
+        if (alcoolPower >= 12)
         {
             Flash();
             await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-            foreach (PintPower _buff in base.Owner.Powers.Where(p => p.TypeForCurrentAmount == PowerType.Buff).ToList())
-                await PowerCmd.Remove(_buff);
+            base.SetAmount(0);
+        }
+        else if (alcoolPower >= 8)
+        {
+            Flash();
+            await CreatureCmd.Damage(choiceContext, base.Owner, 2m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+        }
+        else if (alcoolPower >= 4)
+        {
+            Flash();
+            await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
         }
     }
 }

@@ -48,5 +48,9 @@
   "CHAROLAIS-TROISFEUILLES.description": "Infligez {Damage:diff()} dégâts.\nAppliquez [gold]Vulnérable[/gold] ({VulnerablePower:diff()}).",
   "CHAROLAIS-TROISFEUILLES.title": "Trois Feuilles",
   "CHAROLAIS-PICOLO.description": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
-  "CHAROLAIS-PICOLO.title": "Picolo"
+  "CHAROLAIS-PICOLO.title": "Picolo",
+  "CHAROLAIS-PONCAGE.description": "Infligez {Damage:diff()} dégâts.\nPerdez tous vos effets de [gold]Pinte[/gold].",
+  "CHAROLAIS-PONCAGE.title": "Ponçage",
+  "CHAROLAIS-WHISKYCOCA.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nGagnez {Alcool:diff()} de [gold]Pintes[/gold].",
+  "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca"
 }
