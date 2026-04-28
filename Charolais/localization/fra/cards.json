@@ -19,7 +19,7 @@
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE.title": "Loubarde à l'Observatoire",
   "CHAROLAIS-TYROLIENNE_A_PET.description": "Echangez {Cards:diff()} {Cards:plural:carte|cartes} avec un autre joueur.",
   "CHAROLAIS-TYROLIENNE_A_PET.title": "Tyrolienne à pet",
-  "CHAROLAIS-CONVULSIONS.description": "Infligez {Damage:diff()} dégâts à tous les ennemis.\nInfligez {CalculatedDamage:diff()} {CalculatedDamage:plural:dégât|dégâts} à un allié aléatoire.",
+  "CHAROLAIS-CONVULSIONS.description": "Infligez {Repeat:diff()} fois un montant de dégâts égal à la quantité de [gold]Pintes[/gold] que vous avez à tous les ennemis.{InCombat: ({CalculatedDamage:diff()})|}\nInfligez 1 fois ce montant à un allié aléatoire.",
   "CHAROLAIS-CONVULSIONS.title": "Convulsions",
   "CHAROLAIS-TETEDEPIOCHE.description": "L'ennemi perd un montant de PV égal à la quantité de [gold]Pintes[/gold] que vous avez.{InCombat:\n(L'ennemi perd {CalculatedDamage:diff()} PV.)|}",
   "CHAROLAIS-TETEDEPIOCHE.title": "Tête de Pioche",
@@ -30,5 +30,9 @@
   "CHAROLAIS-CARREAU.description": "Infligez {Damage:diff()} dégâts.\nGagner {Block:diff()} d'[gold]Armure[/gold].",
   "CHAROLAIS-CARREAU.title": "Carreau !",
   "CHAROLAIS-PTITBLANCDEDIXH.description": "Augmentez vos PV Max de {MaxHp:diff()} et gagnez {Alcool:diff()} [gold]Pintes[/gold].",
-  "CHAROLAIS-PTITBLANCDEDIXH.title": "P'tit blanc de 10h"
+  "CHAROLAIS-PTITBLANCDEDIXH.title": "P'tit blanc de 10h",
+  "CHAROLAIS-PICHENETTE.description": "Infligez {Damage:diff()} dégâts.",
+  "CHAROLAIS-PICHENETTE.title": "Pichenette",
+  "CHAROLAIS-BLOC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nPiochez {Cards:diff()} {Cards:plural:carte|cartes}.",
+  "CHAROLAIS-BLOC.title": "Bloc"
 }
