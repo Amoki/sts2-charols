@@ -34,5 +34,11 @@
   "CHAROLAIS-PICHENETTE.description": "Infligez {Damage:diff()} dégâts.",
   "CHAROLAIS-PICHENETTE.title": "Pichenette",
   "CHAROLAIS-BLOC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nPiochez {Cards:diff()} {Cards:plural:carte|cartes}.",
-  "CHAROLAIS-BLOC.title": "Bloc"
+  "CHAROLAIS-BLOC.title": "Bloc",
+  "CHAROLAIS-LET.description": "Infligez {Damage:diff()} dégâts.",
+  "CHAROLAIS-LET.title": "Let",
+  "CHAROLAIS-SALADEDEPATES.description": "Gagnez {Energy:energyIcons()}.",
+  "CHAROLAIS-SALADEDEPATES.title": "Salade de Pâtes",
+  "CHAROLAIS-DIGESPLIF.description": "Gagnez {ArtifactPower:diff()} [gold]Artefact[/gold] et perdez {HpLoss:diff()} HP.",
+  "CHAROLAIS-DIGESPLIF.title": "Digesplif"
 }

@@ -1,5 +1,5 @@
 {
-  "CHAROLAIS-PINT_POWER.description": "À la fin du tour, gagnez [blue]1[/blue] d'[gold]Armure[/gold] par effet de [gold]Pinte[/gold] et perdez 1 HP tous les 3 effet de [gold]Pinte[/gold]. À partir de 12 effets de [gold]Pinte[/gold], perdez 2 HP supplémentaires ainsi que tous ces effets.",
+  "CHAROLAIS-PINT_POWER.description": "À la fin du tour, gagnez [blue]1[/blue] d'[gold]Armure[/gold] par effet de [gold]Pinte[/gold] et perdez 1 HP tous les 3 effets de [gold]Pinte[/gold]. À partir de 12 effets de [gold]Pinte[/gold], perdez 2 HP supplémentaires ainsi que tous ces effets.",
   "CHAROLAIS-PINT_POWER.smartDescription": "Gagnez [blue]{Amount}[/blue] d'[gold]Armure[/gold] et perdez des HP à la fin du tour.",
   "CHAROLAIS-PINT_POWER.title": "Pinte",
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.description": "Dans N tours, tout le monde pioche",
