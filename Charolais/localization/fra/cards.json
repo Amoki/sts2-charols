@@ -40,5 +40,7 @@
   "CHAROLAIS-SALADEDEPATES.description": "Gagnez {Energy:energyIcons()}.",
   "CHAROLAIS-SALADEDEPATES.title": "Salade de Pâtes",
   "CHAROLAIS-DIGESPLIF.description": "Gagnez {ArtifactPower:diff()} [gold]Artefact[/gold] et perdez {HpLoss:diff()} HP.",
-  "CHAROLAIS-DIGESPLIF.title": "Digesplif"
+  "CHAROLAIS-DIGESPLIF.title": "Digesplif",
+  "CHAROLAIS-BITESIGNAL.description": "À la fin du tour, gagnez [blue]{Block:diff()}[/blue] d'[gold]Armure[/gold].",
+  "CHAROLAIS-BITESIGNAL.title": "Bite-Signal"
 }

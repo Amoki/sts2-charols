@@ -4,5 +4,8 @@
   "CHAROLAIS-PINT_POWER.title": "Pinte",
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.description": "Dans N tours, tout le monde pioche",
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.smartDescription": "Dans [blue]{Amount}[/blue] {Amount:plural:tour|tours}, Piochez {Cards:diff()} {Cards:plural:carte|cartes}.",
-  "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.title": "Loubarde à l'Observatoire"
+  "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.title": "Loubarde à l'Observatoire",
+  "CHAROLAIS-BITESIGNAL_POWER.description": "À la fin du tour, gagnez de l'[gold]Armure[/gold]",
+  "CHAROLAIS-BITESIGNAL_POWER.smartDescription": "À la fin du tour, gagnez de l'[gold]Armure[/gold]",
+  "CHAROLAIS-BITESIGNAL_POWER.title": "Bite-Signal"
 }
