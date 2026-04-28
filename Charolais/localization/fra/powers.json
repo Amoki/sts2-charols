@@ -7,5 +7,8 @@
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.title": "Loubarde à l'Observatoire",
   "CHAROLAIS-BITESIGNAL_POWER.description": "À la fin du tour, gagnez de l'[gold]Armure[/gold]",
   "CHAROLAIS-BITESIGNAL_POWER.smartDescription": "À la fin du tour, gagnez de l'[gold]Armure[/gold]",
-  "CHAROLAIS-BITESIGNAL_POWER.title": "Bite-Signal"
+  "CHAROLAIS-BITESIGNAL_POWER.title": "Bite-Signal",
+  "CHAROLAIS-PICOLO_POWER.description": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
+  "CHAROLAIS-PICOLO_POWER.smartDescription": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
+  "CHAROLAIS-PICOLO_POWER.title": "Picolo"
 }

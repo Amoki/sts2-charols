@@ -42,5 +42,11 @@
   "CHAROLAIS-DIGESPLIF.description": "Gagnez {ArtifactPower:diff()} [gold]Artefact[/gold] et perdez {HpLoss:diff()} HP.",
   "CHAROLAIS-DIGESPLIF.title": "Digesplif",
   "CHAROLAIS-BITESIGNAL.description": "À la fin du tour, gagnez [blue]{Block:diff()}[/blue] d'[gold]Armure[/gold].",
-  "CHAROLAIS-BITESIGNAL.title": "Bite-Signal"
+  "CHAROLAIS-BITESIGNAL.title": "Bite-Signal",
+  "CHAROLAIS-SMASH.description": "Infligez {Damage:diff()} dégâts.\n[gold]Épuisez[/gold] 1 carte au hasard.",
+  "CHAROLAIS-SMASH.title": "Smash",
+  "CHAROLAIS-TROISFEUILLES.description": "Infligez {Damage:diff()} dégâts.\nAppliquez [gold]Vulnérable[/gold] ({VulnerablePower:diff()}).",
+  "CHAROLAIS-TROISFEUILLES.title": "Trois Feuilles",
+  "CHAROLAIS-PICOLO.description": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
+  "CHAROLAIS-PICOLO.title": "Picolo"
 }
