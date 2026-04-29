@@ -10,5 +10,8 @@
   "CHAROLAIS-BITESIGNAL_POWER.title": "Bite-Signal",
   "CHAROLAIS-PICOLO_POWER.description": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
   "CHAROLAIS-PICOLO_POWER.smartDescription": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
-  "CHAROLAIS-PICOLO_POWER.title": "Picolo"
+  "CHAROLAIS-PICOLO_POWER.title": "Picolo",
+  "CHAROLAIS-BARBECUE_POWER.description": "Gagnez [blue]1[/blue] d'[gold]Énergie[/gold] et ajoutez [blue]1[/blue] [gold]Brûlure[/gold] à votre [gold]Défausse[/gold] au début de chaque tour.",
+  "CHAROLAIS-BARBECUE_POWER.smartDescription": "Gagnez {Amount:energyIcons()} et ajoutez [blue]1[/blue] [gold]Brûlure[/gold] à votre [gold]Défausse[/gold] au début de chaque tour.",
+  "CHAROLAIS-BARBECUE_POWER.title": "BarbecuePower"
 }

@@ -52,5 +52,11 @@
   "CHAROLAIS-PONCAGE.description": "Infligez {Damage:diff()} dégâts.\nPerdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-PONCAGE.title": "Ponçage",
   "CHAROLAIS-WHISKYCOCA.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nGagnez {Alcool:diff()} de [gold]Pintes[/gold].",
-  "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca"
+  "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca",
+  "CHAROLAIS-COUPDETROTTOIR.description": "Infligez {Damage:diff()} dégâts.\nAppliquez [gold]Shrink[/gold] ({ShrinkPower:diff()}).",
+  "CHAROLAIS-COUPDETROTTOIR.title": "Coup de Trottoir",
+  "CHAROLAIS-PROJETGAIA.description": "Piochez {Cards:diff()} cartes.\\n[gold]Épuisez[/gold] 1 carte.",
+  "CHAROLAIS-PROJETGAIA.title": "Projet Gaïa",
+  "CHAROLAIS-BARBECUE.description": "Gagnez {Energy:energyIcons()} et ajoutez une [gold]Brûlure[/gold] à votre [gold]Défausse[/gold] au début de chaque tour .",
+  "CHAROLAIS-BARBECUE.title": "Barbecue"
 }

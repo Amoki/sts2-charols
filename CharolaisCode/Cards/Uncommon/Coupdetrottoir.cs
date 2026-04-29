@@ -8,17 +8,16 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Troisfeuilles() : CharolaisCard(1,
+public class Coupdetrottoir() : CharolaisCard(2,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-
-                (DynamicVar) new DamageVar(8M, ValueProp.Move),
-                (DynamicVar) new PowerVar<VulnerablePower>(1M)
+        (DynamicVar) new DamageVar(10M, ValueProp.Move),
+        (DynamicVar) new PowerVar<ShrinkPower>(1M)
     ];
-
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<VulnerablePower>())];
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ShrinkPower>())];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -26,12 +25,11 @@ public class Troisfeuilles() : CharolaisCard(1,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
-        await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, this.DynamicVars.Vulnerable.BaseValue, this.Owner.Creature, this);
+        await PowerCmd.Apply<ShrinkPower>(choiceContext, cardPlay.Target, 1, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(3M);
-        this.DynamicVars.Vulnerable.UpgradeValueBy(1M);
+        this.DynamicVars.Damage.UpgradeValueBy(4M);
     }
 }
