@@ -1,17 +1,15 @@
 ﻿using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Charolais.CharolaisCode.Cards.Rare;
+namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Tetedepioche() : CharolaisCard(2, CardType.Skill, CardRarity.Rare, TargetType.AnyEnemy)
+public class Tetedepioche() : CharolaisCard(2, CardType.Skill, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
