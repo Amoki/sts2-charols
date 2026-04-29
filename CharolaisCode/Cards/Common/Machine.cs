@@ -14,7 +14,7 @@ namespace Charolais.CharolaisCode.Cards.Common;
 
 
 
-public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
+public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(15, ValueProp.Move),

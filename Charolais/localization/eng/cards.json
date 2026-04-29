@@ -57,6 +57,14 @@
   "CHAROLAIS-COUPDETROTTOIR.title": "Coup de Trottoir",
   "CHAROLAIS-PROJETGAIA.description": "Piochez {Cards:diff()} cartes.\\n[gold]Épuisez[/gold] 1 carte.",
   "CHAROLAIS-PROJETGAIA.title": "Projet Gaïa",
-  "CHAROLAIS-BARBECUE.description": "Gagnez {Energy:energyIcons()} et ajoutez une [gold]Brûlure[/gold] à votre [gold]Défausse[/gold] au début de chaque tour .",
-  "CHAROLAIS-BARBECUE.title": "Barbecue"
+  "CHAROLAIS-BARBECUE.description": "Au début de votre tour, gagnez {Energy:energyIcons()} et ajoutez une [gold]Brûlure[/gold] à votre [gold]Défausse[/gold].",
+  "CHAROLAIS-BARBECUE.title": "Barbecue",
+  "CHAROLAIS-BURGER.description": "Gagnez {VigorPower:diff()} de [gold]Vigueur[/gold].",
+  "CHAROLAIS-BURGER.title": "Burger",
+  "CHAROLAIS-VERREDEAU.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nPerdez tous vos effets de [gold]Pinte[/gold].",
+  "CHAROLAIS-VERREDEAU.title": "Verre d'eau",
+  "CHAROLAIS-CULSEC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nSi vous avez plus de [blue]7[/blue] [gold]Pintes[/gold], gagnez cet effet une seconde fois.",
+  "CHAROLAIS-CULSEC.title": "Cul-Sec !",
+  "CHAROLAIS-NIQUEZVOUS.description": "Au début de votre tour, récupérez 2 PV et appliquez [gold]Fragilisé[/gold] (1) à un allié aléatoire.",
+  "CHAROLAIS-NIQUEZVOUS.title": "Niquez-vous"
 }

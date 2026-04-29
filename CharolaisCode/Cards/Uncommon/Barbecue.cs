@@ -13,7 +13,7 @@ public class Barbecue() : CharolaisCard(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new EnergyVar(1),
+        (DynamicVar) new EnergyVar(1)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
