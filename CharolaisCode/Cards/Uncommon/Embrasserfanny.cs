@@ -13,7 +13,7 @@ public class Embrasserfanny() : CharolaisCard(1,
     TargetType.Self)
 {
 
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<StrengthPower>(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<StrengthPower>(4)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<StrengthPower>())];
     

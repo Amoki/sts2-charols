@@ -21,7 +21,7 @@ public class Projetgaia() : CharolaisCard(0,
     {
         await CardPileCmd.Draw(choiceContext, this.DynamicVars.Cards.BaseValue, this.Owner);
         CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1);
-        CardModel card = (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (Func<CardModel, bool>)null, (AbstractModel)this)).FirstOrDefault<CardModel>();
+        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (Func<CardModel, bool>?)null, (AbstractModel)this)).FirstOrDefault<CardModel>();
         if (card == null)
             return;
         await CardCmd.Exhaust(choiceContext, card);

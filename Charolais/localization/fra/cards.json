@@ -63,7 +63,7 @@
   "CHAROLAIS-BURGER.title": "Burger",
   "CHAROLAIS-VERREDEAU.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nPerdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-VERREDEAU.title": "Verre d'eau",
-  "CHAROLAIS-CULSEC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nSi vous avez plus de [blue]7[/blue] [gold]Pintes[/gold], gagnez cet effet une seconde fois.",
+  "CHAROLAIS-CULSEC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nSi vous avez plus de 7 [gold]Pintes[/gold], gagnez cet effet une seconde fois.",
   "CHAROLAIS-CULSEC.title": "Cul-Sec !",
   "CHAROLAIS-NIQUEZVOUS.description": "Au début de votre tour, récupérez 2 PV et appliquez [gold]Fragilisé[/gold] (1) à un allié aléatoire.",
   "CHAROLAIS-NIQUEZVOUS.title": "Niquez-vous",
@@ -74,5 +74,11 @@
   "CHAROLAIS-TEQPAF.description": "{IfUpgraded:show:Triple|Double} vos [gold]Pinte[/gold].",
   "CHAROLAIS-TEQPAF.title": "Teq Paf",
   "CHAROLAIS-LEBOL.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nAppliquez [gold]Affaibli[/gold] ({WeakPower:diff()}) à vous-même.",
-  "CHAROLAIS-LEBOL.title": "Le Bol"
+  "CHAROLAIS-LEBOL.title": "Le Bol",
+  "CHAROLAIS-APERISPLIF.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nAjoutez [gold]Retenue[/gold] à une carte dans votre [gold]Main[/gold].",
+  "CHAROLAIS-APERISPLIF.title": "Apérisplif",
+  "CHAROLAIS-SIESTEDANSLEHAMAC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].",
+  "CHAROLAIS-SIESTEDANSLEHAMAC.title": "Sieste dans le Hamac",
+  "CHAROLAIS-TAGADA.description": "Infligez {CalculatedDamage:diff()} dégâts à tous les ennemis.",
+  "CHAROLAIS-TAGADA.title": "Tagada"
 }
