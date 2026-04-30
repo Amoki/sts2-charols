@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Tagada() : CharolaisCard(0, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
+public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
@@ -35,6 +35,6 @@ public class Tagada() : CharolaisCard(0, CardType.Attack, CardRarity.Uncommon, T
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Repeat.UpgradeValueBy(2M);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

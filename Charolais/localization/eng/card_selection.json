@@ -1,3 +1,4 @@
 ﻿{
-  "TO_TRADE": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à [gold]échanger[/gold]."
+  "TO_TRADE": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à [gold]échanger[/gold].",
+  "TO_RETAIN": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à [gold]retenir[/gold]."
 }

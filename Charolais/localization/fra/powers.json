@@ -16,5 +16,8 @@
   "CHAROLAIS-BARBECUE_POWER.title": "BarbecuePower",
   "CHAROLAIS-NIQUEZVOUS_POWER.description": "Au début du tour, récupérez 2 PV et appliquez [gold]Fragilisé[/gold] (1) à un allié aléatoire.",
   "CHAROLAIS-NIQUEZVOUS_POWER.smartDescription": "Au début de votre tour, récupérez 2 PV et appliquez [gold]Fragilisé[/gold] (1) à un allié aléatoire.",
-  "CHAROLAIS-NIQUEZVOUS_POWER.title": "Niquez-vous"
+  "CHAROLAIS-NIQUEZVOUS_POWER.title": "Niquez-vous",
+  "CHAROLAIS-CHEST_POWER.description": "Jouez un [gold]Échec[/gold] pour appliquer autant de dégats que de Coups d'avance.",
+  "CHAROLAIS-CHEST_POWER.smartDescription": "Jouez un [gold]Échec[/gold] pour appliquer {Amount} dégâts.",
+  "CHAROLAIS-CHEST_POWER.title": "Coups d'avance"
 }

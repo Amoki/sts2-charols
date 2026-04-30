@@ -80,5 +80,9 @@
   "CHAROLAIS-SIESTEDANSLEHAMAC.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].",
   "CHAROLAIS-SIESTEDANSLEHAMAC.title": "Sieste dans le Hamac",
   "CHAROLAIS-TAGADA.description": "Infligez {CalculatedDamage:diff()} dégâts à tous les ennemis.",
-  "CHAROLAIS-TAGADA.title": "Tagada"
+  "CHAROLAIS-TAGADA.title": "Tagada",
+  "CHAROLAIS-ECHEC.description": "Appliquez [gold]Affaibli[/gold] ({WeakPower:diff()}).\nInfligez autant de dégâts à un ennemi que sa quantité de [gold]Coups d'avance[/gold].",
+  "CHAROLAIS-ECHEC.title": "Échec",
+  "CHAROLAIS-ENPASSANT.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold].",
+  "CHAROLAIS-ENPASSANT.title": "En passant"
 }

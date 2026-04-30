@@ -47,7 +47,7 @@ public class Charolais : PlaceholderCharacterModel
         ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<Beer>(),
-        ModelDb.Card<Burp>(),
+        ModelDb.Card<Echec>(),
         
     ];
     

@@ -7,10 +7,10 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Charolais.CharolaisCode.Cards.Basic;
+namespace Charolais.CharolaisCode.Cards.Uncommon;
 
 
-public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
+public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(8, ValueProp.Move),
@@ -40,7 +40,7 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, Target
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(2m);
+        base.DynamicVars.Damage.UpgradeValueBy(3m);
         base.DynamicVars.Weak.UpgradeValueBy(1m);
     }
 }
