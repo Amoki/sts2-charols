@@ -16,6 +16,7 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
+        new AlcoolVar(1)
     ];
     
    
