@@ -19,5 +19,8 @@
   "CHAROLAIS-NIQUEZVOUS_POWER.title": "Niquez-vous",
   "CHAROLAIS-CHEST_POWER.description": "Jouez un [gold]Échec[/gold] pour appliquer autant de dégats que de Coups d'avance.",
   "CHAROLAIS-CHEST_POWER.smartDescription": "Jouez un [gold]Échec[/gold] pour appliquer {Amount} dégâts.",
-  "CHAROLAIS-CHEST_POWER.title": "Coups d'avance"
+  "CHAROLAIS-CHEST_POWER.title": "Coups d'avance",
+  "CHAROLAIS-DELIRIUM_POWER.description": "Applique 1 effet de [gold]Pinte[/gold] au début de votre tour.",
+  "CHAROLAIS-DELIRIUM_POWER.smartDescription": "Applique 1 effet de [gold]Pinte[/gold] au début de votre tour.",
+  "CHAROLAIS-DELIRIUM_POWER.title": "Delirium"
 }

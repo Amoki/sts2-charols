@@ -84,5 +84,11 @@
   "CHAROLAIS-ECHEC.description": "Appliquez [gold]Affaibli[/gold] ({WeakPower:diff()}).\nInfligez autant de dégâts à un ennemi que sa quantité de [gold]Coups d'avance[/gold].",
   "CHAROLAIS-ECHEC.title": "Échec",
   "CHAROLAIS-ENPASSANT.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold].",
-  "CHAROLAIS-ENPASSANT.title": "En passant"
+  "CHAROLAIS-ENPASSANT.title": "En passant",
+  "CHAROLAIS-LANCERDEFRISBEE.description": "Infligez {Damage:diff()} dégâts à un ennemi aléatoire, deux fois.",
+  "CHAROLAIS-LANCERDEFRISBEE.title": "Lancer de Frisbee",
+  "CHAROLAIS-TOURDEFRANCE.description": "Gagnez {IfUpgraded:show:X+1|X} [gold]Régénération[/gold].",
+  "CHAROLAIS-TOURDEFRANCE.title": "Tour de France",
+  "CHAROLAIS-DELIRIUM.description": "Applique 1 effet de [gold]Pinte[/gold] au début de votre tour.",
+  "CHAROLAIS-DELIRIUM.title": "Delirium"
 }
