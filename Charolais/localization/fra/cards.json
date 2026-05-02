@@ -98,5 +98,15 @@
   "CHAROLAIS-LEGAMBITDELADAME.description": "Infligez {Damage:diff()} dégâts.\n{IfUpgraded:show:Triple|Double} les [gold]Coups d'avance[/gold].",
   "CHAROLAIS-LEGAMBITDELADAME.title": "Le Gambit de la Dame",
   "CHAROLAIS-ROQUE.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold] à tous les ennemis.",
-  "CHAROLAIS-ROQUE.title": "Roque"
+  "CHAROLAIS-ROQUE.title": "Roque",
+  "CHAROLAIS-MURAILLEDEBOULES.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold] affecté 3 fois par la [gold]Dextérité[/gold].",
+  "CHAROLAIS-MURAILLEDEBOULES.title": "Muraille de Boules",
+  "CHAROLAIS-LECERCLE.description": "Gagnez 1 de [gold]Force[/gold] et 1 de [gold]Dextérité[/gold].\nAu début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
+  "CHAROLAIS-LECERCLE.title": "Le Cercle",
+  "CHAROLAIS-TROPHEEMASTERSCHAROLS.description": "Gagnez {Power:diff()} de [gold]Force[/gold] et {Power:diff()} de [gold]Dextérité[/gold].\nChoisissez une carte de votre [gold]Main[/gold]. Elle coûte [blue]0[/blue] pour le restant du combat.",
+  "CHAROLAIS-TROPHEEMASTERSCHAROLS.title": "Trophée Masters de Charols",
+  "CHAROLAIS-TIRLEBUT.description": "Infligez X fois X dégâts.{IfUpgraded:show:\nAprès l'attaque, gagnez 1 {Energy:energyIcons()}.|}",
+  "CHAROLAIS-TIRLEBUT.title": "Tir le But",
+  "CHAROLAIS-SPRITZENFOLIE.description": "Infligez {Damage:diff()} dégâts.\nGagnez {Alcool:diff()} de [gold]Pinte[/gold]",
+  "CHAROLAIS-SPRITZENFOLIE.title": "Spritz en Folie"
 }

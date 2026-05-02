@@ -22,5 +22,8 @@
   "CHAROLAIS-CHEST_POWER.title": "Coups d'avance",
   "CHAROLAIS-DELIRIUM_POWER.description": "Applique 1 effet de [gold]Pinte[/gold] au début de votre tour.",
   "CHAROLAIS-DELIRIUM_POWER.smartDescription": "Applique 1 effet de [gold]Pinte[/gold] au début de votre tour.",
-  "CHAROLAIS-DELIRIUM_POWER.title": "Delirium"
+  "CHAROLAIS-DELIRIUM_POWER.title": "Delirium",
+  "CHAROLAIS-LECERCLE_POWER.description": "Au début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
+  "CHAROLAIS-LECERCLE_POWER.smartDescription": "Au début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
+  "CHAROLAIS-LECERCLE_POWER.title": "Le Cercle"
 }
