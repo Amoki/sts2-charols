@@ -13,7 +13,7 @@
   "CHAROLAIS-PICOLO_POWER.title": "Picolo",
   "CHAROLAIS-BARBECUE_POWER.description": "Au début de votre tour, gagnez [blue]1[/blue] d'[gold]Énergie[/gold] et ajoutez [blue]1[/blue] [gold]Brûlure[/gold] à votre [gold]Défausse[/gold].",
   "CHAROLAIS-BARBECUE_POWER.smartDescription": "Au début de votre tour, gagnez {Amount:energyIcons()} et ajoutez [blue]1[/blue] [gold]Brûlure[/gold] à votre [gold]Défausse[/gold].",
-  "CHAROLAIS-BARBECUE_POWER.title": "BarbecuePower",
+  "CHAROLAIS-BARBECUE_POWER.title": "Barbecue",
   "CHAROLAIS-NIQUEZVOUS_POWER.description": "Au début du tour, récupérez 2 PV et appliquez [gold]Fragilisé[/gold] (1) à un allié aléatoire.",
   "CHAROLAIS-NIQUEZVOUS_POWER.smartDescription": "Au début de votre tour, récupérez 2 PV et appliquez [gold]Fragilisé[/gold] (1) à un allié aléatoire.",
   "CHAROLAIS-NIQUEZVOUS_POWER.title": "Niquez-vous",
@@ -26,7 +26,7 @@
   "CHAROLAIS-LECERCLE_POWER.description": "Au début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-LECERCLE_POWER.smartDescription": "Au début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-LECERCLE_POWER.title": "Le Cercle",
-  "CHAROLAIS-BOULEDEVANTBOULEDARGENT_POWER.description": "",
-  "CHAROLAIS-BOULEDEVANTBOULEDARGENT_POWER.smartDescription": "",
-  "CHAROLAIS-BOULEDEVANTBOULEDARGENT_POWER.title": "BouledevantbouledargentPower"
+  "CHAROLAIS-TERRAINDEPETANQUE_POWER.description": "La première Attaque [red]Pétanque[/red] jouée chaque tour coûte 0.",
+  "CHAROLAIS-TERRAINDEPETANQUE_POWER.smartDescription": "La première Attaque [red]Pétanque[/red] jouée chaque tour coûte 0.",
+  "CHAROLAIS-TERRAINDEPETANQUE_POWER.title": "Terrain de Pétanque"
 }

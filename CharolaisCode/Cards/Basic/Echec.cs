@@ -35,12 +35,7 @@ public class Echec() : CharolaisCard(0, CardType.Skill, CardRarity.Basic, Target
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target ?? throw new InvalidOperationException(), this.DynamicVars.Weak.BaseValue, this.Owner.Creature, this);
-        var chestPower = cardPlay.Target.IsAlive ? cardPlay.Target.GetPowerAmount<ChestPower>() : 0;
-        await DamageCmd.Attack(chestPower).FromCard(this).WithHitCount(1).Targeting(cardPlay.Target)
-                .WithHitFx("vfx/vfx_attack_slash")
-                .Execute(choiceContext);
-        await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target, (Decimal.Negate(chestPower)), this.Owner.Creature, this);
-
+        await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
     }
 
     protected override void OnUpgrade()

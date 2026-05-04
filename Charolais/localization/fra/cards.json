@@ -112,5 +112,11 @@
   "CHAROLAIS-TIRENRASPAILLE.description": "Infligez {Repeat:diff()} fois {Damage:diff()} dégâts affecté 3 fois par la [gold]Force[/gold].",
   "CHAROLAIS-TIRENRASPAILLE.title": "Tir en Raspaille",
   "CHAROLAIS-BOULEDEVANTBOULEDARGENT.description": "Gagnez 4 d'[gold]Armure[/gold] plus {IfUpgraded:show:2|1} par carte [red]Pétanque[/red] dans votre deck.{InCombat:\n(Gagnez {CalculatedBlock:diff()} d'[gold]Armure[/gold].)|}",
-  "CHAROLAIS-BOULEDEVANTBOULEDARGENT.title": "Boule Devant, Boule d'Argent"
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT.title": "Boule Devant, Boule d'Argent",
+  "CHAROLAIS-TERRAINDEPETANQUE.description": "{Power:plural:La|Les}{Power:plural:| {Power:diff()}} {Power:plural:première Attaque [red]Pétanque[/red] jouée|premières Attaques [red]Pétanque[/red] jouées} chaque tour {Power:plural:coûte|coûtent} 0.",
+  "CHAROLAIS-TERRAINDEPETANQUE.title": "Terrain de Pétanque",
+  "CHAROLAIS-LAFOURCHETTEDUCAVALIER.description": "Infligez {Damage:diff()} dégâts et [gold]Échec[/gold] à tous les ennemis.",
+  "CHAROLAIS-LAFOURCHETTEDUCAVALIER.title": "La Fourchette du Cavalier",
+  "CHAROLAIS-LADEFENSEFRANCAISE.description": "Gagnez autant d'[gold]Armure[/gold] que de [gold]Coups d'avance[/gold]{InCombat: ({CalculatedBlock:diff()})} présents sur tous les ennemis.",
+  "CHAROLAIS-LADEFENSEFRANCAISE.title": "La Défense Française"
 }
