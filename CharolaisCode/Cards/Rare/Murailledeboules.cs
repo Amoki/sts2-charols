@@ -13,6 +13,8 @@ public class Murailledeboules() : CharolaisCard(1, CardType.Skill, CardRarity.Ra
 {
     public override bool GainsBlock => true;
     
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         (DynamicVar) new BlockVar(8m, ValueProp.Move)
     ];

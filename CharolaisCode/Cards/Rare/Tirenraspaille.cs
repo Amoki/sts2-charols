@@ -11,6 +11,8 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(5,ValueProp.Move),
         new RepeatVar(2)

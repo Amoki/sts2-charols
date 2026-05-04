@@ -11,6 +11,8 @@ public class Lancerdeboule() : CharolaisCard(1,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(1, ValueProp.Move)];
+    
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

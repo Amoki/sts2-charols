@@ -13,6 +13,8 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Tropheemasterscharols() : CharolaisCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("Power", 1M),
         new CardsVar(1)

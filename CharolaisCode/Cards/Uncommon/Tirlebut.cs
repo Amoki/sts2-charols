@@ -12,6 +12,7 @@ public class Tirlebut() : CharolaisCard(0,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new EnergyVar(0)
     ];

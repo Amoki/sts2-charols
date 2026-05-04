@@ -1,7 +1,5 @@
-﻿using Charolais.CharolaisCode.Powers;
-using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -12,6 +10,8 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Sortiedupetit() : CharolaisCard(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("Power", 1M)
     ];

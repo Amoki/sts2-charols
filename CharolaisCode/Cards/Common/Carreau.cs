@@ -12,6 +12,8 @@ public class Carreau() : CharolaisCard(1,
 {
     public override bool GainsBlock => true;
 
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(3, ValueProp.Move),

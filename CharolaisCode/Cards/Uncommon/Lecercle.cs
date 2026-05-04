@@ -13,6 +13,8 @@ public class Lecercle() : CharolaisCard(2,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("Power", 1M)
     ];

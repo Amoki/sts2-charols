@@ -25,5 +25,8 @@
   "CHAROLAIS-DELIRIUM_POWER.title": "Delirium",
   "CHAROLAIS-LECERCLE_POWER.description": "Au début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-LECERCLE_POWER.smartDescription": "Au début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
-  "CHAROLAIS-LECERCLE_POWER.title": "Le Cercle"
+  "CHAROLAIS-LECERCLE_POWER.title": "Le Cercle",
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT_POWER.description": "",
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT_POWER.smartDescription": "",
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT_POWER.title": "BouledevantbouledargentPower"
 }

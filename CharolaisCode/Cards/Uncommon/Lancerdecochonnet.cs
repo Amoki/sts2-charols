@@ -12,7 +12,8 @@ public class Lancerdecochonnet() : CharolaisCard(1,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
-
+    protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DexterityPower>(4)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<DexterityPower>())];

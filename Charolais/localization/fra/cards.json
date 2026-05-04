@@ -110,5 +110,7 @@
   "CHAROLAIS-SPRITZENFOLIE.description": "Infligez {Damage:diff()} dégâts.\nGagnez {Alcool:diff()} de [gold]Pinte[/gold]",
   "CHAROLAIS-SPRITZENFOLIE.title": "Spritz en Folie",
   "CHAROLAIS-TIRENRASPAILLE.description": "Infligez {Repeat:diff()} fois {Damage:diff()} dégâts affecté 3 fois par la [gold]Force[/gold].",
-  "CHAROLAIS-TIRENRASPAILLE.title": "Tir en Raspaille"
+  "CHAROLAIS-TIRENRASPAILLE.title": "Tir en Raspaille",
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT.description": "Gagnez 4 d'[gold]Armure[/gold] plus {IfUpgraded:show:2|1} par carte [red]Pétanque[/red] dans votre deck.{InCombat:\n(Gagnez {CalculatedBlock:diff()} d'[gold]Armure[/gold].)|}",
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT.title": "Boule Devant, Boule d'Argent"
 }

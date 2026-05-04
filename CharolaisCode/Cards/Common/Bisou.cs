@@ -1,4 +1,6 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using BaseLib.Patches.Content;
+using Charolais.CharolaisCode.Cards.Uncommon;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -11,6 +13,10 @@ public class Bisou() : CharolaisCard(1,
     TargetType.Self)
 {
     public override bool GainsBlock => true;
+    
+    protected override HashSet<CardTag> CanonicalTags => [
+        PetanqueTag.Petanque
+    ];
     
     protected override IEnumerable<DynamicVar> CanonicalVars
     {
