@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjqq3ycbdp13a"
-path="res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"
+uid="uid://dmbb1dek3i5c1"
+path="res://.godot/imported/pileouface.png-63c6642b48e21fcb7b0878f29369c325.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/charui/character_icon_char_name.png"
-dest_files=["res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"]
+source_file="res://Charolais/images/relics/pileouface.png"
+dest_files=["res://.godot/imported/pileouface.png-63c6642b48e21fcb7b0878f29369c325.ctex"]
 
 [params]
 

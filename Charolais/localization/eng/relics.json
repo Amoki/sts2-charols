@@ -1,5 +1,20 @@
 {
   "CHAROLAIS-TIREUSE.description": "Applique 1 effet de [gold]Pinte[/gold] au début de votre tour.",
   "CHAROLAIS-TIREUSE.flavor": "",
-  "CHAROLAIS-TIREUSE.title": "Tireuse"
+  "CHAROLAIS-TIREUSE.title": "Tireuse",
+  "CHAROLAIS-ANNEAUMAGIQUE.description": "Démarrez chaque combat avec [blue]2[/blue] [gold]Pintes[/gold].",
+  "CHAROLAIS-ANNEAUMAGIQUE.flavor": "L'Anneau Magique qui rend alcoolique...",
+  "CHAROLAIS-ANNEAUMAGIQUE.title": "Anneau Magique",
+  "CHAROLAIS-ECHIQUIERDEVOYAGE.description": "Chaque combat, la première fois que vous appliquez des [gold]Coups d'avance[/gold] à un ennemi, ajoutez en [blue]5[/blue].",
+  "CHAROLAIS-ECHIQUIERDEVOYAGE.flavor": "",
+  "CHAROLAIS-ECHIQUIERDEVOYAGE.title": "Echiquier de Voyage",
+  "CHAROLAIS-PENDULEDECHEC.description": "Vous appliquez [blue]2[/blue] [gold]Coups d'avance[/gold] en plus à chaque fois que vous appliquez des [gold]Coups d'avance[/gold].",
+  "CHAROLAIS-PENDULEDECHEC.flavor": "",
+  "CHAROLAIS-PENDULEDECHEC.title": "Pendule d'Échec",
+  "CHAROLAIS-PILEOUFACE.description": "Au début de chaque combat, gagnez [blue]1[/blue] de [gold]Force[/gold] OU [blue]1[/blue] de [gold]Dextérité[/gold] au hasard.",
+  "CHAROLAIS-PILEOUFACE.flavor": "",
+  "CHAROLAIS-PILEOUFACE.title": "Pile ou Face",
+  "CHAROLAIS-RAMASSEBOULES.description": "Au début de chaque combat, ajoutez une carte [green]Pétanque[/green] aléatoire à votre main.\nElle coûte 0 ce tour.",
+  "CHAROLAIS-RAMASSEBOULES.flavor": "",
+  "CHAROLAIS-RAMASSEBOULES.title": "Ramasse-Boules"
 }

@@ -111,9 +111,9 @@
   "CHAROLAIS-SPRITZENFOLIE.title": "Spritz en Folie",
   "CHAROLAIS-TIRENRASPAILLE.description": "Infligez {Repeat:diff()} fois {Damage:diff()} dégâts affecté 3 fois par la [gold]Force[/gold].",
   "CHAROLAIS-TIRENRASPAILLE.title": "Tir en Raspaille",
-  "CHAROLAIS-BOULEDEVANTBOULEDARGENT.description": "Gagnez 4 d'[gold]Armure[/gold] plus {IfUpgraded:show:2|1} par carte [red]Pétanque[/red] dans votre deck.{InCombat:\n(Gagnez {CalculatedBlock:diff()} d'[gold]Armure[/gold].)|}",
+  "CHAROLAIS-BOULEDEVANTBOULEDARGENT.description": "Gagnez 4 d'[gold]Armure[/gold] plus {IfUpgraded:show:2|1} par carte [green]Pétanque[/green] dans votre deck.{InCombat:\n(Gagnez {CalculatedBlock:diff()} d'[gold]Armure[/gold].)|}",
   "CHAROLAIS-BOULEDEVANTBOULEDARGENT.title": "Boule Devant, Boule d'Argent",
-  "CHAROLAIS-TERRAINDEPETANQUE.description": "{Power:plural:La|Les}{Power:plural:| {Power:diff()}} {Power:plural:première Attaque [red]Pétanque[/red] jouée|premières Attaques [red]Pétanque[/red] jouées} chaque tour {Power:plural:coûte|coûtent} 0.",
+  "CHAROLAIS-TERRAINDEPETANQUE.description": "{Power:plural:La|Les}{Power:plural:| {Power:diff()}} {Power:plural:première Attaque [green]Pétanque[/green] jouée|premières Attaques [green]Pétanque[/green] jouées} chaque tour {Power:plural:coûte|coûtent} 0.",
   "CHAROLAIS-TERRAINDEPETANQUE.title": "Terrain de Pétanque",
   "CHAROLAIS-LAFOURCHETTEDUCAVALIER.description": "Infligez {Damage:diff()} dégâts et [gold]Échec[/gold] à TOUS les ennemis.",
   "CHAROLAIS-LAFOURCHETTEDUCAVALIER.title": "La Fourchette du Cavalier",
@@ -128,5 +128,15 @@
   "CHAROLAIS-BLITZ.description": "Au début de votre tour, appliquez [blue]3[/blue] [gold]Coups d'avance[/gold] à TOUS les ennemis.",
   "CHAROLAIS-BLITZ.title": "Blitz",
   "CHAROLAIS-PAT.description": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]3[/blue] dégâts.",
-  "CHAROLAIS-PAT.title": "Pat"
+  "CHAROLAIS-PAT.title": "Pat",
+  "CHAROLAIS-TOURBILLONDEBOULES.description": "Infligez {Damage:diff()} dégâts 6 fois à TOUS les ennemis.",
+  "CHAROLAIS-TOURBILLONDEBOULES.title": "Tourbillon de Boules",
+  "CHAROLAIS-PLOMBER.description": "Infligez {Damage:diff()} dégâts {Repeat:diff()} fois à TOUS les ennemis.\nPerdez 2 HP.",
+  "CHAROLAIS-PLOMBER.title": "Plomber",
+  "CHAROLAIS-FONCEDALLE.description": "Perdez toutes vos [gold]Pinte[/gold]{InCombat: ({Power:diff()})|}, gagnez autant d'{Energy:energyIcons()}.",
+  "CHAROLAIS-FONCEDALLE.title": "Foncedalle",
+  "CHAROLAIS-GROSSEBETISE.description": "[jitter][purple]50%[/purple][/jitter] d'infligez {Damage:diff()} dégâts à TOUS les ennemis.\n[jitter][purple]50%[/purple][/jitter] de perdre {HpLoss:diff()} HP.",
+  "CHAROLAIS-GROSSEBETISE.title": "Grosse Bêtise",
+  "CHAROLAIS-DORTOIR.description": "[jitter][purple]50%[/purple][/jitter] de gagner {Block:diff()} d'[gold]Armure[/gold] pour vous et un allié.\n[jitter][purple]50%[/purple][/jitter] d'appliquer [gold]Fragilisé[/gold] ({Power:diff()}) à vous et un allié.",
+  "CHAROLAIS-DORTOIR.title": "Dortoir"
 }

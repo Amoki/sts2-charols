@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjqq3ycbdp13a"
-path="res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"
+uid="uid://buk68fvc3pjcy"
+path="res://.godot/imported/anneaumagique_outline.png-35ce6530f276157104487165bee8f2ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/charui/character_icon_char_name.png"
-dest_files=["res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"]
+source_file="res://Charolais/images/relics/anneaumagique_outline.png"
+dest_files=["res://.godot/imported/anneaumagique_outline.png-35ce6530f276157104487165bee8f2ff.ctex"]
 
 [params]
 

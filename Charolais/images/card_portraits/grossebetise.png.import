@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjqq3ycbdp13a"
-path="res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"
+uid="uid://cpebm1n3jaui6"
+path="res://.godot/imported/grossebetise.png-45e0d02448b1495e478d0a7740316ecb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/charui/character_icon_char_name.png"
-dest_files=["res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"]
+source_file="res://Charolais/images/card_portraits/grossebetise.png"
+dest_files=["res://.godot/imported/grossebetise.png-45e0d02448b1495e478d0a7740316ecb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjqq3ycbdp13a"
-path="res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"
+uid="uid://dikw78iq8lsr5"
+path="res://.godot/imported/dortoir.png-b414319d13b01100b1ddc18ca2c3644d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/charui/character_icon_char_name.png"
-dest_files=["res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"]
+source_file="res://Charolais/images/card_portraits/big/dortoir.png"
+dest_files=["res://.godot/imported/dortoir.png-b414319d13b01100b1ddc18ca2c3644d.ctex"]
 
 [params]
 

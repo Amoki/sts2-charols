@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjqq3ycbdp13a"
-path="res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"
+uid="uid://wkge4rj0ex8g"
+path="res://.godot/imported/tourbillondeboules.png-5e46fe17709ee44cf29cebbe6dbbe48b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/charui/character_icon_char_name.png"
-dest_files=["res://.godot/imported/character_icon_char_name.png-45ae3840d3d91e6080dd72cd2d2d1f27.ctex"]
+source_file="res://Charolais/images/card_portraits/big/tourbillondeboules.png"
+dest_files=["res://.godot/imported/tourbillondeboules.png-5e46fe17709ee44cf29cebbe6dbbe48b.ctex"]
 
 [params]
 
