@@ -34,5 +34,14 @@
   "CHAROLAIS-BLITZ_POWER.title": "Blitz",
   "CHAROLAIS-PAT_POWER.description": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]3[/blue] dégâts.",
   "CHAROLAIS-PAT_POWER.smartDescription": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]{Amount}[/blue] dégâts.",
-  "CHAROLAIS-PAT_POWER.title": "Pat"
+  "CHAROLAIS-PAT_POWER.title": "Pat",
+  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.description": "Au début de votre tour, gagnez 4 [gold]Pinte[/gold] et récupérez 2HP.",
+  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.smartDescription": "Au début de votre tour, gagnez 4 [gold]Pinte[/gold] et récupérez 2HP.",
+  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.title": "Forme du Charolais",
+  "CHAROLAIS-TABLEAUDEMAT_POWER.description": "Lorsqu'une attaque vous touche, appliquez 6 [gold]Coups d'avance[/gold] en retour.",
+  "CHAROLAIS-TABLEAUDEMAT_POWER.smartDescription": "Lorsqu'une attaque vous touche, appliquez 6 [gold]Coups d'avance[/gold] en retour.",
+  "CHAROLAIS-TABLEAUDEMAT_POWER.title": "Tableau de Mat",
+  "CHAROLAIS-MUSIQUELACTEE_POWER.description": "La première carte [gold]Épuisée[/gold] jouée chaque tour coûte 0 et est jouée une fois de plus.",
+  "CHAROLAIS-MUSIQUELACTEE_POWER.smartDescription": "La première carte [gold]Épuisée[/gold] jouée chaque tour coûte 0 et est jouée une fois de plus.",
+  "CHAROLAIS-MUSIQUELACTEE_POWER.title": "Musique Lactée"
 }
