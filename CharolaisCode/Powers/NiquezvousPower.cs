@@ -23,9 +23,7 @@ public class NiquezvousPower : CharolaisPower
         
         var players = base.CombatState?.Players;
         if (players == null) { return; }
-        
-        int index = new Random().Next(players.Count);
-        Player randomPlayer = players[index];
+        Player randomPlayer = base.CombatState?.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
         
         if (player.Creature != base.Owner || base.Owner?.Player?.PlayerCombatState == null) return;
         {
