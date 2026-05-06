@@ -16,5 +16,14 @@
   "CHAROLAIS-PILEOUFACE.title": "Pile ou Face",
   "CHAROLAIS-RAMASSEBOULES.description": "Au début de chaque combat, ajoutez une carte [green]Pétanque[/green] aléatoire à votre main.\nElle coûte 0 ce tour.",
   "CHAROLAIS-RAMASSEBOULES.flavor": "",
-  "CHAROLAIS-RAMASSEBOULES.title": "Ramasse-Boules"
+  "CHAROLAIS-RAMASSEBOULES.title": "Ramasse-Boules",
+  "CHAROLAIS-CANETTEDE86.description": "Tous les 3 tours, triplez vos [gold]Pinte[/gold].",
+  "CHAROLAIS-CANETTEDE86.flavor": "",
+  "CHAROLAIS-CANETTEDE86.title": "Canette de 8.6",
+  "CHAROLAIS-TIREUSEDOUBLEBEC.description": "Applique 2 effet de [gold]Pinte[/gold] au début de votre tour.",
+  "CHAROLAIS-TIREUSEDOUBLEBEC.flavor": "",
+  "CHAROLAIS-TIREUSEDOUBLEBEC.title": "Tireuse Double-Bec",
+  "CHAROLAIS-BOUTEILLEDEAU.description": "Au début des 2ème et 4ème tour, perdez 2 [gold]Pinte[/gold] et gagnez {Energy:energyIcons()}.",
+  "CHAROLAIS-BOUTEILLEDEAU.flavor": "",
+  "CHAROLAIS-BOUTEILLEDEAU.title": "Bouteille d'Eau"
 }

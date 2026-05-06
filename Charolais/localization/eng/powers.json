@@ -41,7 +41,10 @@
   "CHAROLAIS-TABLEAUDEMAT_POWER.description": "Lorsqu'une attaque vous touche, appliquez 6 [gold]Coups d'avance[/gold] en retour.",
   "CHAROLAIS-TABLEAUDEMAT_POWER.smartDescription": "Lorsqu'une attaque vous touche, appliquez 6 [gold]Coups d'avance[/gold] en retour.",
   "CHAROLAIS-TABLEAUDEMAT_POWER.title": "Tableau de Mat",
-  "CHAROLAIS-MUSIQUELACTEE_POWER.description": "La première carte [gold]Épuisée[/gold] jouée chaque tour coûte 0 et est jouée une fois de plus.",
-  "CHAROLAIS-MUSIQUELACTEE_POWER.smartDescription": "La première carte [gold]Épuisée[/gold] jouée chaque tour coûte 0 et est jouée une fois de plus.",
-  "CHAROLAIS-MUSIQUELACTEE_POWER.title": "Musique Lactée"
+  "CHAROLAIS-MUSIQUELACTEE_POWER.description": "La première carte [gold]Épuisé[/gold] jouée chaque tour coûte 0 et est jouée deux fois supplémentaires.",
+  "CHAROLAIS-MUSIQUELACTEE_POWER.smartDescription": "La première carte [gold]Épuisé[/gold] jouée chaque tour coûte 0 et est jouée deux fois supplémentaires.",
+  "CHAROLAIS-MUSIQUELACTEE_POWER.title": "Musique Lactée",
+  "CHAROLAIS-TOURNOISDEPETANQUE_POWER.description": "Gagnez [blue]2[/blue] d'[gold]Armure[/gold] pour chaque carte [green]Pétanque[/green] piochée.",
+  "CHAROLAIS-TOURNOISDEPETANQUE_POWER.smartDescription": "Gagnez [blue]2[/blue] d'[gold]Armure[/gold] pour chaque carte [green]Pétanque[/green] piochée.",
+  "CHAROLAIS-TOURNOISDEPETANQUE_POWER.title": "Tournois de Pétanque"
 }

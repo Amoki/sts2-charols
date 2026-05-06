@@ -1,4 +1,7 @@
-﻿using Charolais.CharolaisCode.Powers;
+﻿using BaseLib.Abstracts;
+using Charolais.CharolaisCode.Cards.Ancient;
+using Charolais.CharolaisCode.Powers;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Basic;
@@ -14,8 +17,13 @@ using System.Threading.Tasks;
 
 
 
-public class Beer() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy)
+public class Beer() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, TargetType.AnyEnemy), ITranscendenceCard
 {
+    
+    public CardModel GetTranscendenceTransformedCard()
+    {
+        return ModelDb.Card<Futdebiere>();
+    }
     protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move), new AlcoolVar(3)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

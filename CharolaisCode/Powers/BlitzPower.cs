@@ -39,6 +39,6 @@ public class BlitzPower : CharolaisPower
         }
 
         await PowerCmd.Apply<ChestPower>((PlayerChoiceContext)new ThrowingPlayerChoiceContext(),
-            (IEnumerable<Creature>)this.CombatState.HittableEnemies, (Decimal)this.Amount, this.Owner, (CardModel)null);
+            (IEnumerable<Creature>)this.CombatState.HittableEnemies, (Decimal)this.Amount, this.Owner, null);
     }
 }

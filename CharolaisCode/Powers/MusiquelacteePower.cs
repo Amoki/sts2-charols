@@ -26,7 +26,7 @@ public class MusiquelacteePower : CharolaisPower
         
         if (count == 0)
         {
-            return playCount + 1;
+            return playCount + 2;
         }
         return playCount;
     }

@@ -152,5 +152,15 @@
   "CHAROLAIS-FUTDEBIERE.description": "Infligez {Damage:diff()} dégâts.\nGagnez {Power:diff()} [gold]Pinte[/gold].",
   "CHAROLAIS-FUTDEBIERE.title": "Fut de Bière",
   "CHAROLAIS-MUSIQUELACTEE.description": "La première carte [gold]Épuisée[/gold] jouée chaque tour coûte 0 et est jouée une fois de plus.",
-  "CHAROLAIS-MUSIQUELACTEE.title": "Musique Lactée"
+  "CHAROLAIS-MUSIQUELACTEE.title": "Musique Lactée",
+  "CHAROLAIS-COUPDECRANE.description": "Infligez {Damage:diff()} dégâts.\nPerdez 3 [gold]Pinte[/gold].",
+  "CHAROLAIS-COUPDECRANE.title": "Coup de Crâne",
+  "CHAROLAIS-BIEREVOLANTE.description": "Infligez vos [gold]Pinte[/gold] en dégâts{IfUpgraded:show: 2 fois|}à TOUS les ennemis.\n[gold]Défaussez[/gold] 1 carte au hasard.",
+  "CHAROLAIS-BIEREVOLANTE.title": "Bière Volante",
+  "CHAROLAIS-LEGAMBITDUROI.description": "Appliquez {Power:diff()} [gold]Coups d'avance[/gold] puis [gold]Échec[/gold].",
+  "CHAROLAIS-LEGAMBITDUROI.title": "Le Gambit du Roi",
+  "CHAROLAIS-ECHECETMAT.description": "Infligez {Damage:diff()} dégâts, [gold]Shrink[/gold] (1) et [gold]Échec[/gold] à TOUS les ennemis.",
+  "CHAROLAIS-ECHECETMAT.title": "Échec et Mat",
+  "CHAROLAIS-TOURNOISDEPETANQUE.description": "Gagnez [blue]{Power:diff()}[/blue] d'[gold]Armure[/gold] pour chaque carte [green]Pétanque[/green] piochée.",
+  "CHAROLAIS-TOURNOISDEPETANQUE.title": "Tournois de Pétanque"
 }

@@ -1,10 +1,12 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
+using Charolais.CharolaisCode.Cards.Ancient;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Logging;
+using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards;
 
@@ -31,4 +33,5 @@ public abstract class CharolaisCard(int cost, CardType type, CardRarity rarity, 
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    
 }

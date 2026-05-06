@@ -46,7 +46,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         {
             var serializedCard = cardToGive.ToSerializable();
             var newCard = CardModel.FromSerializable(serializedCard);
-            cardPlay.Target.CombatState!.AddCard(newCard, cardPlay.Target.Player);
+            cardPlay.Target.CombatState?.AddCard(newCard, cardPlay.Target.Player);
             await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, cardPlay.Target.Player);
             await CardPileCmd.RemoveFromCombat(cardToGive);
         }
@@ -55,7 +55,7 @@ public class TyrolienneAPet() : CharolaisCard(1,
         {
             var serializedCard = cardToReceive.ToSerializable();
             var newCard = CardModel.FromSerializable(serializedCard);
-            base.CombatState!.AddCard(newCard, base.Owner);
+            base.CombatState?.AddCard(newCard, base.Owner);
             await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, base.Owner);
             await CardPileCmd.RemoveFromCombat(cardToReceive);
         }

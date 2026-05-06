@@ -1,7 +1,7 @@
 {
   "CHAROLAIS-CHAROLAIS.aromaPrinciple": "[sine][gold]Le gras c'est la vie.[/gold][/sine]",
-  "CHAROLAIS-CHAROLAIS.banter.alive.endTurnPing": "C'est pour aujourd'hui ou pour demain Polo ?",
-  "CHAROLAIS-CHAROLAIS.banter.dead.endTurnPing": "Bougez-vous les noobs !",
+  "CHAROLAIS-CHAROLAIS.banter.alive.endTurnPing": "Vous êtes fatigués...",
+  "CHAROLAIS-CHAROLAIS.banter.dead.endTurnPing": "Non, non non non, non non !",
   "CHAROLAIS-CHAROLAIS.cardsModifierDescription": "Les cartes du Charolais peuvent apparaître dans les récompenses et dans la boutique.",
   "CHAROLAIS-CHAROLAIS.cardsModifierTitle": "Cartes du Charolais",
   "CHAROLAIS-CHAROLAIS.description": "L'essence de Charols incarnée dans ce personnage.",
@@ -13,5 +13,5 @@
   "CHAROLAIS-CHAROLAIS.pronounSubject": "ilt",
   "CHAROLAIS-CHAROLAIS.title": "Le Charolais",
   "CHAROLAIS-CHAROLAIS.titleObject": "Le Charolais",
-  "RANDOM_CHARACTER.description": "Random pour les hommes."
+  "RANDOM_CHARACTER.description": "Random pour les [aqua]HOMMES[/aqua]."
 }

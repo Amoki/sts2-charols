@@ -3,8 +3,7 @@ using BaseLib.Extensions;
 using BaseLib.Utils;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Extensions;
-using Godot;
-using MegaCrit.Sts2.Core.Logging;
+using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Relics;
 
@@ -17,4 +16,9 @@ public abstract class CharolaisRelic : CustomRelicModel
         $"{Id.Entry.RemovePrefix().ToLowerInvariant()}_outline.png".RelicImagePath();
     
     protected override string BigIconPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".BigRelicImagePath();
+    
+    public override RelicModel? GetUpgradeReplacement()
+    {
+        return ModelDb.Relic<Tireusedoublebec>();
+    }
 }
