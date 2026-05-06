@@ -30,18 +30,16 @@ public class Tropheemasterscharols() : CharolaisCard(3, CardType.Power, CardRari
 
     protected override async Task OnPlay( PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int amount = this.DynamicVars["Power"].IntValue;
+        var amount = this.DynamicVars["Power"].IntValue;
         var combatState = this.CombatState;
         if (combatState != null)
         {
-            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature,
-                (Decimal) amount, this.Owner.Creature, (CardModel)this);
-            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature,
-                (Decimal) amount, this.Owner.Creature, (CardModel)this);
+            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, (CardModel)this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, (CardModel)this);
         }
         
-        CardSelectorPrefs prefs = new CardSelectorPrefs(SettofreeSelectionPrompt, 1);
-        (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (Func<CardModel, bool>) (c => c.CostsEnergyOrStars(false) || c.CostsEnergyOrStars(true)), (AbstractModel) this)).FirstOrDefault<CardModel>()?.SetToFreeThisCombat();
+        var prefs = new CardSelectorPrefs(SettofreeSelectionPrompt, 1);
+        (await CardSelectCmd.FromHand(choiceContext, this.Owner, prefs, (c => c.CostsEnergyOrStars(false) || c.CostsEnergyOrStars(true)), this)).FirstOrDefault()?.SetToFreeThisCombat();
     }
 
 

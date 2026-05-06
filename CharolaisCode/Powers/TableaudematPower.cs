@@ -21,6 +21,8 @@ public class TableaudematPower : CharolaisPower
         Creature? dealer,
         CardModel? cardSource)
     {
+        if (target != base.Owner.Player?.Creature)
+            return;
         if (dealer != null && dealer != this.Owner)
         {
             this.Flash();

@@ -13,8 +13,8 @@ public class Coupdecrane() : CharolaisCard(1,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new DamageVar(9M, ValueProp.Move),
-        (DynamicVar) new DynamicVar("Power", 3)
+        new DamageVar(9M, ValueProp.Move),
+        new DynamicVar("Power", 3)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<PintPower>())];
@@ -25,7 +25,7 @@ public class Coupdecrane() : CharolaisCard(1,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
-        int powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
+        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         if (powerAmount < 3)
         {
             await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, Decimal.Negate(powerAmount),

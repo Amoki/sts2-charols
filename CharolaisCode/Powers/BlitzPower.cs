@@ -1,13 +1,10 @@
 ﻿using Godot;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Helpers;
 using MegaCrit.Sts2.Core.HoverTips;
-using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 
@@ -30,15 +27,15 @@ public class BlitzPower : CharolaisPower
             return;
         this.Flash();
         await Cmd.CustomScaledWait(0.2f, 0.4f);
-        foreach (Creature hittableEnemy in (IEnumerable<Creature>)this.CombatState.HittableEnemies)
+        foreach (var hittableEnemy in this.CombatState.HittableEnemies)
         {
-            NCreature? creatureNode = NCombatRoom.Instance?.GetCreatureNode(hittableEnemy);
+            var creatureNode = NCombatRoom.Instance?.GetCreatureNode(hittableEnemy);
             if (creatureNode != null)
-                NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(
-                    (Node)NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("80001e")));
+            {
+                NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("80001e")));
+            }
         }
 
-        await PowerCmd.Apply<ChestPower>((PlayerChoiceContext)new ThrowingPlayerChoiceContext(),
-            (IEnumerable<Creature>)this.CombatState.HittableEnemies, (Decimal)this.Amount, this.Owner, null);
+        await PowerCmd.Apply<ChestPower>(new ThrowingPlayerChoiceContext(), this.CombatState.HittableEnemies, this.Amount, this.Owner, null);
     }
 }

@@ -27,14 +27,12 @@ public class Sortiedupetit() : CharolaisCard(0, CardType.Skill, CardRarity.Rare,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         
-        int amount = this.DynamicVars["Power"].IntValue;
+        var amount = this.DynamicVars["Power"].IntValue;
         var combatState = this.CombatState;
         if (combatState != null)
         {
-            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature,
-                (Decimal) amount, this.Owner.Creature, (CardModel)this);
-            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature,
-                (Decimal) amount, this.Owner.Creature, (CardModel)this);
+            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, (CardModel)this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, (CardModel)this);
         }
     }
     

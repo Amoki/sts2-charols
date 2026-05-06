@@ -13,7 +13,8 @@ public class BitesignalPower : CharolaisPower
     
     public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
-        if (side != base.Owner.Side || base.Owner?.Player?.PlayerCombatState == null) return;
+        if (side != base.Owner.Side) 
+            return;
         
         Flash();
         await CreatureCmd.GainBlock(base.Owner, base.Amount, ValueProp.Unpowered, null);

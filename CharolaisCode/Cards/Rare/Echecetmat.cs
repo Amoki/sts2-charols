@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -39,15 +38,13 @@ public class Echecetmat() : CharolaisCard(1,
         await CreatureCmd.TriggerAnim(this.Owner.Creature, "Cast", this.Owner.Character.CastAnimDelay);
         VfxCmd.PlayOnCreatureCenter(this.Owner.Creature, "vfx/vfx_flying_slash");
         
-        var actors = CombatState?.Enemies;
-        Debug.Assert(actors != null, nameof(actors) + " != null");
-        foreach (var actor in actors)
+        var enemies = CombatState?.Enemies;
+        Debug.Assert(enemies != null, nameof(enemies) + " != null");
+        foreach (var enemy in enemies)
         {
-            if (actor is { } enemy && enemy.IsAlive && enemy != this.Owner.Creature)
-            {
-                await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, enemy);
-                await PowerCmd.Apply<ShrinkPower>(choiceContext, actor, this.DynamicVars["Power"].IntValue, this.Owner.Creature, (CardModel)this);
-            }
+            if (!enemy.IsAlive || enemy == this.Owner.Creature) continue;
+            await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, enemy);
+            await PowerCmd.Apply<ShrinkPower>(choiceContext, enemy, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         }
     }
     

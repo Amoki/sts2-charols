@@ -11,8 +11,7 @@ public class Lancerdefrisbee() : CharolaisCard(0,
     TargetType.RandomEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-
-        (DynamicVar) new DamageVar(6M, ValueProp.Move)
+        new DamageVar(6M, ValueProp.Move)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

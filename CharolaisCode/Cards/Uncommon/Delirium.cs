@@ -12,7 +12,7 @@ public class Delirium() : CharolaisCard(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new PowerVar<PintPower>(1)
+        new PowerVar<PintPower>(1)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

@@ -5,7 +5,6 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
@@ -16,7 +15,7 @@ public class Aperisplif() : CharolaisCard(2,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(13m, ValueProp.Move),
+        new BlockVar(13m, ValueProp.Move),
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromKeyword(CardKeyword.Retain))];
@@ -28,7 +27,7 @@ public class Aperisplif() : CharolaisCard(2,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        CardSelectorPrefs prefs = new CardSelectorPrefs(RetainSelectionPrompt, 1);
+        var prefs = new CardSelectorPrefs(RetainSelectionPrompt, 1);
         var selectedCards = await CardSelectCmd.FromHand(
             choiceContext, 
             this.Owner, 
@@ -36,7 +35,7 @@ public class Aperisplif() : CharolaisCard(2,
             c => !c.Keywords.Contains(CardKeyword.Retain), 
             this
         );
-        CardModel? card = selectedCards?.FirstOrDefault();
+        var card = selectedCards.FirstOrDefault();
         if (card == null) return;
         CardCmd.ApplyKeyword(card, CardKeyword.Retain);
     }

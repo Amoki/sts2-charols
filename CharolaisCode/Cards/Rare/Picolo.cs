@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
@@ -20,7 +19,7 @@ public class Picolo() : CharolaisCard(1, CardType.Power, CardRarity.Rare, Target
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.TriggerAnim(this.Owner.Creature, "Cast", this.Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<PicoloPower>(choiceContext, this.Owner.Creature, this.DynamicVars.Cards.BaseValue, this.Owner.Creature, (CardModel) this);
+        await PowerCmd.Apply<PicoloPower>(choiceContext, this.Owner.Creature, this.DynamicVars.Cards.BaseValue, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()

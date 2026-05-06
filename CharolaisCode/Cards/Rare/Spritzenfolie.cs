@@ -1,6 +1,5 @@
 ﻿using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -11,8 +10,8 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class Spritzenfolie() : CharolaisCard(2, CardType.Attack, CardRarity.Rare, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new DamageVar(18M, ValueProp.Move),
-        (DynamicVar) new AlcoolVar(6)
+        new DamageVar(18M, ValueProp.Move),
+        new AlcoolVar(6),
     ];
     
     protected override async Task OnPlay(
@@ -21,7 +20,7 @@ public class Spritzenfolie() : CharolaisCard(2, CardType.Attack, CardRarity.Rare
     {
         if (CombatState != null)
         {
-            AttackCommand attackCommand = await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue)
+            await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue)
                 .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);

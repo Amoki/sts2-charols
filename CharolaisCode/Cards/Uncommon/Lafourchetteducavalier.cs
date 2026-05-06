@@ -14,7 +14,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new DamageVar(5M, ValueProp.Move)
+        new DamageVar(5M, ValueProp.Move)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ChestPower>())];
@@ -26,12 +26,12 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         
-        var actors = CombatState?.Enemies;
+        var enemies = CombatState?.Enemies;
 
-        Debug.Assert(actors != null, nameof(actors) + " != null");
-        foreach (var actor in actors)
+        Debug.Assert(enemies != null, nameof(enemies) + " != null");
+        foreach (var enemy in enemies)
         {
-            if (actor is { } enemy && enemy.IsAlive && enemy != this.Owner.Creature)
+            if (enemy.IsAlive && enemy != this.Owner.Creature)
             {
                 await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, enemy);
             }

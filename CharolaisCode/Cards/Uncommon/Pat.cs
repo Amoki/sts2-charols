@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
@@ -23,9 +22,8 @@ public class Pat() : CharolaisCard(2,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int amount = DynamicVars["Power"].IntValue;
-        await PowerCmd.Apply<PatPower>(choiceContext, this.Owner.Creature,
-                (Decimal)amount, this.Owner.Creature, (CardModel)this);
+        var amount = DynamicVars["Power"].IntValue;
+        await PowerCmd.Apply<PatPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()

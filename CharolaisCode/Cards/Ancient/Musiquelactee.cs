@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards.Ancient;
 
@@ -22,7 +21,7 @@ public class Musiquelactee() : CharolaisCard(3, CardType.Power, CardRarity.Ancie
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.TriggerAnim(this.Owner.Creature, "Cast", this.Owner.Character.CastAnimDelay);
-        await PowerCmd.Apply<MusiquelacteePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, (CardModel) this);
+        await PowerCmd.Apply<MusiquelacteePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()

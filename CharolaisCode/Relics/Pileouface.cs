@@ -11,7 +11,7 @@ namespace Charolais.CharolaisCode.Relics;
 
 [Pool(typeof(CharolaisRelicPool))]
 
-public class Pileouface() : CharolaisRelic
+public class Pileouface : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Uncommon;
 

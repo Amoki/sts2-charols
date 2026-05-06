@@ -25,8 +25,7 @@ public class Legambitduroi() : CharolaisCard(1,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         if (cardPlay.Target != null)
-            await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target, this.DynamicVars["Power"].IntValue,
-                this.Owner.Creature, (CardModel)this);
+            await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
     }
     

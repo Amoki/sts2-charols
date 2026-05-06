@@ -1,5 +1,4 @@
-﻿using Charolais.CharolaisCode.Cards;
-using Charolais.CharolaisCode.Powers;
+﻿using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -22,7 +21,7 @@ public class LoubardeObservatoire() : CharolaisCard(1, CardType.Skill, CardRarit
             where c.IsAlive && c.IsPlayer
             select c;
         
-        foreach (Creature item in enumerable)
+        foreach (var item in enumerable)
         {
             await PowerCmd.Apply<LoubardeObservatoirePower>(choiceContext, item.Player!.Creature, appliedTurn, this.Owner.Creature, this);
         }

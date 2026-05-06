@@ -10,7 +10,7 @@ public class Saladedepates() : CharolaisCard(1,
     CardType.Skill, CardRarity.Common,
     TargetType.Self)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [(DynamicVar)new EnergyVar(2)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new EnergyVar(2)];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
@@ -19,7 +19,7 @@ public class Saladedepates() : CharolaisCard(1,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PlayerCmd.GainEnergy((Decimal) this.DynamicVars.Energy.IntValue, this.Owner);
+        await PlayerCmd.GainEnergy(this.DynamicVars.Energy.IntValue, this.Owner);
     }
     
     protected override void OnUpgrade() => this.DynamicVars.Energy.UpgradeValueBy(1M);

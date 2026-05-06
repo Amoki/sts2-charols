@@ -11,7 +11,7 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class Tourdefrance() : CharolaisCard(0, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new PowerVar<RegenPower>(1)
+        new PowerVar<RegenPower>(1)
     ];
 
     protected override bool HasEnergyCostX => true;
@@ -24,16 +24,14 @@ public class Tourdefrance() : CharolaisCard(0, CardType.Skill, CardRarity.Rare, 
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int powerAmount = this.ResolveEnergyXValue();
+        var powerAmount = this.ResolveEnergyXValue();
         if (this.IsUpgraded)
         {
-            await PowerCmd.Apply<RegenPower>(choiceContext, this.Owner.Creature, (decimal.Add(1, powerAmount)),
-                this.Owner.Creature, this);
+            await PowerCmd.Apply<RegenPower>(choiceContext, this.Owner.Creature, (decimal.Add(1, powerAmount)), this.Owner.Creature, this);
         }
         else
         {
-            await PowerCmd.Apply<RegenPower>(choiceContext, this.Owner.Creature, (decimal)powerAmount,
-                this.Owner.Creature, this);
+            await PowerCmd.Apply<RegenPower>(choiceContext, this.Owner.Creature, (decimal)powerAmount, this.Owner.Creature, this);
         }
     }
 

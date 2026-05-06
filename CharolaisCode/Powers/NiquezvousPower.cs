@@ -2,7 +2,6 @@
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Charolais.CharolaisCode.Powers;
@@ -17,16 +16,18 @@ public class NiquezvousPower : CharolaisPower
     
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
-
+        if (player != base.Owner.Player)
+            return;
+        
         Flash();
         await CreatureCmd.Heal(base.Owner, 2m);
         var players = base.CombatState?.Players;
         if (players == null) { return; }
-        Player randomPlayer = base.CombatState?.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
+        var randomPlayer = base.CombatState?.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
         
         if (player.Creature != base.Owner || base.Owner?.Player?.PlayerCombatState == null) return;
         {
-            await PowerCmd.Apply<FrailPower>(choiceContext, randomPlayer.Creature, 1, base.Owner, (CardModel?)null);
+            await PowerCmd.Apply<FrailPower>(choiceContext, randomPlayer.Creature, 1, base.Owner, null);
         }
     }
 }

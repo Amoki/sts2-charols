@@ -4,14 +4,13 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Foncedalle() : CharolaisCard(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar)new EnergyVar(1),
+        new EnergyVar(1),
         new DynamicVar("Power", 1)
     ];
     
@@ -23,10 +22,9 @@ public class Foncedalle() : CharolaisCard(2, CardType.Skill, CardRarity.Rare, Ta
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int power = base.Owner.Creature.GetPowerAmount<PintPower>();
-        var energy = DynamicVars["Power"].IntValue;
+        var power = base.Owner.Creature.GetPowerAmount<PintPower>();
         await PlayerCmd.GainEnergy(power, this.Owner);
-        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, decimal.Negate(power), this.Owner.Creature, (CardModel) this);
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, decimal.Negate(power), this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()

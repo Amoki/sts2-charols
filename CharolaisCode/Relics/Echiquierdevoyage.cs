@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace Charolais.CharolaisCode.Relics;
 
 [Pool(typeof(CharolaisRelicPool))]
-public class Echiquierdevoyage() : CharolaisRelic
+public class Echiquierdevoyage : CharolaisRelic
 {
   public override RelicRarity Rarity => RelicRarity.Uncommon;
   
@@ -24,10 +24,10 @@ public class Echiquierdevoyage() : CharolaisRelic
     HoverTipFactory.FromPower<ChestPower>()
   ];
   
-  public override Decimal ModifyPowerAmountGiven(
+  public override decimal ModifyPowerAmountGiven(
     PowerModel power,
     Creature giver,
-    Decimal amount,
+    decimal amount,
     Creature? target,
     CardModel? cardSource)
   {

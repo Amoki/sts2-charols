@@ -6,15 +6,15 @@ using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Charolais.CharolaisCode.Cards.Uncommon;
+namespace Charolais.CharolaisCode.Cards.Common;
 
 public class Louvertureitalienne() : CharolaisCard(1,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new DamageVar(8M, ValueProp.Move),
-        (DynamicVar) new CardsVar(1)
+        new DamageVar(8M, ValueProp.Move),
+        new CardsVar(1),
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -31,7 +31,7 @@ public class Louvertureitalienne() : CharolaisCard(1,
                 .Execute(choiceContext);
             var target = cardPlay.Target;
             if (target == null || !target.IsAlive) return;
-            int amount = target.GetPowerAmount<ChestPower>();
+            var amount = target.GetPowerAmount<ChestPower>();
             if (amount > 0)
             {
                 await CardPileCmd.Draw(choiceContext, this.DynamicVars.Cards.BaseValue, this.Owner);

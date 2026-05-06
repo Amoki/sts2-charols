@@ -15,18 +15,18 @@ public class Labricotdejacoulot() : CharolaisCard(1,
     public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(1M, ValueProp.Move),
-        new PowerVar<PintPower>(1M)
+        new BlockVar(1M, ValueProp.Move),
+        new PowerVar<PintPower>(1M),
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<PintPower>())];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
-        int blockAmount = this.DynamicVars.Block.IntValue;
-        int totalAmount = powerAmount + blockAmount;
-        BlockVar manualBlock = new BlockVar(0, ValueProp.Move);
+        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
+        var blockAmount = this.DynamicVars.Block.IntValue;
+        var totalAmount = powerAmount + blockAmount;
+        var manualBlock = new BlockVar(0, ValueProp.Move);
         manualBlock.BaseValue = totalAmount;
         {
             await CreatureCmd.GainBlock(this.Owner.Creature, manualBlock, cardPlay);

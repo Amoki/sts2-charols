@@ -14,7 +14,7 @@ public static class CheckmateAction
     {
         var target = targetOverride ?? cardPlay.Target;
         if (target == null || !target.IsAlive) return;
-        int amount = target.GetPowerAmount<ChestPower>();
+        var amount = target.GetPowerAmount<ChestPower>();
         if (amount > 0)
         {
             await DamageCmd.Attack(amount)

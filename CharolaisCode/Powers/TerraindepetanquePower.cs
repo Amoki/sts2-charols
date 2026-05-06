@@ -17,7 +17,7 @@ public class TerraindepetanquePower : CharolaisPower
 
   public override Task BeforePowerAmountChanged(
     PowerModel power,
-    Decimal amount,
+    decimal amount,
     Creature target,
     Creature? applier,
     CardModel? cardSource)
@@ -30,7 +30,7 @@ public class TerraindepetanquePower : CharolaisPower
 
   public override Task BeforeApplied(
     Creature target,
-    Decimal amount,
+    decimal amount,
     Creature? applier,
     CardModel? cardSource)
   {
@@ -40,8 +40,8 @@ public class TerraindepetanquePower : CharolaisPower
 
   public override bool TryModifyEnergyCostInCombatLate(
     CardModel card,
-    Decimal originalCost,
-    out Decimal modifiedCost)
+    decimal originalCost,
+    out decimal modifiedCost)
   {
     modifiedCost = originalCost;
     if (this.ShouldSkip(card))
@@ -52,8 +52,8 @@ public class TerraindepetanquePower : CharolaisPower
 
   public override bool TryModifyStarCost(
     CardModel card,
-    Decimal originalCost,
-    out Decimal modifiedCost)
+    decimal originalCost,
+    out decimal modifiedCost)
   {
     modifiedCost = originalCost;
     if (this.ShouldSkip(card))
@@ -64,7 +64,7 @@ public class TerraindepetanquePower : CharolaisPower
 
   public override Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
   {
-    if (cardPlay.Card.Owner.Creature == this.Owner && cardPlay != null && !cardPlay.IsAutoPlay && cardPlay.IsLastInSeries)
+    if (cardPlay.Card.Owner.Creature == this.Owner && !cardPlay.IsAutoPlay && cardPlay.IsLastInSeries)
       ++this.GetInternalData<TerraindepetanquePower.Data>().CardsPlayedThisTurn;
     return Task.CompletedTask;
   }
@@ -84,13 +84,13 @@ public class TerraindepetanquePower : CharolaisPower
     if (card.Owner.Creature != this.Owner)
       return true;
     
-    PileType? type = card.Pile?.Type;
-    bool inHandOrPlay = type == PileType.Hand || type == PileType.Play;
+    var type = card.Pile?.Type;
+    var inHandOrPlay = type == PileType.Hand || type == PileType.Play;
     if (!inHandOrPlay)
       return true;
     
-    bool isAttack = card.Type == CardType.Attack;
-    bool isPetanque = card.Tags.Contains(PetanqueTag.Petanque);
+    var isAttack = card.Type == CardType.Attack;
+    var isPetanque = card.Tags.Contains(PetanqueTag.Petanque);
 
     if (!isAttack || !isPetanque)
       return true;

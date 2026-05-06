@@ -19,31 +19,29 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(4M),
         new CalculationExtraVar(1M),
-        (DynamicVar) new CalculatedBlockVar(ValueProp.Move).WithMultiplier((card, _) => (decimal)card.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque)))
+        new CalculatedBlockVar(ValueProp.Move).WithMultiplier((card, _) => card.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque)))
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         if (this.IsUpgraded)
         {
-            int count = base.Owner.PlayerCombatState.AllCards.Count(c =>
-                c.Tags != null && c.Tags.Contains(PetanqueTag.Petanque));
+            var count = base.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
 
-            decimal extraBonus = 2M;
-            decimal totalBlock = 4M + (extraBonus * count);
-            BlockVar manualBlock = new BlockVar(0, ValueProp.Move);
+            var extraBonus = 2M;
+            var totalBlock = 4M + (extraBonus * count);
+            var manualBlock = new BlockVar(0, ValueProp.Move);
             manualBlock.BaseValue = totalBlock;
             
             await CreatureCmd.GainBlock(this.Owner.Creature, manualBlock, cardPlay);
         }
         else
         {
-            int count = base.Owner.PlayerCombatState.AllCards.Count(c =>
-                c.Tags != null && c.Tags.Contains(PetanqueTag.Petanque));
+            var count = base.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
 
-            decimal extraBonus = 1M;
-            decimal totalBlock = 4M + (extraBonus * count);
-            BlockVar manualBlock = new BlockVar(0, ValueProp.Move);
+            var extraBonus = 1M;
+            var totalBlock = 4M + (extraBonus * count);
+            var manualBlock = new BlockVar(0, ValueProp.Move);
             manualBlock.BaseValue = totalBlock;
             
             await CreatureCmd.GainBlock(this.Owner.Creature, manualBlock, cardPlay);

@@ -8,7 +8,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 
 namespace Charolais.CharolaisCode.Relics;
 
-public class Tireusedoublebec() : CharolaisRelic
+public class Tireusedoublebec : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
     

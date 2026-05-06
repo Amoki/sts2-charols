@@ -28,8 +28,8 @@ public class CharolaisCardPool : CustomCardPoolModel
     }*/
 
     //Color of small card icons
-    public override Color DeckEntryCardColor => new("ffffff");
-    public override Color EnergyOutlineColor => new Color("b83405");
+    public override Color DeckEntryCardColor => new ("FABB5C");
+    public override Color EnergyOutlineColor => new ("b83405");
 
     public override bool IsColorless => false;
 }

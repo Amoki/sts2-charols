@@ -20,7 +20,6 @@ public class Lancerdecochonnet() : CharolaisCard(1,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        Lancerdecochonnet card = this;
         await PowerCmd.Apply<LancerdecochonnetPower>(choiceContext, this.Owner.Creature, this.DynamicVars.Dexterity.BaseValue, this.Owner.Creature,this);
     }
     

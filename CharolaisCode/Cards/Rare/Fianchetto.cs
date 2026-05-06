@@ -15,7 +15,7 @@ public class Fianchetto() : CharolaisCard(2,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        (DynamicVar)new DamageVar(9M, ValueProp.Move)
+        new DamageVar(9M, ValueProp.Move)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ChestPower>())];
@@ -24,17 +24,16 @@ public class Fianchetto() : CharolaisCard(2,
     {
         var target = cardPlay.Target;
         if (target == null || !target.IsAlive) return;
-        int amount = target.GetPowerAmount<ChestPower>();
+        var amount = target.GetPowerAmount<ChestPower>();
+        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         if (amount > 0)
         {
-            ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
             await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(3).FromCard(this).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(context);
         }
         else
         {
-            ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
             await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(context);

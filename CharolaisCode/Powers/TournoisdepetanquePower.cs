@@ -17,6 +17,9 @@ public class TournoisdepetanquePower : CharolaisPower
         CardModel card,
         bool fromHandDraw)
     {
+        if (card.Owner != base.Owner.Player)
+            return;
+        
         if (card.Tags.Contains(PetanqueTag.Petanque))
         {
             Flash();

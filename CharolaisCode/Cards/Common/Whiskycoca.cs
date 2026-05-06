@@ -15,8 +15,8 @@ public class Whiskycoca() : CharolaisCard(0,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 
-        (DynamicVar) new BlockVar(5m, ValueProp.Move),
-        (DynamicVar) new AlcoolVar(3)
+        new BlockVar(5m, ValueProp.Move),
+        new AlcoolVar(3),
     ];
     
     

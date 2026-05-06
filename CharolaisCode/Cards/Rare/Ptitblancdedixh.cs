@@ -9,7 +9,7 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class Ptitblancdedixh() : CharolaisCard(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new MaxHpVar(2M),
+        new MaxHpVar(2M),
         new AlcoolVar(3)
     ];
 
@@ -17,7 +17,7 @@ public class Ptitblancdedixh() : CharolaisCard(2, CardType.Skill, CardRarity.Rar
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-            await CreatureCmd.GainMaxHp(this.Owner.Creature, (Decimal) this.DynamicVars.MaxHp.IntValue);
+            await CreatureCmd.GainMaxHp(this.Owner.Creature, this.DynamicVars.MaxHp.IntValue);
             await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, DynamicVars["Alcool"].IntValue, this.Owner.Creature, this);
     }
     

@@ -11,7 +11,7 @@ namespace Charolais.CharolaisCode.Relics;
 
 [Pool(typeof(CharolaisRelicPool))]
 
-public class Anneaumagique() : CharolaisRelic
+public class Anneaumagique : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Common;
 
@@ -22,9 +22,9 @@ public class Anneaumagique() : CharolaisRelic
     
     public override async Task AfterRoomEntered(AbstractRoom room)
     {
-        if (!(room is CombatRoom))
+        if (room is not CombatRoom)
             return;
         Flash();
-        await PowerCmd.Apply<PintPower>((PlayerChoiceContext) new ThrowingPlayerChoiceContext(), this.Owner.Creature, 2, this.Owner.Creature, null);
+        await PowerCmd.Apply<PintPower>(new ThrowingPlayerChoiceContext(), this.Owner.Creature, 2, this.Owner.Creature, null);
     }
 }

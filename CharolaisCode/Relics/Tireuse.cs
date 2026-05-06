@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Charolais.CharolaisCode.Relics;
 
-public class Tireuse() : CharolaisRelic
+public class Tireuse : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
 

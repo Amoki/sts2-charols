@@ -14,17 +14,16 @@ public class PicoloPower : CharolaisPower
     public override async Task AfterPowerAmountChanged(
         PlayerChoiceContext choiceContext,
         PowerModel power,
-        Decimal amount,
+        decimal amount,
         Creature? applier,
         CardModel? cardSource)
     {
-        if (amount <= 0M || applier != this.Owner || !(power is PintPower))
+        if (amount <= 0M || applier != this.Owner || power is not PintPower)
             return;
         Flash();
         if (Owner.Player != null)
         {
-            IEnumerable<CardModel> cardModels =
-                await CardPileCmd.Draw(choiceContext, (Decimal)this.Amount, Owner.Player);
+           await CardPileCmd.Draw(choiceContext, this.Amount, Owner.Player);
         }
     }
 }

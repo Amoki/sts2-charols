@@ -15,7 +15,7 @@ public class Ladefensecarokann() : CharolaisCard(2,
     public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(12m, ValueProp.Move)
+        new BlockVar(12m, ValueProp.Move)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

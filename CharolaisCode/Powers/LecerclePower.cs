@@ -20,11 +20,13 @@ public class LecerclePower : CharolaisPower
         PlayerChoiceContext choiceContext,
         Player player)
     {
-        int powerAmount = this.Owner.GetPowerAmount<PintPower>();
+        if (player != base.Owner.Player)
+            return;
+        var powerAmount = this.Owner.GetPowerAmount<PintPower>();
         if (powerAmount >= 0)
         {
             Flash();
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, Decimal.Negate(powerAmount), this.Owner, null);
+            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, decimal.Negate(powerAmount), this.Owner, null);
         }
     }
 }

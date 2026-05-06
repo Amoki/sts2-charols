@@ -23,21 +23,21 @@ public class PintPower : CharolaisPower
         
         var alcoolPower = base.Owner.GetPowerAmount<PintPower>();
         
-        if (alcoolPower >= 12)
+        switch (alcoolPower)
         {
-            Flash();
-            await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-            base.SetAmount(0);
-        }
-        else if (alcoolPower >= 8)
-        {
-            Flash();
-            await CreatureCmd.Damage(choiceContext, base.Owner, 2m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-        }
-        else if (alcoolPower >= 4)
-        {
-            Flash();
-            await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+            case >= 12:
+                Flash();
+                await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                base.SetAmount(0);
+                break;
+            case >= 8:
+                Flash();
+                await CreatureCmd.Damage(choiceContext, base.Owner, 2m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                break;
+            case >= 4:
+                Flash();
+                await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                break;
         }
     }
 }

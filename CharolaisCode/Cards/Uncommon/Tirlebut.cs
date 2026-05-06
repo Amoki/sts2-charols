@@ -23,14 +23,14 @@ public class Tirlebut() : CharolaisCard(0,
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        int energyAmount = this.ResolveEnergyXValue();
-        ArgumentNullException.ThrowIfNull((object) cardPlay.Target, "cardPlay.Target");
+        var energyAmount = this.ResolveEnergyXValue();
+        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         await DamageCmd.Attack(energyAmount)
             .WithHitCount(energyAmount).FromCard(this)
             .Targeting(cardPlay.Target)
-            .WithHitVfxNode((Func<Creature, Node2D>) (t => (Node2D) NStabVfx.Create(t, true, VfxColor.Gold)))
+            .WithHitVfxNode(t => NStabVfx.Create(t, true, VfxColor.Gold))
             .Execute(choiceContext);
-        await PlayerCmd.GainEnergy((Decimal) this.DynamicVars.Energy.IntValue, this.Owner);
+        await PlayerCmd.GainEnergy(this.DynamicVars.Energy.IntValue, this.Owner);
     }
     
     protected override void OnUpgrade()

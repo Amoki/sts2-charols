@@ -7,13 +7,12 @@ using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.Factories;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Relics;
 
 [Pool(typeof(CharolaisRelicPool))]
 
-public class Ramasseboules() : CharolaisRelic
+public class Ramasseboules : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Rare;
     
@@ -27,7 +26,7 @@ public class Ramasseboules() : CharolaisRelic
         var petanqueCards = fullPool.Where(c => c.Tags.Contains(PetanqueTag.Petanque)).ToList();
         if (petanqueCards.Count == 0) return;
         
-        CardModel card = CardFactory.GetDistinctForCombat(
+        var card = CardFactory.GetDistinctForCombat(
             this.Owner, 
             petanqueCards, 
             1, 

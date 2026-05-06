@@ -13,12 +13,12 @@ public class MusiquelacteePower : CharolaisPower
 
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
-        bool hasExhaust = card.Keywords.Contains(CardKeyword.Exhaust);
+        var hasExhaust = card.Keywords.Contains(CardKeyword.Exhaust);
         if (!hasExhaust)
         {
             return playCount;
         }
-        int count = CombatManager.Instance.History.CardPlaysStarted.Count(e => 
+        var count = CombatManager.Instance.History.CardPlaysStarted.Count(e => 
             e.Actor == this.Owner && 
             e.CardPlay.Card.Keywords.Contains(CardKeyword.Exhaust) && 
             e.HappenedThisTurn(this.CombatState)
@@ -37,23 +37,18 @@ public class MusiquelacteePower : CharolaisPower
         out decimal modifiedCost)
     {
         modifiedCost = originalCost;
-        
-        if (card.Keywords.Contains(CardKeyword.Exhaust))
-        {
-            int count = CombatManager.Instance.History.CardPlaysStarted.Count(e => 
-                e.Actor == this.Owner && 
-                e.CardPlay.Card.Keywords.Contains(CardKeyword.Exhaust) && 
-                e.HappenedThisTurn(this.CombatState)
-            );
-            
-            if (count == 0)
-            {
-                modifiedCost = 0M;
-                return true;
-            }
-        }
 
-        return false;
+        if (!card.Keywords.Contains(CardKeyword.Exhaust)) return false;
+        var count = CombatManager.Instance.History.CardPlaysStarted.Count(e => 
+            e.Actor == this.Owner && 
+            e.CardPlay.Card.Keywords.Contains(CardKeyword.Exhaust) && 
+            e.HappenedThisTurn(this.CombatState)
+        );
+
+        if (count != 0) return false;
+        modifiedCost = 0M;
+        return true;
+
     }
     
     public override Task AfterModifyingCardPlayCount(CardModel card)

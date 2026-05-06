@@ -12,7 +12,7 @@ public class Siestedanslehamac() : CharolaisCard(0,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(4m, ValueProp.Move)
+        new BlockVar(4m, ValueProp.Move)
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];

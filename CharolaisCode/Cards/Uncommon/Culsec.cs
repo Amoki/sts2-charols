@@ -14,7 +14,7 @@ public class Culsec() : CharolaisCard(1,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(7m, ValueProp.Move),
+        new BlockVar(7m, ValueProp.Move),
         new PowerVar<PintPower>(1)
     ];
 
@@ -26,7 +26,7 @@ public class Culsec() : CharolaisCard(1,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        int powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
+        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         if (powerAmount >= 8)
         {
             await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);

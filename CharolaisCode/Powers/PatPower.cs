@@ -22,14 +22,15 @@ public class PatPower : CharolaisPower
     public override async Task AfterPowerAmountChanged(
         PlayerChoiceContext choiceContext,
         PowerModel power,
-        Decimal amount,
+        decimal amount,
         Creature? applier,
         CardModel? cardSource)
     {
-            if (amount <= 0M || applier != this.Owner || !power.Owner.IsEnemy || applier != this.Owner || power is ITemporaryPower)
-                return;
-            this.Flash();
-            VfxCmd.PlayOnCreatureCenters((IEnumerable<Creature>) this.CombatState.HittableEnemies, "vfx/vfx_attack_slash");
-            await CreatureCmd.Damage(choiceContext, (IEnumerable<Creature>) this.CombatState.HittableEnemies, (Decimal)this.Amount, ValueProp.Unpowered, this.Owner, null);
+        if (amount <= 0M || !power.Owner.IsEnemy || applier != this.Owner || power is not ChestPower)
+            return;
+        
+        Flash();
+        VfxCmd.PlayOnCreatureCenters((IEnumerable<Creature>) this.CombatState.HittableEnemies, "vfx/vfx_attack_slash");
+        await CreatureCmd.Damage(choiceContext, (IEnumerable<Creature>) this.CombatState.HittableEnemies, this.Amount, ValueProp.Unpowered, this.Owner, null);
     }
 }

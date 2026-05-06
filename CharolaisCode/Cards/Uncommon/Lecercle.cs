@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
@@ -28,14 +27,12 @@ public class Lecercle() : CharolaisCard(2,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int amount = this.DynamicVars["Power"].IntValue;
+        var amount = this.DynamicVars["Power"].IntValue;
         var combatState = this.CombatState;
         if (combatState != null)
         {
-            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature,
-                (Decimal)amount, this.Owner.Creature, (CardModel)this);
-            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature,
-                (Decimal)amount, this.Owner.Creature, (CardModel)this);
+            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
             await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
         }
     }

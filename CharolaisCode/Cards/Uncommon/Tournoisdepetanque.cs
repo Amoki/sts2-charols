@@ -19,7 +19,7 @@ public class Tournoisdepetanque() : CharolaisCard(2,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int amount = this.DynamicVars["Power"].IntValue;
+        var amount = this.DynamicVars["Power"].IntValue;
         var combatState = this.CombatState;
         if (combatState != null)
         {

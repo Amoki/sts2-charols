@@ -1,8 +1,6 @@
 ﻿using Charolais.CharolaisCode.Powers;
-using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -27,8 +25,8 @@ public class Echec() : CharolaisCard(0, CardType.Skill, CardRarity.Basic, Target
     {
         get
         {
-            ICombatState? combatState = this.CombatState;
-            return combatState != null && combatState.HittableEnemies.Any<Creature>((Func<Creature, bool>) (e => e.HasPower<ChestPower>()));
+            var combatState = this.CombatState;
+            return combatState != null && combatState.HittableEnemies.Any(e => e.HasPower<ChestPower>());
         }
     }
     

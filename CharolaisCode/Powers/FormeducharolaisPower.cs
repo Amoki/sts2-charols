@@ -16,6 +16,8 @@ public class FormeducharolaisPower : CharolaisPower
     
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
+        if (player != base.Owner.Player)
+            return;
         Flash();
         await CreatureCmd.Heal(base.Owner, 2m);
         await PowerCmd.Apply<PintPower>(choiceContext, base.Owner, 5, base.Owner, (CardModel?)null);

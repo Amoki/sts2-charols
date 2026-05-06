@@ -13,8 +13,8 @@ public class Coupdetrottoir() : CharolaisCard(2,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new DamageVar(10M, ValueProp.Move),
-        (DynamicVar) new PowerVar<ShrinkPower>(1M)
+        new DamageVar(10M, ValueProp.Move),
+        new PowerVar<ShrinkPower>(1M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ShrinkPower>())];

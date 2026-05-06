@@ -20,7 +20,6 @@ public class Embrasserfanny() : CharolaisCard(1,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        Embrasserfanny card = this;
         await PowerCmd.Apply<EmbrasserfannyPower>(choiceContext, this.Owner.Creature, this.DynamicVars.Strength.BaseValue, this.Owner.Creature,this);
     }
     

@@ -15,7 +15,7 @@ public class Poncage() : CharolaisCard(2,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new DamageVar(14M, ValueProp.Move),
+        new DamageVar(14M, ValueProp.Move),
         new PowerVar<PintPower>(1)
     ];
     
@@ -30,7 +30,7 @@ public class Poncage() : CharolaisCard(2,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
-        int powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
+        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         if (powerAmount >= 0)
         {
             await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, (Decimal.Negate(powerAmount)), this.Owner.Creature, (CardModel) this);

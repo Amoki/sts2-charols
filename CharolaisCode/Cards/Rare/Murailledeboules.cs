@@ -3,7 +3,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -16,7 +15,7 @@ public class Murailledeboules() : CharolaisCard(1, CardType.Skill, CardRarity.Ra
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(8m, ValueProp.Move)
+        new BlockVar(8m, ValueProp.Move)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<DexterityPower>())];
@@ -27,9 +26,9 @@ public class Murailledeboules() : CharolaisCard(1, CardType.Skill, CardRarity.Ra
     {
         var dextPower = base.Owner.Creature.GetPowerAmount<DexterityPower>();
         var doubleDextPower = dextPower * 2;
-        await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, doubleDextPower, this.Owner.Creature, (CardModel) this);
+        await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, doubleDextPower, this.Owner.Creature, this);
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, Decimal.Negate(doubleDextPower), this.Owner.Creature, (CardModel) this);
+        await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, decimal.Negate(doubleDextPower), this.Owner.Creature,  this);
     }
 
     protected override void OnUpgrade()

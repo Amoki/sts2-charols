@@ -15,7 +15,7 @@ public class Ladefensesicilienne() : CharolaisCard(1,
     public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(7m, ValueProp.Move),
+        new BlockVar(7m, ValueProp.Move),
         new DynamicVar("Power", 7M)
     ];
     
@@ -27,10 +27,9 @@ public class Ladefensesicilienne() : CharolaisCard(1,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        int amount = this.DynamicVars["Power"].IntValue;
-        var randomEnemy = CombatState?.Enemies.Where(e => e.IsAlive).OrderBy(_ => Guid.NewGuid()).FirstOrDefault();
+        var randomEnemy = base.Owner.RunState.Rng.CombatTargets.NextItem(CombatState?.Enemies ?? throw new InvalidOperationException());
         if (randomEnemy != null)
-            await PowerCmd.Apply<ChestPower>(choiceContext, randomEnemy, amount, cardPlay.Card.Owner.Creature, cardPlay.Card);
+            await PowerCmd.Apply<ChestPower>(choiceContext, randomEnemy, this.DynamicVars["Power"].IntValue, cardPlay.Card.Owner.Creature, cardPlay.Card);
     }
     
     protected override void OnUpgrade()

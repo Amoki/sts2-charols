@@ -18,6 +18,8 @@ public class DeliriumPower : CharolaisPower
         PlayerChoiceContext choiceContext,
         Player player)
     {
+        if (player != this.Owner.Player)
+            return;
         Flash();
         await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, 1, this.Owner, null);
     }

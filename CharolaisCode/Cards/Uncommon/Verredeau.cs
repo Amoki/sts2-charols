@@ -15,7 +15,7 @@ public class Verredeau() : CharolaisCard(0,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        (DynamicVar) new BlockVar(6m, ValueProp.Move),
+        new BlockVar(6m, ValueProp.Move),
         new PowerVar<PintPower>(1)
     ];
 
@@ -27,10 +27,10 @@ public class Verredeau() : CharolaisCard(0,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        int powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
+        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         if (powerAmount >= 0)
         {
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, (Decimal.Negate(powerAmount)), this.Owner.Creature, (CardModel) this);
+            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, (decimal.Negate(powerAmount)), this.Owner.Creature, this);
         }
     }
     

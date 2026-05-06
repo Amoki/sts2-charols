@@ -15,7 +15,7 @@ namespace Charolais.CharolaisCode.Relics;
 
 [Pool(typeof(CharolaisRelicPool))]
 
-public class Canettede86() : CharolaisRelic
+public class Canettede86 : CharolaisRelic
 {
     private const string _turnsKey = "Turns";
     private bool _isActivating;
@@ -32,14 +32,11 @@ public class Canettede86() : CharolaisRelic
         HoverTipFactory.FromPower<PintPower>()
     ];
     
-    public override int DisplayAmount
-    {
-        get => !this.IsActivating ? this.TurnsSeen : this.DynamicVars["Turns"].IntValue;
-    }
+    public override int DisplayAmount => !this.IsActivating ? this.TurnsSeen : this.DynamicVars["Turns"].IntValue;
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        (DynamicVar)new DynamicVar("Power",1),
+        new DynamicVar("Power",1),
         new DynamicVar("Turns", 3M)
     ];
 
@@ -55,7 +52,7 @@ public class Canettede86() : CharolaisRelic
     }
 
     [SavedProperty]
-    public int TurnsSeen
+    private int TurnsSeen
     {
         get => this._turnsSeen;
         set
@@ -74,8 +71,8 @@ public class Canettede86() : CharolaisRelic
         this.Status = this.TurnsSeen == this.DynamicVars["Turns"].IntValue - 1 ? RelicStatus.Active : RelicStatus.Normal;
         if (this.TurnsSeen != 0)
             return;
-        TaskHelper.RunSafely(this.DoActivateVisuals());
-        int powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
+        await TaskHelper.RunSafely(this.DoActivateVisuals());
+        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, decimal.Multiply(2, powerAmount), this.Owner.Creature, null);
     }
     

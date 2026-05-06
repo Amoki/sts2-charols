@@ -1,6 +1,4 @@
-﻿using BaseLib.Patches.Content;
-using Charolais.CharolaisCode.Cards.Uncommon;
-using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
@@ -17,26 +15,21 @@ public class Bisou() : CharolaisCard(1,
     protected override HashSet<CardTag> CanonicalTags => [
         PetanqueTag.Petanque
     ];
-    
-    protected override IEnumerable<DynamicVar> CanonicalVars
-    {
-        get
-        {
-            return (IEnumerable<DynamicVar>) new DynamicVar[2]
-            {
-                (DynamicVar) new BlockVar(2m, ValueProp.Move),
-                (DynamicVar) new RepeatVar(1)
-            };
-        }
-    }
+
+    protected override IEnumerable<DynamicVar> CanonicalVars =>
+    [
+        new BlockVar(2m, ValueProp.Move),
+        new RepeatVar(1),
+    ];
+
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        int blockGains = 1;
+        var blockGains = 1;
         blockGains += this.DynamicVars.Repeat.IntValue;
-        for (int i = 0; i < blockGains; ++i)
+        for (var i = 0; i < blockGains; ++i)
         {
-            Decimal num = await CreatureCmd.GainBlock(this.Owner.Creature, this.DynamicVars.Block, cardPlay);
+            await CreatureCmd.GainBlock(this.Owner.Creature, this.DynamicVars.Block, cardPlay);
         }
     }
     

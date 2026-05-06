@@ -1,6 +1,5 @@
 ﻿using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
-using MegaCrit.Sts2.Core.Commands.Builders;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -15,7 +14,7 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
-        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((CardModel card, Creature? target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
         new AlcoolVar(1)
     ];
     
@@ -26,7 +25,7 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
     {
         if (CombatState != null)
         {
-            AttackCommand attackCommand = await DamageCmd.Attack(this.DynamicVars.CalculatedDamage)
+            await DamageCmd.Attack(this.DynamicVars.CalculatedDamage)
                 .FromCard(this).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);

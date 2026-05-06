@@ -10,7 +10,7 @@ using MegaCrit.Sts2.Core.Models;
 namespace Charolais.CharolaisCode.Relics;
 
 [Pool(typeof(CharolaisRelicPool))]
-public class Penduledechec() : CharolaisRelic
+public class Penduledechec : CharolaisRelic
 {
   public override RelicRarity Rarity => RelicRarity.Rare;
 
@@ -24,14 +24,20 @@ public class Penduledechec() : CharolaisRelic
     new DynamicVar("Power",2M)
   ];
   
-  public override Decimal ModifyPowerAmountGiven(
+  public override decimal ModifyPowerAmountGiven(
     PowerModel power,
     Creature giver,
-    Decimal amount,
+    decimal amount,
     Creature? target,
     CardModel? cardSource)
   {
-    return !(power is ChestPower) || giver != this.Owner.Creature ? amount : amount + (Decimal) this.DynamicVars["Power"].IntValue;
+    if (power is not ChestPower || giver != this.Owner.Creature)
+    {
+      return amount;
+    }
+
+    return amount + this.DynamicVars["Power"].IntValue;
+
   }
 
   public override Task AfterModifyingPowerAmountGiven(PowerModel power)

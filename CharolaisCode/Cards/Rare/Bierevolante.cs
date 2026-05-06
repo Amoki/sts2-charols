@@ -4,7 +4,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
@@ -12,7 +11,7 @@ public class Bierevolante() : CharolaisCard(1, CardType.Attack, CardRarity.Rare,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new RepeatVar(1),
-        (DynamicVar) new CardsVar(1)
+        new CardsVar(1),
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -30,8 +29,8 @@ public class Bierevolante() : CharolaisCard(1, CardType.Attack, CardRarity.Rare,
                 .WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_giant_horizontal_slash")
                 .Execute(choiceContext);
-        CardPile pile = PileType.Hand.GetPile(base.Owner);
-        CardModel? card = base.Owner.RunState.Rng.CombatCardSelection.NextItem<CardModel>((IEnumerable<CardModel>) pile.Cards);
+        var pile = PileType.Hand.GetPile(base.Owner);
+        var card = base.Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
         if (card == null)
             return;
         await CardCmd.Discard(choiceContext, card);

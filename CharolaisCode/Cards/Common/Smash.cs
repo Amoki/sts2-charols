@@ -3,7 +3,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Common;
@@ -22,8 +21,8 @@ public class Smash() : CharolaisCard(1,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-        CardPile pile = PileType.Hand.GetPile(base.Owner);
-        CardModel? card = base.Owner.RunState.Rng.CombatCardSelection.NextItem<CardModel>((IEnumerable<CardModel>) pile.Cards);
+        var pile = PileType.Hand.GetPile(base.Owner);
+        var card = base.Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
         if (card == null)
             return;
         await CardCmd.Exhaust(choiceContext, card);
