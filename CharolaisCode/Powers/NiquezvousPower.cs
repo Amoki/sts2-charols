@@ -20,7 +20,6 @@ public class NiquezvousPower : CharolaisPower
 
         Flash();
         await CreatureCmd.Heal(base.Owner, 2m);
-        
         var players = base.CombatState?.Players;
         if (players == null) { return; }
         Player randomPlayer = base.CombatState?.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();

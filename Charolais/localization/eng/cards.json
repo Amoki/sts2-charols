@@ -155,7 +155,7 @@
   "CHAROLAIS-MUSIQUELACTEE.title": "Musique Lactée",
   "CHAROLAIS-COUPDECRANE.description": "Infligez {Damage:diff()} dégâts.\nPerdez 3 [gold]Pinte[/gold].",
   "CHAROLAIS-COUPDECRANE.title": "Coup de Crâne",
-  "CHAROLAIS-BIEREVOLANTE.description": "Infligez vos [gold]Pinte[/gold] en dégâts{IfUpgraded:show: 2 fois|}à TOUS les ennemis.\n[gold]Défaussez[/gold] 1 carte au hasard.",
+  "CHAROLAIS-BIEREVOLANTE.description": "Infligez vos [gold]Pinte[/gold] en dégâts{IfUpgraded:show: 2 fois|} à TOUS les ennemis.\n[gold]Défaussez[/gold] 1 carte au hasard.",
   "CHAROLAIS-BIEREVOLANTE.title": "Bière Volante",
   "CHAROLAIS-LEGAMBITDUROI.description": "Appliquez {Power:diff()} [gold]Coups d'avance[/gold] puis [gold]Échec[/gold].",
   "CHAROLAIS-LEGAMBITDUROI.title": "Le Gambit du Roi",

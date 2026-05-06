@@ -45,8 +45,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         if (alcoolPower > 0)
         {
-            int index = new Random().Next(players.Count);
-            Player randomPlayer = players[index];
+            Player randomPlayer =  base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
             await Cmd.Wait(0.5f);
             await DamageCmd.Attack(alcoolPower).FromCard(this).Targeting(randomPlayer.Creature)
                 .WithHitFx("vfx/vfx_attack_slash")

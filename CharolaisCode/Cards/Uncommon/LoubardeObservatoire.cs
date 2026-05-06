@@ -16,10 +16,10 @@ public class LoubardeObservatoire() : CharolaisCard(1, CardType.Skill, CardRarit
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
-        var appliedTurn  = new Random().Next(1,  base.DynamicVars["Turns"].IntValue + 1);
+        var appliedTurn = base.Owner.RunState.Rng.CombatTargets.NextInt(1, base.DynamicVars["Turns"].IntValue + 1);
         
         IEnumerable<Creature> enumerable = from c in base.CombatState?.GetTeammatesOf(base.Owner.Creature)
-            where c != null && c.IsAlive && c.IsPlayer
+            where c.IsAlive && c.IsPlayer
             select c;
         
         foreach (Creature item in enumerable)

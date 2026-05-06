@@ -24,8 +24,7 @@ public class Pileouface() : CharolaisRelic
     public override async Task AfterRoomEntered(AbstractRoom room)
     {
         
-        var randomNbr  = new Random().Next(0,  100);
-        if (randomNbr < 50)
+        if (base.Owner.RunState.Rng.CombatTargets.NextBool())
         {
             await PowerCmd.Apply<StrengthPower>((PlayerChoiceContext)new ThrowingPlayerChoiceContext(),
                 this.Owner.Creature, 1, this.Owner.Creature, null);
