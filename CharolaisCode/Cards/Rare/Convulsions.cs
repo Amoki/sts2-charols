@@ -26,7 +26,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         HoverTipFactory.FromPower<PintPower>()
     ];
     
-    // public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

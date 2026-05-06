@@ -10,7 +10,7 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Niquezvous() : CharolaisCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
-    // public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<FrailPower>())];
     
