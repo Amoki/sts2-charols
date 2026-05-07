@@ -18,6 +18,7 @@ public class Lancerdefrisbee() : CharolaisCard(0,
     {
         var combatState = this.CombatState;
         if (combatState != null)
+            // vigor trigger only on the first hit
             await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this)
                 .TargetingRandomOpponents(combatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
         if (combatState != null)

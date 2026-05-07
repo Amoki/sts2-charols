@@ -14,8 +14,8 @@ public class Troisfeuilles() : CharolaisCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
 
-                (DynamicVar) new DamageVar(8M, ValueProp.Move),
-                (DynamicVar) new PowerVar<VulnerablePower>(1)
+                new DamageVar(8M, ValueProp.Move),
+                new PowerVar<VulnerablePower>(1)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<VulnerablePower>())];

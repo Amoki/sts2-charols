@@ -12,13 +12,14 @@ public class Grossebetise() : CharolaisCard(3,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(28M, ValueProp.Move),
+        new DamageVar(285M, ValueProp.Move),
         new HpLossVar(3M)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (base.Owner.RunState.Rng.CombatTargets.NextBool())
+        var random = base.Owner.RunState.Rng.CombatTargets.NextInt(0, 100);
+        if (random >= 50)
         {
             if (CombatState != null)
                 await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(1)

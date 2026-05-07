@@ -24,7 +24,7 @@ public class Charolais : PlaceholderCharacterModel
 
     public static readonly Color Color = new("BABB5C");
     public override Color EnergyLabelOutlineColor => new Color("F26A38FF");
-    public override int BaseOrbSlotCount => 3;
+    public override int BaseOrbSlotCount => 0;
     public override Color DialogueColor => new Color("13446B");
     public override VfxColor SpeechBubbleColor => VfxColor.Gold;
     public override Color MapDrawingColor => new Color("FABB5C");

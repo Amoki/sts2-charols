@@ -33,7 +33,7 @@ public class Poncage() : CharolaisCard(2,
         var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         if (powerAmount >= 0)
         {
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, (Decimal.Negate(powerAmount)), this.Owner.Creature, (CardModel) this);
+            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, decimal.Negate(powerAmount), this.Owner.Creature, this);
         }
     }
     

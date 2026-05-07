@@ -28,9 +28,7 @@ public class Labricotdejacoulot() : CharolaisCard(1,
         var totalAmount = powerAmount + blockAmount;
         var manualBlock = new BlockVar(0, ValueProp.Move);
         manualBlock.BaseValue = totalAmount;
-        {
-            await CreatureCmd.GainBlock(this.Owner.Creature, manualBlock, cardPlay);
-        }
+        await CreatureCmd.GainBlock(this.Owner.Creature, manualBlock, cardPlay);
     }
     
     protected override void OnUpgrade() => this.DynamicVars.Block.UpgradeValueBy(3M);

@@ -22,7 +22,8 @@ public class Dortoir() : CharolaisCard(2,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        if (base.Owner.RunState.Rng.CombatTargets.NextBool())
+        var random = base.Owner.RunState.Rng.CombatTargets.NextInt(0, 100);
+        if (random >= 50)
         {
             await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
             if (cardPlay.Target != null) await CreatureCmd.GainBlock(cardPlay.Target, base.DynamicVars.Block, cardPlay);
