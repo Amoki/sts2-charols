@@ -14,6 +14,7 @@ public class TerraindepetanquePower : CharolaisPower
     public override PowerStackType StackType => PowerStackType.Counter;
     
    protected override object InitInternalData() => (object) new TerraindepetanquePower.Data();
+   
 
   public override Task BeforePowerAmountChanged(
     PowerModel power,
@@ -64,8 +65,10 @@ public class TerraindepetanquePower : CharolaisPower
 
   public override Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
   {
-    if (cardPlay.Card.Owner.Creature == this.Owner && !cardPlay.IsAutoPlay && cardPlay.IsLastInSeries)
-      ++this.GetInternalData<TerraindepetanquePower.Data>().CardsPlayedThisTurn;
+    if (cardPlay.Card.Owner.Creature == this.Owner && !cardPlay.IsAutoPlay && cardPlay.IsLastInSeries && cardPlay.Card.Type == CardType.Attack && cardPlay.Card.Tags.Contains(PetanqueTag.Petanque))
+    {
+      ++this.GetInternalData<Data>().CardsPlayedThisTurn;
+    }
     return Task.CompletedTask;
   }
 
@@ -75,12 +78,15 @@ public class TerraindepetanquePower : CharolaisPower
     ICombatState combatState)
   {
     if (side == this.Owner.Side)
-      this.GetInternalData<TerraindepetanquePower.Data>().CardsPlayedThisTurn = 0;
+    {
+      this.GetInternalData<Data>().CardsPlayedThisTurn = 0;
+    }
     return Task.CompletedTask;
   }
 
   private bool ShouldSkip(CardModel card)
   {
+   
     if (card.Owner.Creature != this.Owner)
       return true;
     
@@ -91,16 +97,16 @@ public class TerraindepetanquePower : CharolaisPower
     
     var isAttack = card.Type == CardType.Attack;
     var isPetanque = card.Tags.Contains(PetanqueTag.Petanque);
-
-    if (!isAttack || !isPetanque)
+    
+    if (!isPetanque && !isAttack)
       return true;
     
-    return this.GetInternalData<TerraindepetanquePower.Data>().CardsPlayedThisTurn >= this.Amount;
+    return this.GetInternalData<Data>().CardsPlayedThisTurn >= this.Amount;
   }
 
   private void HideTemporaryZeroCostVisual()
   {
-    this.GetInternalData<TerraindepetanquePower.Data>().CardsPlayedThisTurn = 999999999;
+    this.GetInternalData<Data>().CardsPlayedThisTurn = 999999999;
   }
 
   private class Data

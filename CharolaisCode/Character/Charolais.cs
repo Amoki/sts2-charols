@@ -80,4 +80,12 @@ public class Charolais : PlaceholderCharacterModel
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
     public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
     public override string CustomIconOutlineTexturePath => "character_icon_char_name_outline.png".CharacterUiPath();
+    
+    public override string CustomArmPointingTexturePath => "arm.png".CharacterUiPath();
+    
+    public override string CustomArmRockTexturePath =>"rock.png".CharacterUiPath();
+    
+    public override string CustomArmPaperTexturePath => "paper.png".CharacterUiPath();
+    
+    public override string CustomArmScissorsTexturePath => "scissors.png".CharacterUiPath();
 }

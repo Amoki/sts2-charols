@@ -17,6 +17,7 @@ public class Culsec() : CharolaisCard(1,
         new BlockVar(7m, ValueProp.Move),
         new PowerVar<PintPower>(1)
     ];
+    
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [

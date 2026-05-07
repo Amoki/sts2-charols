@@ -3,6 +3,7 @@ using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -30,7 +31,7 @@ public class PatPower : CharolaisPower
             return;
         
         Flash();
-        VfxCmd.PlayOnCreatureCenters((IEnumerable<Creature>) this.CombatState.HittableEnemies, "vfx/vfx_attack_slash");
-        await CreatureCmd.Damage(choiceContext, (IEnumerable<Creature>) this.CombatState.HittableEnemies, this.Amount, ValueProp.Unpowered, this.Owner, null);
+        VfxCmd.PlayOnCreatureCenters(this.CombatState.HittableEnemies, "vfx/vfx_attack_slash");
+        await CreatureCmd.Damage(choiceContext, this.CombatState.HittableEnemies, this.Amount, ValueProp.Unpowered, this.Owner, null);
     }
 }
