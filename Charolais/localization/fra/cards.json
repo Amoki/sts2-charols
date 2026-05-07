@@ -99,7 +99,7 @@
   "CHAROLAIS-LEGAMBITDELADAME.title": "Le Gambit de la Dame",
   "CHAROLAIS-ROQUE.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold] à TOUS les ennemis.",
   "CHAROLAIS-ROQUE.title": "Roque",
-  "CHAROLAIS-MURAILLEDEBOULES.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold] affecté 3 fois par la [gold]Dextérité[/gold].",
+  "CHAROLAIS-MURAILLEDEBOULES.description": "Gagnez {CalculatedBlock:diff()} d'[gold]Armure[/gold] affecté 3 fois par la [gold]Dextérité[/gold].",
   "CHAROLAIS-MURAILLEDEBOULES.title": "Muraille de Boules",
   "CHAROLAIS-LECERCLE.description": "Gagnez 1 de [gold]Force[/gold] et 1 de [gold]Dextérité[/gold].\nAu début de votre tour, perdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-LECERCLE.title": "Le Cercle",
