@@ -10,7 +10,7 @@ public class Pichenette() : CharolaisCard(0,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(4, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(5, ValueProp.Move)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -20,5 +20,5 @@ public class Pichenette() : CharolaisCard(0,
             .Execute(choiceContext);
     }
     
-    protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(2M);
+    protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(3M);
 }

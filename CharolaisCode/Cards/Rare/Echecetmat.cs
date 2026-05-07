@@ -16,7 +16,7 @@ public class Echecetmat() : CharolaisCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(6M, ValueProp.Move),
+        new DamageVar(10M, ValueProp.Move),
         new DynamicVar("Power",1M)
     ];
 

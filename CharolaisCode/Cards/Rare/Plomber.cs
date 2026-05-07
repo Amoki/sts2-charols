@@ -15,8 +15,7 @@ public class Plomber() : CharolaisCard(0,
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(1M, ValueProp.Move),
-        new RepeatVar(4),
-        new HpLossVar(2M)
+        new RepeatVar(4)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -26,7 +25,6 @@ public class Plomber() : CharolaisCard(0,
             await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(this.DynamicVars.Repeat.IntValue)
                 .FromCard(this).TargetingAllOpponents(combatState).WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
-        await CreatureCmd.Damage(choiceContext, this.Owner.Creature, this.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
     }
     
     protected override void OnUpgrade()

@@ -16,7 +16,7 @@ public class Lesystemedelondres() : CharolaisCard(1,
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(7, ValueProp.Move),
-        new ChestVar(4)
+        new ChestVar(7)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -31,6 +31,6 @@ public class Lesystemedelondres() : CharolaisCard(1,
     protected override void OnUpgrade()
     {
         this.DynamicVars.Damage.UpgradeValueBy(3M);
-        this.DynamicVars["Chest"].UpgradeValueBy(2M);
+        this.DynamicVars["Chest"].UpgradeValueBy(3M);
     }
 }

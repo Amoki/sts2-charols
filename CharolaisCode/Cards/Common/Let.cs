@@ -10,7 +10,7 @@ public class Let() : CharolaisCard(1,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(7, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(8, ValueProp.Move)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
 

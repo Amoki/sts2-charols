@@ -16,7 +16,7 @@ public class Boulesurlepied() : CharolaisCard(0,
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(3M, ValueProp.Move),
+        new DamageVar(5M, ValueProp.Move),
         new DynamicVar("Power", 1M)
     ];
     

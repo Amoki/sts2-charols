@@ -11,7 +11,7 @@ public class Futdebiere() : CharolaisCard(0, CardType.Attack, CardRarity.Ancient
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(20, ValueProp.Move),
-        new DynamicVar("Power", 4)
+        new DynamicVar("Power", 5)
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -26,6 +26,6 @@ public class Futdebiere() : CharolaisCard(0, CardType.Attack, CardRarity.Ancient
     protected override void OnUpgrade()
     {
         base.DynamicVars.Damage.UpgradeValueBy(5m);
-        base.DynamicVars["Power"].UpgradeValueBy(2m);
+        base.DynamicVars["Power"].UpgradeValueBy(3m);
     }
 }

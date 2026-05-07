@@ -3,7 +3,6 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -15,7 +14,7 @@ public class Lebol() : CharolaisCard(1,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(11m, ValueProp.Move),
+        new BlockVar(12m, ValueProp.Move),
         new PowerVar<WeakPower>(2)
     ];
 
@@ -30,6 +29,6 @@ public class Lebol() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(3M);
+        this.DynamicVars.Block.UpgradeValueBy(4M);
     }
 }

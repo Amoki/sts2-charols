@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Lancerdefrisbee() : CharolaisCard(0,
+public class Lancerdefrisbee() : CharolaisCard(1,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.RandomEnemy)
 {

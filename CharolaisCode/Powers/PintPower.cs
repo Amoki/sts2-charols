@@ -25,16 +25,16 @@ public class PintPower : CharolaisPower
         
         switch (alcoolPower)
         {
-            case >= 12:
+            case >= 15:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 base.SetAmount(0);
                 break;
-            case >= 8:
+            case >= 10:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 2m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 break;
-            case >= 4:
+            case >= 5:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 break;

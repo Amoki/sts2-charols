@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Tourbillondeboules() : CharolaisCard(3,
+public class Tourbillondeboules() : CharolaisCard(2,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AllEnemies)
 {
@@ -14,22 +14,21 @@ public class Tourbillondeboules() : CharolaisCard(3,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(1M, ValueProp.Move)
+        new DamageVar(1M, ValueProp.Move),
+        new RepeatVar(6)
     ];
-    
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var combatState = this.CombatState;
         if (combatState != null)
-            await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(6).FromCard(this)
+            await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this)
                 .TargetingAllOpponents(combatState).WithHitFx("vfx/vfx_giant_horizontal_slash")
                 .Execute(choiceContext);
     }
     
     protected override void OnUpgrade()
     {
-        this.EnergyCost.UpgradeBy(-1);
+        this.DynamicVars.Repeat.UpgradeValueBy(2);
     }
 }

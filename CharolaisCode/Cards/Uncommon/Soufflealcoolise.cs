@@ -23,11 +23,6 @@ public class Soufflealcoolise() : CharolaisCard(2,
     [
         HoverTipFactory.FromPower<PintPower>()
     ];
-
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [
-        CardKeyword.Exhaust,
-        CardKeyword.Retain
-    ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -50,6 +45,6 @@ public class Soufflealcoolise() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        
+        this.AddKeyword(CardKeyword.Retain);
     }
 }

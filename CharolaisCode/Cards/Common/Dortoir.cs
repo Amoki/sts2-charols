@@ -14,7 +14,7 @@ public class Dortoir() : CharolaisCard(2,
     public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(14m, ValueProp.Move),
+        new BlockVar(16m, ValueProp.Move),
         new DynamicVar("Power", 2M),
     ];
     
@@ -38,7 +38,6 @@ public class Dortoir() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(8M);
-        this.DynamicVars["Power"].UpgradeValueBy(1M);
+        this.DynamicVars.Block.UpgradeValueBy(6M);
     }
 }

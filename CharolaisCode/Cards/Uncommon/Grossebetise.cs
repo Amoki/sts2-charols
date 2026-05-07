@@ -12,7 +12,7 @@ public class Grossebetise() : CharolaisCard(3,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(285M, ValueProp.Move),
+        new DamageVar(30M, ValueProp.Move),
         new HpLossVar(3M)
     ];
     
@@ -35,6 +35,5 @@ public class Grossebetise() : CharolaisCard(3,
     protected override void OnUpgrade()
     {
         this.DynamicVars.Damage.UpgradeValueBy(8M);
-        this.DynamicVars.HpLoss.UpgradeValueBy(1M);
     }
 }

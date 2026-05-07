@@ -15,7 +15,7 @@ public class Burger() : CharolaisCard(1,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new PowerVar<VigorPower>(4M)
+        new PowerVar<VigorPower>(5M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<VigorPower>())];
@@ -28,6 +28,6 @@ public class Burger() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars["VigorPower"].UpgradeValueBy(2M);
+        this.DynamicVars["VigorPower"].UpgradeValueBy(3M);
     }
 }

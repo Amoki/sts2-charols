@@ -9,7 +9,7 @@ namespace Charolais.CharolaisCode.Cards.Common;
 public class Gachis() : CharolaisCard(4, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(16, ValueProp.Move)
+        new DamageVar(20, ValueProp.Move)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -22,6 +22,6 @@ public class Gachis() : CharolaisCard(4, CardType.Attack, CardRarity.Common, Tar
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(5m);
+        base.DynamicVars.Damage.UpgradeValueBy(6m);
     }
 }

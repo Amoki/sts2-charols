@@ -13,7 +13,7 @@ namespace Charolais.CharolaisCode.Cards.Uncommon;
 public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(8, ValueProp.Move),
+        new DamageVar(4, ValueProp.Move),
         new PowerVar<WeakPower>(1m)
     ];
     
@@ -25,16 +25,15 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, Tar
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
+        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
+        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue + alcoolPower).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
-        if (alcoolPower > 0m)
+        if (alcoolPower > 4m)
         {
             await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, -1, this.Owner.Creature, null);
         }
     }
 

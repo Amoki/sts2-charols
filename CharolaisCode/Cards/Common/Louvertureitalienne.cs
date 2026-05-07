@@ -14,7 +14,7 @@ public class Louvertureitalienne() : CharolaisCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(8M, ValueProp.Move),
-        new CardsVar(1),
+        new CardsVar(2),
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -41,7 +41,7 @@ public class Louvertureitalienne() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(1M);
+        this.DynamicVars.Damage.UpgradeValueBy(2M);
         this.DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }

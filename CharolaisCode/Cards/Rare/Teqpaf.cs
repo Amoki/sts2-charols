@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
-public class Teqpaf() : CharolaisCard(2,
+public class Teqpaf() : CharolaisCard(1,
     CardType.Skill, CardRarity.Rare,
     TargetType.Self)
 {

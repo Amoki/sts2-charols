@@ -23,7 +23,9 @@ public class LoubardeObservatoire() : CharolaisCard(1, CardType.Skill, CardRarit
         
         foreach (var item in enumerable)
         {
-            await PowerCmd.Apply<LoubardeObservatoirePower>(choiceContext, item.Player!.Creature, appliedTurn, this.Owner.Creature, this);
+            if (item.Player != null)
+                await PowerCmd.Apply<LoubardeObservatoirePower>(choiceContext, item.Player.Creature, appliedTurn,
+                    this.Owner.Creature, this);
         }
     }
 

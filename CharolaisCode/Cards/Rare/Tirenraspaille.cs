@@ -30,9 +30,22 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
         var strePower = base.Owner.Creature.GetPowerAmount<StrengthPower>();
         var combatState = this.CombatState;
         if (combatState != null)
-            await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue + strePower * 3).WithHitCount(this.DynamicVars.Repeat.IntValue)
-                .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException()).WithHitFx("vfx/vfx_attack_slash")
-                .Execute(choiceContext);
+            if (this.IsUpgraded)
+            {
+                await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue + strePower)
+                    .WithHitCount(this.DynamicVars.Repeat.IntValue)
+                    .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+                    .WithHitFx("vfx/vfx_attack_slash")
+                    .Execute(choiceContext);
+            }
+            else
+            {
+                await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue + strePower * 2)
+                    .WithHitCount(this.DynamicVars.Repeat.IntValue)
+                    .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+                    .WithHitFx("vfx/vfx_attack_slash")
+                    .Execute(choiceContext);
+            }
     }
 
     protected override void OnUpgrade()

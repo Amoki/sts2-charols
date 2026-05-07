@@ -16,7 +16,7 @@ public class Ladefensesicilienne() : CharolaisCard(1,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(7m, ValueProp.Move),
-        new DynamicVar("Power", 7M)
+        new DynamicVar("Power", 10M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

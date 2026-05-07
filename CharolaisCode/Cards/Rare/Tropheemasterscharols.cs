@@ -16,7 +16,7 @@ public class Tropheemasterscharols() : CharolaisCard(3, CardType.Power, CardRari
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 1M),
+        new DynamicVar("Power", 2M),
         new CardsVar(1)
     ];
     

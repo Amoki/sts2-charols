@@ -14,7 +14,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
     TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(5M, ValueProp.Move)
+        new DamageVar(7M, ValueProp.Move)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ChestPower>())];

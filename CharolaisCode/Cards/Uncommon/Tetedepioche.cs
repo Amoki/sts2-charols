@@ -32,7 +32,7 @@ public class Tetedepioche() : CharolaisCard(2, CardType.Skill, CardRarity.Uncomm
         if (alcoolPower > 0) 
         {
             ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-            await DamageCmd.Attack(alcoolPower).FromCard(this).WithHitCount(1).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(alcoolPower * 2).FromCard(this).WithHitCount(1).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
         }

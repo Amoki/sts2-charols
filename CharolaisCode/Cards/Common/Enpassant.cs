@@ -13,7 +13,7 @@ public class Enpassant() : CharolaisCard(1,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new ChestVar(8)
+        new ChestVar(10)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

@@ -16,6 +16,7 @@ public class Bouleenplastique() : CharolaisCard(0,
     [
         new DamageVar(3M, ValueProp.Move),
         new CardsVar(1),
+        new EnergyVar(1)
     ];
 
 
@@ -26,6 +27,7 @@ public class Bouleenplastique() : CharolaisCard(0,
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         await CardPileCmd.Draw(choiceContext, this.DynamicVars.Cards.BaseValue, this.Owner);
+        await PlayerCmd.GainEnergy(this.DynamicVars.Energy.IntValue, this.Owner);
     }
     
     protected override void OnUpgrade()

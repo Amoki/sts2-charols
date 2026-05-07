@@ -16,8 +16,8 @@ public class Carreau() : CharolaisCard(1,
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(3, ValueProp.Move),
-        new BlockVar(3m, ValueProp.Move)
+        new DamageVar(4, ValueProp.Move),
+        new BlockVar(4m, ValueProp.Move)
     ];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];

@@ -18,7 +18,7 @@ public class Bisou() : CharolaisCard(1,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new BlockVar(2m, ValueProp.Move),
+        new BlockVar(3m, ValueProp.Move),
         new RepeatVar(1),
     ];
 

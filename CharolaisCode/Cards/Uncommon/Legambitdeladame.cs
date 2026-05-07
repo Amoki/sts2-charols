@@ -16,8 +16,6 @@ public class Legambitdeladame() : CharolaisCard(2,
         new ChestVar(1)
     ];
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target);

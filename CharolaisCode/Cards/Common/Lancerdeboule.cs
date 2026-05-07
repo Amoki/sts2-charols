@@ -10,7 +10,7 @@ public class Lancerdeboule() : CharolaisCard(1,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(1, ValueProp.Move)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(3, ValueProp.Move)];
     
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
 

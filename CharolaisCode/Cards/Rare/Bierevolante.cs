@@ -10,7 +10,7 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class Bierevolante() : CharolaisCard(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new RepeatVar(1),
+        new RepeatVar(2),
         new CardsVar(1),
     ];
     

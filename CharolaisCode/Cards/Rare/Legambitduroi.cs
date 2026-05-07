@@ -1,4 +1,5 @@
-﻿using Charolais.CharolaisCode.Powers;
+﻿using System.Diagnostics;
+using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -26,7 +27,15 @@ public class Legambitduroi() : CharolaisCard(1,
     {
         if (cardPlay.Target != null)
             await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
+
+
+        Debug.Assert(cardPlay.Target != null, "cardPlay.Target != null");
+        var amount = cardPlay.Target.GetPowerAmount<ChestPower>();
+
         await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
+        
+        if (cardPlay.Target != null)
+            await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target, amount, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()
