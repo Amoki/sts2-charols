@@ -31,7 +31,7 @@ public class Tourdefrance() : CharolaisCard(0, CardType.Skill, CardRarity.Rare, 
         }
         else
         {
-            await PowerCmd.Apply<RegenPower>(choiceContext, this.Owner.Creature, (decimal)powerAmount, this.Owner.Creature, this);
+            await PowerCmd.Apply<RegenPower>(choiceContext, this.Owner.Creature, powerAmount, this.Owner.Creature, this);
         }
     }
 

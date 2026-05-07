@@ -55,7 +55,7 @@
   "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca",
   "CHAROLAIS-COUPDETROTTOIR.description": "Infligez {Damage:diff()} dégâts.\nAppliquez [gold]Shrink[/gold] ({ShrinkPower:diff()}).",
   "CHAROLAIS-COUPDETROTTOIR.title": "Coup de Trottoir",
-  "CHAROLAIS-PROJETGAIA.description": "Piochez {Cards:diff()} cartes.\\n[gold]Épuisez[/gold] 1 carte.",
+  "CHAROLAIS-PROJETGAIA.description": "Piochez {Cards:diff()} cartes.\n[gold]Épuisez[/gold] 1 carte.",
   "CHAROLAIS-PROJETGAIA.title": "Projet Gaïa",
   "CHAROLAIS-BARBECUE.description": "Au début de votre tour, gagnez {Energy:energyIcons()} et ajoutez une [gold]Brûlure[/gold] à votre [gold]Défausse[/gold].",
   "CHAROLAIS-BARBECUE.title": "Barbecue",
