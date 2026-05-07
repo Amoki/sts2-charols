@@ -14,7 +14,7 @@ public class PintPower : CharolaisPower
 
     public override bool AllowNegative => false;
     
-    public override async Task AfterTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
     {
         if (side != base.Owner.Side || base.Owner?.Player?.PlayerCombatState == null) return;
         
