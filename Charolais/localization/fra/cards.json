@@ -143,7 +143,7 @@
   "CHAROLAIS-BOULESURLEPIED.title": "Boule sur le Pied",
   "CHAROLAIS-LABRICOTDEJACOULOT.description": "Gagnez {Block:diff()} plus votre montant de [gold]Pinte[/gold] en [gold]Armure[/gold].",
   "CHAROLAIS-LABRICOTDEJACOULOT.title": "L'Abricot de Jacoulot",
-  "CHAROLAIS-FORMEDUCHAROLAIS.description": "Au début de votre tour, gagnez 5 [gold]Pinte[/gold] et récupérez 2 PV.",
+  "CHAROLAIS-FORMEDUCHAROLAIS.description": "Au début de votre tour, gagnez 5 [gold]Pinte[/gold] et récupérez {Power:diff()} PV.",
   "CHAROLAIS-FORMEDUCHAROLAIS.title": "Forme du Charolais",
   "CHAROLAIS-FIANCHETTO.description": "Infligez {Damage:diff()} dégâts.\nSi l'ennemi a des [gold]Coups d'avance[/gold], infligez ces dégâts 4 fois.",
   "CHAROLAIS-FIANCHETTO.title": "Fianchetto",
