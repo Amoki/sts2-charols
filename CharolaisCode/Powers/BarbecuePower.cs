@@ -12,7 +12,7 @@ public class BarbecuePower : CharolaisPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
     
-    public override bool IsInstanced => true;
+    public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
     // ToDo uninstanced and increment burns ?
     
     public override decimal ModifyMaxEnergy(Player player, decimal amount)

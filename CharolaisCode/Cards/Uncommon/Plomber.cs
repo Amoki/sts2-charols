@@ -4,18 +4,18 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Charolais.CharolaisCode.Cards.Rare;
+namespace Charolais.CharolaisCode.Cards.Uncommon;
 
 public class Plomber() : CharolaisCard(0,
-    CardType.Attack, CardRarity.Rare,
-    TargetType.AllEnemies)
+    CardType.Attack, CardRarity.Uncommon,
+    TargetType.AnyEnemy)
 {
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(1M, ValueProp.Move),
-        new RepeatVar(5)
+        new DamageVar(3M, ValueProp.Move),
+        new RepeatVar(6)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -23,12 +23,12 @@ public class Plomber() : CharolaisCard(0,
         var combatState = this.CombatState;
         if (combatState != null)
             await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(this.DynamicVars.Repeat.IntValue)
-                .FromCard(this).TargetingAllOpponents(combatState).WithHitFx("vfx/vfx_attack_slash")
+                .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException()).WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
     }
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Repeat.UpgradeValueBy(2M);
+        this.DynamicVars.Damage.UpgradeValueBy(1M);
     }
 }

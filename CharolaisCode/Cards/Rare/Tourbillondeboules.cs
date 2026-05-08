@@ -4,10 +4,10 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 
-namespace Charolais.CharolaisCode.Cards.Uncommon;
+namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Tourbillondeboules() : CharolaisCard(2,
-    CardType.Attack, CardRarity.Uncommon,
+    CardType.Attack, CardRarity.Rare,
     TargetType.AllEnemies)
 {
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
@@ -29,6 +29,6 @@ public class Tourbillondeboules() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(1);
+        this.DynamicVars.Damage.UpgradeValueBy(2);
     }
 }
