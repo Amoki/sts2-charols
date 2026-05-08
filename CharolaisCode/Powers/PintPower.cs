@@ -28,6 +28,7 @@ public class PintPower : CharolaisPower
             case >= 18:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                base.SetAmount(0);
                 break;
             case >= 12:
                 Flash();

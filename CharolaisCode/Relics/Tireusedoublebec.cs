@@ -20,6 +20,6 @@ public class Tireusedoublebec : CharolaisRelic
         if (player != this.Owner)
             return;
         Flash();
-        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, 2, this.Owner.Creature, null);
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, 3, this.Owner.Creature, null);
     }
 }

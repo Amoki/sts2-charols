@@ -13,8 +13,7 @@ namespace Charolais.CharolaisCode.Cards.Common;
 public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(7, ValueProp.Move),
-        new CalculationBaseVar(0m),
+        new CalculationBaseVar(7m),
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>())
     ];
@@ -30,12 +29,12 @@ public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, Ta
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue + alcoolPower).FromCard(this).Targeting(cardPlay.Target)
+        await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
+        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         var players = base.CombatState?.Players;
         if (players == null) { return; }
         if (alcoolPower > 0)
@@ -52,6 +51,6 @@ public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, Ta
     
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(3m);
+        base.DynamicVars.CalculationBase.UpgradeValueBy(3m);
     }
 }
