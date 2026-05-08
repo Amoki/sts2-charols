@@ -27,12 +27,12 @@ public class Pileouface : CharolaisRelic
         if (base.Owner.RunState.Rng.CombatTargets.NextBool())
         {
             await PowerCmd.Apply<StrengthPower>((PlayerChoiceContext)new ThrowingPlayerChoiceContext(),
-                this.Owner.Creature, 1, this.Owner.Creature, null);
+                this.Owner.Creature, 2, this.Owner.Creature, null);
         }
         else
         {
             await PowerCmd.Apply<DexterityPower>((PlayerChoiceContext)new ThrowingPlayerChoiceContext(),
-                this.Owner.Creature, 1, this.Owner.Creature, null);
+                this.Owner.Creature, 2, this.Owner.Creature, null);
         }
     }
 }

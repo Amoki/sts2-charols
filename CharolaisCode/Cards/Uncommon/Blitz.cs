@@ -12,7 +12,7 @@ public class Blitz() : CharolaisCard(2,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 4M)
+        new DynamicVar("Power", 6M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

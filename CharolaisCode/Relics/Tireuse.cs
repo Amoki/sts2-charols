@@ -4,6 +4,7 @@ using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Powers;
 
@@ -14,6 +15,11 @@ public class Tireuse : CharolaisRelic
 {
     public override RelicRarity Rarity => RelicRarity.Starter;
 
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<PintPower>(),
+    ];
+    
     public override async Task BeforeHandDraw(
         Player player,
         PlayerChoiceContext choiceContext,

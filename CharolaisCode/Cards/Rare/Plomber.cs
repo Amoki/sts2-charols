@@ -15,7 +15,7 @@ public class Plomber() : CharolaisCard(0,
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
         new DamageVar(1M, ValueProp.Move),
-        new RepeatVar(4)
+        new RepeatVar(5)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

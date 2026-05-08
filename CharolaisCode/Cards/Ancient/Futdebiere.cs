@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Charolais.CharolaisCode.Cards.Ancient;
 
-public class Futdebiere() : CharolaisCard(0, CardType.Attack, CardRarity.Ancient, TargetType.AnyEnemy)
+public class Futdebiere() : CharolaisCard(1, CardType.Attack, CardRarity.Ancient, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(20, ValueProp.Move),
@@ -27,5 +27,6 @@ public class Futdebiere() : CharolaisCard(0, CardType.Attack, CardRarity.Ancient
     {
         base.DynamicVars.Damage.UpgradeValueBy(5m);
         base.DynamicVars["Power"].UpgradeValueBy(3m);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

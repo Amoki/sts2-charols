@@ -43,7 +43,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         {
             var randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
             await Cmd.Wait(0.5f);
-            await DamageCmd.Attack(alcoolPower).FromCard(this).Targeting(randomPlayer.Creature)
+            await DamageCmd.Attack(alcoolPower).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
         }

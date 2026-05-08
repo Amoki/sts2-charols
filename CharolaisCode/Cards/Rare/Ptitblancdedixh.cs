@@ -10,7 +10,7 @@ public class Ptitblancdedixh() : CharolaisCard(2, CardType.Skill, CardRarity.Rar
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new MaxHpVar(3M),
-        new AlcoolVar(5)
+        new AlcoolVar(3)
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];

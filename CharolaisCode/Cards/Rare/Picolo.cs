@@ -24,6 +24,6 @@ public class Picolo() : CharolaisCard(1, CardType.Power, CardRarity.Rare, Target
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Innate);
+        this.AddKeyword(CardKeyword.Retain);
     }
 }

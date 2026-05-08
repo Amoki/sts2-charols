@@ -29,6 +29,6 @@ public class Tourbillondeboules() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Repeat.UpgradeValueBy(2);
+        this.DynamicVars.Damage.UpgradeValueBy(1);
     }
 }

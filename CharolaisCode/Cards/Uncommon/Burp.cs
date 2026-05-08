@@ -36,7 +36,7 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, Tar
             await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
         }
     }
-
+    
     protected override void OnUpgrade()
     {
         base.DynamicVars.Damage.UpgradeValueBy(3m);

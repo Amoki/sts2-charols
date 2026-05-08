@@ -26,6 +26,6 @@ public class Formeducharolais() : CharolaisCard(3, CardType.Power, CardRarity.Ra
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Innate);
+        this.RemoveKeyword(CardKeyword.Ethereal);
     }
 }

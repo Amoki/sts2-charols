@@ -1,7 +1,5 @@
-﻿using Godot;
-using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
-using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
@@ -25,8 +23,8 @@ public class Tirlebut() : CharolaisCard(0,
     {
         var energyAmount = this.ResolveEnergyXValue();
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-        await DamageCmd.Attack(energyAmount)
-            .WithHitCount(energyAmount).FromCard(this)
+        await DamageCmd.Attack(energyAmount + 1)
+            .WithHitCount(energyAmount + 1).FromCard(this)
             .Targeting(cardPlay.Target)
             .WithHitVfxNode(t => NStabVfx.Create(t, true, VfxColor.Gold))
             .Execute(choiceContext);
