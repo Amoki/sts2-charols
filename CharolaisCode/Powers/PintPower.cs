@@ -19,22 +19,21 @@ public class PintPower : CharolaisPower
         if (side != base.Owner.Side || base.Owner?.Player?.PlayerCombatState == null) return;
         
         Flash();
-        await CreatureCmd.GainBlock(base.Owner, base.Amount, ValueProp.Unpowered, null);
+        await CreatureCmd.GainBlock(base.Owner, decimal.Divide(Amount, 2), ValueProp.Unpowered, null);
         
         var alcoolPower = base.Owner.GetPowerAmount<PintPower>();
         
         switch (alcoolPower)
         {
-            case >= 15:
+            case >= 18:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-                base.SetAmount(0);
                 break;
-            case >= 10:
+            case >= 12:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 2m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 break;
-            case >= 5:
+            case >= 6:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 break;

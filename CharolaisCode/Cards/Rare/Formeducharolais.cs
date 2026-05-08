@@ -11,7 +11,7 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class Formeducharolais() : CharolaisCard(3, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 2M)
+        new DynamicVar("Power", 1M)
     ];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];

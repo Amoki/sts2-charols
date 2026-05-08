@@ -5,17 +5,16 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
-public class Legambitduroi() : CharolaisCard(1,
+public class Legambitduroi() : CharolaisCard(2,
     CardType.Skill, CardRarity.Rare,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("Power",12M)
+        new DynamicVar("Power",13M)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -37,6 +36,6 @@ public class Legambitduroi() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars["Power"].UpgradeValueBy(6M);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

@@ -1,6 +1,6 @@
 {
-  "CHAROLAIS-PINT_POWER.description": "À la fin du tour, gagnez [blue]1[/blue] d'[gold]Armure[/gold] par effet de [gold]Pinte[/gold] et perdez 1 PV tous les 5 effets de [gold]Pinte[/gold]. À partir de 15 effets de [gold]Pinte[/gold], perdez 3 PV ainsi que tous ces effets.",
-  "CHAROLAIS-PINT_POWER.smartDescription": "Gagnez [blue]{Amount}[/blue] d'[gold]Armure[/gold] et perdez des PV à la fin du tour.",
+  "CHAROLAIS-PINT_POWER.description": "À la fin du tour, gagnez [blue]1[/blue] d'[gold]Armure[/gold] tous les 2 effet de [gold]Pinte[/gold] et perdez 1 PV tous les 6 effets de [gold]Pinte[/gold]. À partir de 18 effets de [gold]Pinte[/gold], perdez 3 PV ainsi que tous ces effets.",
+  "CHAROLAIS-PINT_POWER.smartDescription": "Gagnez de l'[gold]Armure[/gold] en fonction de vos pintes et perdez des PV à la fin du tour.",
   "CHAROLAIS-PINT_POWER.title": "Pinte",
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.description": "Dans N tours, tout le monde pioche",
   "CHAROLAIS-LOUBARDE_OBSERVATOIRE_POWER.smartDescription": "Dans [blue]{Amount}[/blue] {Amount:plural:tour|tours}, Piochez {Cards:diff()} {Cards:plural:carte|cartes}.",
@@ -32,7 +32,7 @@
   "CHAROLAIS-BLITZ_POWER.description": "Au début de votre tour, appliquez [blue]4[/blue] [gold]Coups d'avance[/gold] à TOUS les ennemis.",
   "CHAROLAIS-BLITZ_POWER.smartDescription": "Au début de votre tour, appliquez [blue]{Amount}[/blue] [gold]Coups d'avance[/gold] à TOUS les ennemis.",
   "CHAROLAIS-BLITZ_POWER.title": "Blitz",
-  "CHAROLAIS-PAT_POWER.description": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]3[/blue] dégâts.",
+  "CHAROLAIS-PAT_POWER.description": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]6[/blue] dégâts.",
   "CHAROLAIS-PAT_POWER.smartDescription": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]{Amount}[/blue] dégâts.",
   "CHAROLAIS-PAT_POWER.title": "Pat",
   "CHAROLAIS-FORMEDUCHAROLAIS_POWER.description": "Au début de votre tour, gagnez 5 [gold]Pinte[/gold] et récupérez 1 PV.",

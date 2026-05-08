@@ -29,6 +29,6 @@ public class Legambitdeladame() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.RemoveKeyword(CardKeyword.Exhaust);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

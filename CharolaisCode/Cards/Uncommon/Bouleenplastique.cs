@@ -16,7 +16,7 @@ public class Bouleenplastique() : CharolaisCard(0,
     [
         new DamageVar(3M, ValueProp.Move),
         new CardsVar(1),
-        new EnergyVar(1)
+        new EnergyVar(0)
     ];
 
 
@@ -32,6 +32,6 @@ public class Bouleenplastique() : CharolaisCard(0,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Cards.UpgradeValueBy(1M);
+        this.DynamicVars.Energy.UpgradeValueBy(1M);
     }
 }
