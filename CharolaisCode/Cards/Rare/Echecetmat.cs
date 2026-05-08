@@ -16,16 +16,14 @@ public class Echecetmat() : CharolaisCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(10M, ValueProp.Move),
-        new DynamicVar("Power",1M)
+        new DamageVar(10M, ValueProp.Move)
     ];
 
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<ChestPower>(),
-        HoverTipFactory.FromPower<ShrinkPower>()
+        HoverTipFactory.FromPower<ChestPower>()
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -44,7 +42,6 @@ public class Echecetmat() : CharolaisCard(1,
         {
             if (!enemy.IsAlive || enemy == this.Owner.Creature) continue;
             await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, enemy);
-            await PowerCmd.Apply<ShrinkPower>(choiceContext, enemy, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         }
     }
     

@@ -33,9 +33,6 @@ public class Legambitduroi() : CharolaisCard(1,
         var amount = cardPlay.Target.GetPowerAmount<ChestPower>();
 
         await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
-        
-        if (cardPlay.Target != null)
-            await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target, amount, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()

@@ -26,7 +26,7 @@ public class Ladefensecarokann() : CharolaisCard(2,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
+        await CheckAction.ExecuteCheck(choiceContext, cardPlay);
     }
     
     protected override void OnUpgrade()

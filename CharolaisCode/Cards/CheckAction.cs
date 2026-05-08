@@ -8,10 +8,11 @@ using MegaCrit.Sts2.Core.Nodes.Vfx;
 namespace Charolais.CharolaisCode.Cards;
 
 
-public static class CheckmateAction
+public static class CheckAction
 {
-    public const string Key = "Échec et Mat";
-    public static async Task ExecuteCheckmate(PlayerChoiceContext context, CardPlay cardPlay, Creature? targetOverride = null)
+    public const string Key = "Échec";
+    
+    public static async Task ExecuteCheck(PlayerChoiceContext context, CardPlay cardPlay, Creature? targetOverride = null)
     {
         var target = targetOverride ?? cardPlay.Target;
         if (target == null || !target.IsAlive) return;
@@ -26,6 +27,8 @@ public static class CheckmateAction
                 .WithAttackerAnim("Cast", 1f)
                 .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, target))
                 .Execute(context);
+            
+            await PowerCmd.Apply<ChestPower>(context, target, -amount, cardPlay.Card.Owner.Creature, cardPlay.Card);
         }
     }
 }

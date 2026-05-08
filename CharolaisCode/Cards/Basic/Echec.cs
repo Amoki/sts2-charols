@@ -33,7 +33,7 @@ public class Echec() : CharolaisCard(0, CardType.Skill, CardRarity.Basic, Target
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target ?? throw new InvalidOperationException(), this.DynamicVars.Weak.BaseValue, this.Owner.Creature, this);
-        await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
+        await CheckAction.ExecuteCheck(choiceContext, cardPlay);
     }
 
     protected override void OnUpgrade()

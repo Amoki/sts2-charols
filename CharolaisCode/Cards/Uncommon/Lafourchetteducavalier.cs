@@ -33,7 +33,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
         {
             if (enemy.IsAlive && enemy != this.Owner.Creature)
             {
-                await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, enemy);
+                await CheckAction.ExecuteCheck(choiceContext, cardPlay);
             }
         }
     }
