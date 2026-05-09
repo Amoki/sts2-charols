@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.Nodes.Rooms;
 
 namespace Charolais.CharolaisCode.Potions;
 
-public class Potiondebiere : CharolaisPotion
+public class Potiondeflotte : CharolaisPotion
 {
     public override PotionRarity Rarity => PotionRarity.Common;
 
@@ -21,7 +21,7 @@ public class Potiondebiere : CharolaisPotion
     public override TargetType TargetType => TargetType.AnyPlayer;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 8)
+        new DynamicVar("Power", 5)
     ];
 
     public override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -32,7 +32,7 @@ public class Potiondebiere : CharolaisPotion
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
         PotionModel.AssertValidForTargetedPotion(target);
-        NCombatRoom.Instance?.PlaySplashVfx(target, new Color("FABB5C"));
-        await PowerCmd.Apply<PintPower>(choiceContext, target, this.DynamicVars["Power"].BaseValue, this.Owner.Creature, null);
+        NCombatRoom.Instance?.PlaySplashVfx(target, new Color("45e6d0"));
+        await PowerCmd.Apply<PintPower>(choiceContext, target, decimal.Negate(DynamicVars["Power"].BaseValue), this.Owner.Creature, null);
     }
 }

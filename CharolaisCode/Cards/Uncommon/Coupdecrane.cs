@@ -25,17 +25,8 @@ public class Coupdecrane() : CharolaisCard(1,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
-        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
-        if (powerAmount < 3)
-        {
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, Decimal.Negate(powerAmount),
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, Decimal.Negate(this.DynamicVars["Power"].IntValue),
                 this.Owner.Creature, this);
-        }
-        else
-        {
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, Decimal.Negate(this.DynamicVars["Power"].IntValue),
-                this.Owner.Creature, this);
-        }
     }
     
     protected override void OnUpgrade()

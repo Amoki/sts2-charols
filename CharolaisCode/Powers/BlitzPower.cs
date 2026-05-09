@@ -32,7 +32,7 @@ public class BlitzPower : CharolaisPower
             var creatureNode = NCombatRoom.Instance?.GetCreatureNode(hittableEnemy);
             if (creatureNode != null)
             {
-                NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("80001e")));
+                NCombatRoom.Instance?.CombatVfxContainer.AddChildSafely(NGaseousImpactVfx.Create(creatureNode.VfxSpawnPosition, new Color("80001E")));
             }
         }
 
