@@ -15,9 +15,7 @@ public class Sortiedupetit() : CharolaisCard(0, CardType.Skill, CardRarity.Rare,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("Power", 1M)
     ];
-
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
-
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<StrengthPower>(),

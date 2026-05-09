@@ -8,17 +8,18 @@ using MegaCrit.Sts2.Core.Models.Powers;
 
 namespace Charolais.CharolaisCode.Cards.Basic;
 
-public class Echec() : CharolaisCard(0, CardType.Skill, CardRarity.Basic, TargetType.AnyEnemy)
+public class Echec() : CharolaisCard(1, CardType.Skill, CardRarity.Basic, TargetType.AnyEnemy)
 {
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new PowerVar<WeakPower>(1m),
-        new PowerVar<ChestPower>(1m)
+        new DynamicVar("Power", 1m)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         (HoverTipFactory.FromPower<ChestPower>()),
-        (HoverTipFactory.FromPower<WeakPower>())
+        (HoverTipFactory.FromPower<WeakPower>()),
+        (HoverTipFactory.FromPower<VulnerablePower>())
     ];
     
     protected override bool ShouldGlowGoldInternal
@@ -38,6 +39,6 @@ public class Echec() : CharolaisCard(0, CardType.Skill, CardRarity.Basic, Target
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Weak.UpgradeValueBy(1M);
+        this.DynamicVars["Power"].UpgradeValueBy(1M);
     }
 }

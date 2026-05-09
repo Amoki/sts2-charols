@@ -24,7 +24,7 @@ public class Beer() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, Target
     {
         return ModelDb.Card<Futdebiere>();
     }
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move), new AlcoolVar(3)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move), new AlcoolVar(5)];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
