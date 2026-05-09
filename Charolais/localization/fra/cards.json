@@ -21,7 +21,7 @@
   "CHAROLAIS-TYROLIENNE_A_PET.title": "Tyrolienne à pet",
   "CHAROLAIS-CONVULSIONS.description": "Infligez un montant de dégâts égal à la quantité de vos [gold]Pintes[/gold]{InCombat: ({CalculatedDamage:diff()})|} {Repeat:diff()} fois à TOUS les ennemis.\nInfligez 1 fois ce montant à un allié aléatoire.",
   "CHAROLAIS-CONVULSIONS.title": "Convulsions",
-  "CHAROLAIS-TETEDEPIOCHE.description": "L'ennemi perd un montant de PV égal au double de vos [gold]Pintes[/gold]{InCombat: ({CalculatedDamage:diff()})|}.\nIgnore l'[gold]Armure[/gold].",
+  "CHAROLAIS-TETEDEPIOCHE.description": "L'ennemi perd un montant de PV égal au double de vos [gold]Pintes[/gold]{InCombat: ({CalculatedDamage:diff()})|}.",
   "CHAROLAIS-TETEDEPIOCHE.title": "Tête de Pioche",
   "CHAROLAIS-LANCERDECOCHONNET.description": "Gagnez {DexterityPower:diff()} de [gold]Dextérité[/gold] jusqu'à la fin du tour.",
   "CHAROLAIS-LANCERDECOCHONNET.title": "Lancer de Cochonnet",

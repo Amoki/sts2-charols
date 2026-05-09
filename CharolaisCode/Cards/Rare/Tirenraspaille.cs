@@ -15,9 +15,9 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(8m),
-        new CalculationExtraVar(1m),
-        new RepeatVar(2),
+        new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) => card.Owner.Creature.GetPowerAmount<StrengthPower>() * 2),
+        new RepeatVar(2)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -29,7 +29,6 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        var strePower = base.Owner.Creature.GetPowerAmount<StrengthPower>();
         var combatState = this.CombatState;
         if (combatState != null)
                 await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue)
