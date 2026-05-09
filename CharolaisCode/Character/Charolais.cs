@@ -40,8 +40,6 @@ public class Charolais : PlaceholderCharacterModel
         ModelDb.Card<StrikeCharolais>(),
         ModelDb.Card<StrikeCharolais>(),
         ModelDb.Card<StrikeCharolais>(),
-        ModelDb.Card<StrikeCharolais>(),
-        ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<DefendCharolais>(),
         ModelDb.Card<DefendCharolais>(),

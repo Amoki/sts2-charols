@@ -14,7 +14,7 @@ public class Poncage() : CharolaisCard(2,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(14M, ValueProp.Move),
+        new DamageVar(16M, ValueProp.Move),
         new PowerVar<PintPower>(1)
     ];
     
@@ -38,6 +38,6 @@ public class Poncage() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(4M);
+        this.DynamicVars.Damage.UpgradeValueBy(6M);
     }
 }
