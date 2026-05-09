@@ -16,7 +16,7 @@ public class Murailledeboules() : CharolaisCard(1, CardType.Skill, CardRarity.Ra
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new CalculationBaseVar(8m),
+        new CalculationBaseVar(10m),
         new CalculationExtraVar(1m),
         new CalculatedBlockVar(ValueProp.Unpowered).WithMultiplier((card, _) => GetOwnerDextAmount(card) * 3)
     ];

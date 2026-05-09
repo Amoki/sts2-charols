@@ -12,7 +12,7 @@ public class Tetedepioche() : CharolaisCard(2, CardType.Skill, CardRarity.Uncomm
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(0m),
-        new ExtraDamageVar(1m),
+        new ExtraDamageVar(2m),
         new CalculatedDamageVar(ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
     ];
     
@@ -28,14 +28,10 @@ public class Tetedepioche() : CharolaisCard(2, CardType.Skill, CardRarity.Uncomm
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
-        if (alcoolPower > 0) 
-        {
-            ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-            await DamageCmd.Attack(alcoolPower * 2).FromCard(this).WithHitCount(1).Targeting(cardPlay.Target)
+        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
+        await DamageCmd.Attack(this.DynamicVars.CalculatedDamage.BaseValue).FromCard(this).WithHitCount(1).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
-        }
     }
     
     protected override void OnUpgrade()

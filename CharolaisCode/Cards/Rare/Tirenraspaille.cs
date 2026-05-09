@@ -14,8 +14,10 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(5,ValueProp.Move),
-        new RepeatVar(2)
+        new CalculationBaseVar(8m),
+        new CalculationExtraVar(1m),
+        new RepeatVar(2),
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, _) => card.Owner.Creature.GetPowerAmount<StrengthPower>() * 2),
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -30,22 +32,11 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
         var strePower = base.Owner.Creature.GetPowerAmount<StrengthPower>();
         var combatState = this.CombatState;
         if (combatState != null)
-            if (this.IsUpgraded)
-            {
-                await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue + strePower)
+                await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue)
                     .WithHitCount(this.DynamicVars.Repeat.IntValue)
                     .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                     .WithHitFx("vfx/vfx_attack_slash")
                     .Execute(choiceContext);
-            }
-            else
-            {
-                await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue + strePower * 2)
-                    .WithHitCount(this.DynamicVars.Repeat.IntValue)
-                    .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
-                    .WithHitFx("vfx/vfx_attack_slash")
-                    .Execute(choiceContext);
-            }
     }
 
     protected override void OnUpgrade()

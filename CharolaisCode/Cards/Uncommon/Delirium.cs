@@ -12,7 +12,7 @@ public class Delirium() : CharolaisCard(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<PintPower>(1)
+        new DynamicVar("Power", 1)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -22,11 +22,11 @@ public class Delirium() : CharolaisCard(1,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<DeliriumPower>(choiceContext, this.Owner.Creature, 1, this.Owner.Creature,this);
+        await PowerCmd.Apply<DeliriumPower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature,this);
     }
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Innate);
+        this.DynamicVars["Power"].UpgradeValueBy(1M);
     }
 }

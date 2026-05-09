@@ -15,7 +15,7 @@ public class Aperisplif() : CharolaisCard(2,
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(13m, ValueProp.Move),
+        new BlockVar(14m, ValueProp.Move),
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromKeyword(CardKeyword.Retain))];
@@ -42,6 +42,6 @@ public class Aperisplif() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(3M);
+        this.DynamicVars.Block.UpgradeValueBy(4M);
     }
 }

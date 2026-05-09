@@ -14,7 +14,7 @@ public class Lancerdecochonnet() : CharolaisCard(1,
 {
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DexterityPower>(4)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new PowerVar<DexterityPower>(5)];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<DexterityPower>())];
     
@@ -25,6 +25,6 @@ public class Lancerdecochonnet() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Dexterity.UpgradeValueBy(2);
+        this.DynamicVars.Dexterity.UpgradeValueBy(3);
     }
 }
