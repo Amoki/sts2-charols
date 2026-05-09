@@ -13,6 +13,11 @@ public class MusiquelacteePower : CharolaisPower
 
     public override int ModifyCardPlayCount(CardModel card, Creature? target, int playCount)
     {
+        if (card.Owner.Creature != base.Owner)
+        {
+            return playCount;
+        }
+        
         var hasExhaust = card.Keywords.Contains(CardKeyword.Exhaust);
         if (!hasExhaust)
         {
@@ -24,7 +29,7 @@ public class MusiquelacteePower : CharolaisPower
             e.HappenedThisTurn(this.CombatState)
         );
         
-        if (count == 0)
+        if (count < this.Amount)
         {
             return playCount + 2;
         }
@@ -38,6 +43,11 @@ public class MusiquelacteePower : CharolaisPower
     {
         modifiedCost = originalCost;
 
+        if (card.Owner.Creature != base.Owner)
+        {
+            return false;
+        }
+        
         if (!card.Keywords.Contains(CardKeyword.Exhaust)) return false;
         var count = CombatManager.Instance.History.CardPlaysStarted.Count(e => 
             e.Actor == this.Owner && 

@@ -31,7 +31,7 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
     {
         var combatState = this.CombatState;
         if (combatState != null)
-                await DamageCmd.Attack(base.DynamicVars.CalculatedDamage.BaseValue)
+                await DamageCmd.Attack(base.DynamicVars.CalculatedDamage)
                     .WithHitCount(this.DynamicVars.Repeat.IntValue)
                     .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                     .WithHitFx("vfx/vfx_attack_slash")
