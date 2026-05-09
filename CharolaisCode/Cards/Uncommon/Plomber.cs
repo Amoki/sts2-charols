@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Plomber() : CharolaisCard(1,
+public class Plomber() : CharolaisCard(2,
     CardType.Attack, CardRarity.Uncommon,
     TargetType.AnyEnemy)
 {
