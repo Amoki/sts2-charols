@@ -19,14 +19,14 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(4M),
         new CalculationExtraVar(1M),
-        new CalculatedBlockVar(ValueProp.Move).WithMultiplier((card, _) => card.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque)))
+        new CalculatedBlockVar(ValueProp.Move).WithMultiplier((card, _) => card.Owner.PlayerCombatState!.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque)))
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         if (this.IsUpgraded)
         {
-            var count = base.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
+            var count = base.Owner.PlayerCombatState!.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
 
             var extraBonus = 2M;
             var totalBlock = 4M + (extraBonus * count);
@@ -37,7 +37,7 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
         }
         else
         {
-            var count = base.Owner.PlayerCombatState.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
+            var count = base.Owner.PlayerCombatState!.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
 
             var extraBonus = 1M;
             var totalBlock = 4M + (extraBonus * count);

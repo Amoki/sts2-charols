@@ -41,7 +41,7 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, Tar
     
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(3m);
+        base.DynamicVars.CalculationBase.UpgradeValueBy(3m);
         base.DynamicVars.Weak.UpgradeValueBy(1m);
     }
 }
