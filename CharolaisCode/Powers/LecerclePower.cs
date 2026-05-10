@@ -13,20 +13,18 @@ public class LecerclePower : CharolaisPower
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new PowerVar<PintPower>(1)
+        new DynamicVar("Power",1)
     ];
 
+    public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
+    
     public override async Task AfterPlayerTurnStartLate(
         PlayerChoiceContext choiceContext,
         Player player)
     {
         if (player != base.Owner.Player)
             return;
-        var powerAmount = this.Owner.GetPowerAmount<PintPower>();
-        if (powerAmount >= 0)
-        {
-            Flash();
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, decimal.Negate(powerAmount), this.Owner, null);
-        }
+        Flash();
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, decimal.Negate(this.DynamicVars["Power"].BaseValue), this.Owner, null);
     }
 }

@@ -28,4 +28,24 @@ public static class CheckmateAction
                 .Execute(context);
         }
     }
+    
+    public static async Task ExecuteCheckmate(PlayerChoiceContext context, CardPlay cardPlay, IReadOnlyList<Creature> creatures)
+    {
+        foreach (var creature in creatures)
+        {
+            if (!creature.IsAlive) continue;
+            var amount = creature.GetPowerAmount<ChestPower>();
+            if (amount > 0)
+            {
+                await DamageCmd.Attack(amount)
+                    .Unpowered()
+                    .FromCard(cardPlay.Card)
+                    .WithHitCount(1)
+                    .Targeting(creature)
+                    .WithAttackerAnim("Cast", 1f)
+                    .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, creature))
+                    .Execute(context);
+            }
+        }
+    }
 }

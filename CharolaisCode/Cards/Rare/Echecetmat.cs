@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Logging;
 using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -36,13 +37,7 @@ public class Echecetmat() : CharolaisCard(1,
         await CreatureCmd.TriggerAnim(this.Owner.Creature, "Cast", this.Owner.Character.CastAnimDelay);
         VfxCmd.PlayOnCreatureCenter(this.Owner.Creature, "vfx/vfx_flying_slash");
         
-        var enemies = CombatState?.Enemies;
-        Debug.Assert(enemies != null, nameof(enemies) + " != null");
-        foreach (var enemy in enemies)
-        {
-            if (!enemy.IsAlive || enemy == this.Owner.Creature) continue;
-            await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, enemy);
-        }
+        await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay, CombatState.HittableEnemies);
     }
     
     protected override void OnUpgrade()

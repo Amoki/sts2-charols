@@ -39,6 +39,6 @@ public class Lecercle() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Innate);
+        this.DynamicVars["Power"].UpgradeValueBy(1M);
     }
 }
