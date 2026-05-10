@@ -5,7 +5,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Bienveillance() : CharolaisCard(2,
+public class Bienveillance() : CharolaisCard(1,
     CardType.Skill, CardRarity.Uncommon,
     TargetType.Self)
 {
