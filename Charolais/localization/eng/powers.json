@@ -46,5 +46,11 @@
   "CHAROLAIS-MUSIQUELACTEE_POWER.title": "Musique Lactée",
   "CHAROLAIS-TOURNOISDEPETANQUE_POWER.description": "Gagnez [blue]2[/blue] d'[gold]Armure[/gold] pour chaque carte [green]Pétanque[/green] piochée.",
   "CHAROLAIS-TOURNOISDEPETANQUE_POWER.smartDescription": "Gagnez [blue]2[/blue] d'[gold]Armure[/gold] pour chaque carte [green]Pétanque[/green] piochée.",
-  "CHAROLAIS-TOURNOISDEPETANQUE_POWER.title": "Tournois de Pétanque"
+  "CHAROLAIS-TOURNOISDEPETANQUE_POWER.title": "Tournois de Pétanque",
+  "CHAROLAIS-RANGERLEGARAGE_POWER.description": "Au début de votre tour, ajoutez 1 Compétence Inhabituel aléatoire à votre [gold]Main[/gold].",
+  "CHAROLAIS-RANGERLEGARAGE_POWER.smartDescription": "Au début de votre tour, ajoutez 1 Compétence Inhabituel aléatoire à votre [gold]Main[/gold].",
+  "CHAROLAIS-RANGERLEGARAGE_POWER.title": "Ranger le Garage",
+  "CHAROLAIS-RANGERLEGARAGE_UPGRADED_POWER.description": "Au début de votre tour, ajoutez 1 Compétence Inhabituel ou Rare aléatoire à votre [gold]Main[/gold].",
+  "CHAROLAIS-RANGERLEGARAGE_UPGRADED_POWER.smartDescription": "Au début de votre tour, ajoutez 1 Compétence Inhabituel ou Rare aléatoire à votre [gold]Main[/gold].",
+  "CHAROLAIS-RANGERLEGARAGE_UPGRADED_POWER.title": "Ranger le Garage+"
 }

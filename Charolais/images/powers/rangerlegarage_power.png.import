@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bynk1wta261lu"
-path="res://.godot/imported/labricotdejacoulot.png-52f3f49a66a9c3f3cd8c1128124eb865.ctex"
+uid="uid://di601ii3obux0"
+path="res://.godot/imported/rangerlegarage_power.png-19866e2c55eab202e5822177194bf695.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/big/labricotdejacoulot.png"
-dest_files=["res://.godot/imported/labricotdejacoulot.png-52f3f49a66a9c3f3cd8c1128124eb865.ctex"]
+source_file="res://Charolais/images/powers/rangerlegarage_power.png"
+dest_files=["res://.godot/imported/rangerlegarage_power.png-19866e2c55eab202e5822177194bf695.ctex"]
 
 [params]
 

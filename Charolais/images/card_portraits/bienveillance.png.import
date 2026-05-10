@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bynk1wta261lu"
-path="res://.godot/imported/labricotdejacoulot.png-52f3f49a66a9c3f3cd8c1128124eb865.ctex"
+uid="uid://crs0b88u1difg"
+path="res://.godot/imported/bienveillance.png-86eb6d0b4c99a007cd4559895a6a38c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/big/labricotdejacoulot.png"
-dest_files=["res://.godot/imported/labricotdejacoulot.png-52f3f49a66a9c3f3cd8c1128124eb865.ctex"]
+source_file="res://Charolais/images/card_portraits/bienveillance.png"
+dest_files=["res://.godot/imported/bienveillance.png-86eb6d0b4c99a007cd4559895a6a38c4.ctex"]
 
 [params]
 

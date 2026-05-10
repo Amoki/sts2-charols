@@ -15,7 +15,7 @@ public class Dortoir() : CharolaisCard(2,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(16m, ValueProp.Move),
-        new DynamicVar("Power", 2M),
+        new DynamicVar("Power", 1M),
     ];
     
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;

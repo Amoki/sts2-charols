@@ -1,6 +1,7 @@
 ﻿using BaseLib.Abstracts;
 using Charolais.CharolaisCode.Cards.Ancient;
 using Charolais.CharolaisCode.Powers;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
@@ -24,7 +25,15 @@ public class Beer() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, Target
     {
         return ModelDb.Card<Futdebiere>();
     }
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new DamageVar(9, ValueProp.Move), new AlcoolVar(5)];
+    protected override IEnumerable<DynamicVar> CanonicalVars => [
+        new DamageVar(10, ValueProp.Move),
+        new DynamicVar("Power", 4)
+    ];
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<PintPower>()
+    ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
@@ -32,11 +41,12 @@ public class Beer() : CharolaisCard(1, CardType.Attack, CardRarity.Basic, Target
         await DamageCmd.Attack(base.DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
                     .WithHitFx("vfx/vfx_attack_slash")
                     .Execute(choiceContext);
-        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, DynamicVars["Alcool"].IntValue, this.Owner.Creature, this);
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, DynamicVars["Power"].IntValue, this.Owner.Creature, this);
     }
 
     protected override void OnUpgrade()
     {
-        base.DynamicVars.Damage.UpgradeValueBy(3m);
+        base.DynamicVars.Damage.UpgradeValueBy(2m);
+        base.DynamicVars["Power"].UpgradeValueBy(2m);
     }
 }

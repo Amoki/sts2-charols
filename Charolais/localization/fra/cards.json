@@ -1,5 +1,5 @@
 {
-  "CHAROLAIS-BEER.description": "Infligez {Damage:diff()} dégâts.\nBuvez {Alcool:diff()} [gold]Pintes[/gold].",
+  "CHAROLAIS-BEER.description": "Infligez {Damage:diff()} dégâts.\nBuvez {Power:diff()} [gold]Pintes[/gold].",
   "CHAROLAIS-BEER.title": "Beer",
   "CHAROLAIS-STRIKE_CHAROLAIS.description": "Infligez {Damage:diff()} dégâts.",
   "CHAROLAIS-STRIKE_CHAROLAIS.title": "Frappe",
@@ -39,7 +39,7 @@
   "CHAROLAIS-LET.title": "Let",
   "CHAROLAIS-SALADEDEPATES.description": "Gagnez {Energy:energyIcons()}.",
   "CHAROLAIS-SALADEDEPATES.title": "Salade de Pâtes",
-  "CHAROLAIS-DIGESPLIF.description": "Gagnez {ArtifactPower:diff()} [gold]Artefact[/gold] et perdez {HpLoss:diff()} PV.",
+  "CHAROLAIS-DIGESPLIF.description": "Doublez votre [gold]Force[/gold].\nPerdez {HpLoss:diff()} PV.",
   "CHAROLAIS-DIGESPLIF.title": "Digesplif",
   "CHAROLAIS-BITESIGNAL.description": "À la fin du tour, gagnez [blue]{Block:diff()}[/blue] d'[gold]Armure[/gold].",
   "CHAROLAIS-BITESIGNAL.title": "Bite-Signal",
@@ -49,7 +49,7 @@
   "CHAROLAIS-TROISFEUILLES.title": "Trois Feuilles",
   "CHAROLAIS-PICOLO.description": "Piochez 1 carte à chaque fois que vous gagnez un effet de [gold]Pinte[/gold].",
   "CHAROLAIS-PICOLO.title": "Picolo",
-  "CHAROLAIS-PONCAGE.description": "Infligez {Damage:diff()} dégâts.\nPerdez tous vos effets de [gold]Pinte[/gold].",
+  "CHAROLAIS-PONCAGE.description": "Infligez {Damage:diff()} dégâts.\nPerdez tous vos effets de [gold]Pinte[/gold].\nRécupérez {Heal:diff()} PV.",
   "CHAROLAIS-PONCAGE.title": "Ponçage",
   "CHAROLAIS-WHISKYCOCA.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nGagnez {Alcool:diff()} de [gold]Pintes[/gold].",
   "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca",
@@ -162,5 +162,9 @@
   "CHAROLAIS-ECHECETMAT.description": "Infligez {Damage:diff()} dégâts et [gold]Échec et Mat[/gold] à TOUS les ennemis.",
   "CHAROLAIS-ECHECETMAT.title": "Échec et Mat",
   "CHAROLAIS-TOURNOISDEPETANQUE.description": "Gagnez [blue]{Power:diff()}[/blue] d'[gold]Armure[/gold] pour chaque carte [green]Pétanque[/green] piochée.",
-  "CHAROLAIS-TOURNOISDEPETANQUE.title": "Tournois de Pétanque"
+  "CHAROLAIS-TOURNOISDEPETANQUE.title": "Tournois de Pétanque",
+  "CHAROLAIS-BIENVEILLANCE.description": "Récupérez {Heal:diff()} PV.",
+  "CHAROLAIS-BIENVEILLANCE.title": "Bienveillance",
+  "CHAROLAIS-RANGERLEGARAGE.description": "Au début de votre tour, ajoutez 1 Compétence Inhabituel{IfUpgraded:show: ou Rare|} aléatoire à votre [gold]Main[/gold].",
+  "CHAROLAIS-RANGERLEGARAGE.title": "Ranger le Garage"
 }

@@ -28,5 +28,5 @@ public class Smash() : CharolaisCard(1,
         await CardCmd.Exhaust(choiceContext, card);
     }
     
-    protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(3M);
+    protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(4M);
 }

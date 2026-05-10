@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Charolais.CharolaisCode.Cards.Uncommon;
 
-public class Blitz() : CharolaisCard(2,
+public class Blitz() : CharolaisCard(1,
     CardType.Power, CardRarity.Uncommon,
     TargetType.Self)
 {

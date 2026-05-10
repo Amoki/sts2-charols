@@ -15,6 +15,8 @@ public class TyrolienneAPet() : CharolaisCard(0,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(1)];
 
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    
     protected override async Task OnPlay( PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");

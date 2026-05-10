@@ -15,7 +15,8 @@ public class Poncage() : CharolaisCard(2,
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(16M, ValueProp.Move),
-        new PowerVar<PintPower>(1)
+        new PowerVar<PintPower>(1),
+        new HealVar(2M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -29,6 +30,7 @@ public class Poncage() : CharolaisCard(2,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
+        await CreatureCmd.Heal(this.Owner.Creature, this.DynamicVars.Heal.BaseValue);
         var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
         if (powerAmount >= 0)
         {
