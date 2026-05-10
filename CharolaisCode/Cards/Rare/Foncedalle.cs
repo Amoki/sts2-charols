@@ -14,6 +14,8 @@ public class Foncedalle() : CharolaisCard(2, CardType.Skill, CardRarity.Rare, Ta
         new DynamicVar("Power", 1)
     ];
     
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         this.EnergyHoverTip,
