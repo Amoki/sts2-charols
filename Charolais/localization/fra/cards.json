@@ -81,7 +81,7 @@
   "CHAROLAIS-LANCERDECOCHONNET.title": "Lancer de Cochonnet",
   "CHAROLAIS-LANCERDEFRISBEE.description": "Infligez {Damage:diff()} dégâts à un ennemi aléatoire 3 fois.",
   "CHAROLAIS-LANCERDEFRISBEE.title": "Lancer de Frisbee",
-  "CHAROLAIS-LEBOL.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nAppliquez [gold]Affaibli[/gold] ({WeakPower:diff()}) à vous-même.",
+  "CHAROLAIS-LEBOL.description": "Vous ne perdez pas vos pintes à la fin de ce tour.\nBuvez {Power:diff()} [gold]Pintes[/gold].",
   "CHAROLAIS-LEBOL.title": "Le Bol",
   "CHAROLAIS-LECERCLE.description": "Gagnez {Power:diff()} de [gold]Force[/gold].\nGagnez {Power:diff()} de [gold]Dextérité[/gold].\nAu début de chaque tour, perdez 1 [gold]Pinte[/gold].",
   "CHAROLAIS-LECERCLE.title": "Le Cercle",

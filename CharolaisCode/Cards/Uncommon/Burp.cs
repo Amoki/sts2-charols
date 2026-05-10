@@ -19,7 +19,7 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, Tar
         new PowerVar<WeakPower>(1m)
     ];
     
-    protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<PintPower>() >= 1;
+    protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<PintPower>() >= 4;
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<WeakPower>())];
     
@@ -33,7 +33,7 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, Tar
             .Execute(choiceContext);
         
         var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
-        if (alcoolPower > 4m)
+        if (alcoolPower >= 4m)
         {
             await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target, base.DynamicVars.Weak.BaseValue, base.Owner.Creature, this);
         }
