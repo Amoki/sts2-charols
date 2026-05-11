@@ -27,7 +27,8 @@ public class Ladefensesicilienne() : CharolaisCard(1,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        var randomEnemy = base.Owner.RunState.Rng.CombatTargets.NextItem(CombatState?.Enemies ?? throw new InvalidOperationException());
+        var aliveEnemies = CombatState?.HittableEnemies.Where(e => e.IsAlive);
+        var randomEnemy = base.Owner.RunState.Rng.CombatTargets.NextItem(aliveEnemies!);
         if (randomEnemy != null)
             await PowerCmd.Apply<ChestPower>(choiceContext, randomEnemy, this.DynamicVars["Power"].IntValue, cardPlay.Card.Owner.Creature, cardPlay.Card);
     }
