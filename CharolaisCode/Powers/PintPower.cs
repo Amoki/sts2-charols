@@ -51,11 +51,14 @@ public class PintPower : CharolaisPower
         if (side != base.Owner.Side || base.Owner?.Player?.PlayerCombatState == null) return;
         
         var alcoolPower = base.Owner.GetPowerAmount<PintPower>();
+
+        var maxHpToRemove = base.Owner.CurrentHp - 1;
+        
         switch (alcoolPower)
         {
             case >= 18:
                 Flash();
-                await CreatureCmd.Damage(choiceContext, base.Owner, 3m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                await CreatureCmd.Damage(choiceContext, base.Owner, Math.Min(maxHpToRemove, 3), ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 if (!SkipReset)
                 {
                     base.SetAmount(0);
@@ -67,11 +70,11 @@ public class PintPower : CharolaisPower
                 break;
             case >= 12:
                 Flash();
-                await CreatureCmd.Damage(choiceContext, base.Owner, 2m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                await CreatureCmd.Damage(choiceContext, base.Owner, Math.Min(maxHpToRemove, 2), ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 break;
             case >= 6:
                 Flash();
-                await CreatureCmd.Damage(choiceContext, base.Owner, 1m, ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
+                await CreatureCmd.Damage(choiceContext, base.Owner, Math.Min(maxHpToRemove, 1), ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
                 break;
         }
     }
