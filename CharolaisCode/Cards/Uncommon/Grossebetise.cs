@@ -13,7 +13,7 @@ public class Grossebetise() : CharolaisCard(3,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(30M, ValueProp.Move),
-        new HpLossVar(3M)
+        new HpLossVar(2M)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

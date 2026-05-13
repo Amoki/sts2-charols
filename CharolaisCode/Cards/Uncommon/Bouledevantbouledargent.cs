@@ -18,7 +18,7 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CalculationBaseVar(4M),
-        new CalculationExtraVar(1M),
+        new CalculationExtraVar(2M),
         new CalculatedBlockVar(ValueProp.Move).WithMultiplier((card, _) => card.Owner.PlayerCombatState!.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque)))
     ];
 
@@ -28,7 +28,7 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
         {
             var count = base.Owner.PlayerCombatState!.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
 
-            var extraBonus = 2M;
+            var extraBonus = 3M;
             var totalBlock = 4M + (extraBonus * count);
             var manualBlock = new BlockVar(0, ValueProp.Move);
             manualBlock.BaseValue = totalBlock;
@@ -39,7 +39,7 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
         {
             var count = base.Owner.PlayerCombatState!.AllCards.Count(c => c.Tags.Contains(PetanqueTag.Petanque));
 
-            var extraBonus = 1M;
+            var extraBonus = 2M;
             var totalBlock = 4M + (extraBonus * count);
             var manualBlock = new BlockVar(0, ValueProp.Move);
             manualBlock.BaseValue = totalBlock;
@@ -47,6 +47,9 @@ public class Bouledevantbouledargent() : CharolaisCard(2,
             await CreatureCmd.GainBlock(this.Owner.Creature, manualBlock, cardPlay);
         }
     }
-    
-    protected override void OnUpgrade() => this.DynamicVars.CalculationExtra.UpgradeValueBy(1M);
+
+    protected override void OnUpgrade()
+    {
+        DynamicVars.CalculationExtra.UpgradeValueBy(1M);
+    }
 }

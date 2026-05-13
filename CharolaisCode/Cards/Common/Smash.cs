@@ -1,8 +1,10 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using MegaCrit.Sts2.Core.CardSelection;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Common;
@@ -17,16 +19,32 @@ public class Smash() : CharolaisCard(1,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
+        ArgumentNullException.ThrowIfNull(cardPlay.Target);
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-        var pile = PileType.Hand.GetPile(base.Owner);
-        var card = base.Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
-        if (card == null)
-            return;
-        await CardCmd.Exhaust(choiceContext, card);
+        
+        if (IsUpgraded)
+        {
+            CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1);
+            CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
+            if (card == null)
+                return;
+            await CardCmd.Exhaust(choiceContext, card);
+        }
+        
+        else
+        {
+            var pile = PileType.Hand.GetPile(Owner);
+            var card = Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
+            if (card == null)
+                return;
+            await CardCmd.Exhaust(choiceContext, card);
+        }
     }
-    
-    protected override void OnUpgrade() => this.DynamicVars.Damage.UpgradeValueBy(4M);
+
+    protected override void OnUpgrade()
+    {
+        
+    }
 }

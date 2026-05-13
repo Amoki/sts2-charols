@@ -30,14 +30,14 @@ public class Soufflealcoolise() : CharolaisCard(2,
         if (this.IsUpgraded)
         {
             ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-            await DamageCmd.Attack(decimal.Multiply(3, alcoolPower)).FromCard(this).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(decimal.Multiply(4, alcoolPower)).FromCard(this).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
         }
         else
         {
             ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-            await DamageCmd.Attack(decimal.Multiply(2, alcoolPower)).FromCard(this).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(decimal.Multiply(3, alcoolPower)).FromCard(this).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
         }

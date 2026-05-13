@@ -13,7 +13,7 @@ public class Coupdetrottoir() : CharolaisCard(2,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(10M, ValueProp.Move),
+        new DamageVar(12M, ValueProp.Move),
         new PowerVar<ShrinkPower>(1M)
     ];
     
@@ -30,6 +30,6 @@ public class Coupdetrottoir() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(4M);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }
