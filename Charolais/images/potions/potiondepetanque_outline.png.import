@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6hvixvfyjucn"
-path="res://.godot/imported/potiondeflotte.png-e0acd09f918e4c33aa0726848c3e166d.ctex"
+uid="uid://dhjxrlrnrvchp"
+path="res://.godot/imported/potiondepetanque_outline.png-a228482292cb59326a72bf8eac28257d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/potions/potiondeflotte.png"
-dest_files=["res://.godot/imported/potiondeflotte.png-e0acd09f918e4c33aa0726848c3e166d.ctex"]
+source_file="res://Charolais/images/potions/potiondepetanque_outline.png"
+dest_files=["res://.godot/imported/potiondepetanque_outline.png-a228482292cb59326a72bf8eac28257d.ctex"]
 
 [params]
 
