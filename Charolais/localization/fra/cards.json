@@ -166,5 +166,7 @@
   "CHAROLAIS-VERREDEAU.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nPerdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-VERREDEAU.title": "Verre d'eau",
   "CHAROLAIS-WHISKYCOCA.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nGagnez {Alcool:diff()} de [gold]Pintes[/gold].",
-  "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca"
+  "CHAROLAIS-WHISKYCOCA.title": "Whisky-Coca",
+  "CHAROLAIS-RANGEMENT_FINAL.description": "Obtenez une récompense de {Cards:diff()} cartes supplémentaires d'autres couleurs.",
+  "CHAROLAIS-RANGEMENT_FINAL.title": "Rangement Final"
 }
