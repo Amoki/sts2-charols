@@ -51,6 +51,11 @@ public class TyrolienneAPet() : CharolaisCard(0,
             cardPlay.Target.CombatState?.AddCard(newCard, cardPlay.Target.Player);
             await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, cardPlay.Target.Player);
             await CardPileCmd.RemoveFromCombat(cardToGive);
+            
+            var clonedCard = newCard.CreateClone();
+            CardCmd.ApplyKeyword(clonedCard, CardKeyword.Ethereal);
+            CardCmd.ApplyKeyword(clonedCard, CardKeyword.Exhaust);
+            await CardPileCmd.AddGeneratedCardToCombat(clonedCard, PileType.Hand, cardPlay.Target.Player);
         }
 
         foreach (var cardToReceive in cardsToReceive)
@@ -60,6 +65,11 @@ public class TyrolienneAPet() : CharolaisCard(0,
             base.CombatState?.AddCard(newCard, base.Owner);
             await CardPileCmd.AddGeneratedCardToCombat(newCard, PileType.Hand, base.Owner);
             await CardPileCmd.RemoveFromCombat(cardToReceive);
+            
+            var clonedCard = newCard.CreateClone();
+            CardCmd.ApplyKeyword(clonedCard, CardKeyword.Ethereal);
+            CardCmd.ApplyKeyword(clonedCard, CardKeyword.Exhaust);
+            await CardPileCmd.AddGeneratedCardToCombat(clonedCard, PileType.Hand, base.Owner);
         }
     }
 
