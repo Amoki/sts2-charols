@@ -34,19 +34,13 @@ public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, Ta
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
         
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         var players = base.CombatState?.Players;
         if (players == null) { return; }
-        if (alcoolPower > 0)
-        {
-            Player randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
-            await Cmd.Wait(0.5f);
-            await DamageCmd.Attack(alcoolPower).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
-                .WithHitFx("vfx/vfx_attack_slash")
-                .Execute(choiceContext);
-        }
-        
-        
+        Player randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
+        await Cmd.Wait(0.5f);
+        await DamageCmd.Attack(5).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
+            .WithHitFx("vfx/vfx_attack_slash")
+            .Execute(choiceContext);
     }
     
     protected override void OnUpgrade()

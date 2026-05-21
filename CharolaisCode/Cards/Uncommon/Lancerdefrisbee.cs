@@ -12,7 +12,7 @@ public class Lancerdefrisbee() : CharolaisCard(1,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(6M, ValueProp.Move),
-        new RepeatVar(2)
+        new RepeatVar(3)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

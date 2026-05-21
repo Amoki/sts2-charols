@@ -25,6 +25,6 @@ public class Anneaumagique : CharolaisRelic
         if (room is not CombatRoom)
             return;
         Flash();
-        await PowerCmd.Apply<PintPower>(new ThrowingPlayerChoiceContext(), this.Owner.Creature, 3, this.Owner.Creature, null);
+        await PowerCmd.Apply<PintPower>(new ThrowingPlayerChoiceContext(), this.Owner.Creature, 5, this.Owner.Creature, null);
     }
 }

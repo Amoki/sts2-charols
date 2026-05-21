@@ -28,6 +28,6 @@ public class Blitz() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Innate);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

@@ -15,7 +15,8 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
-        new AlcoolVar(1)
+        new AlcoolVar(1),
+        new CardsVar(1)
     ];
     
    
@@ -29,6 +30,7 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
                 .FromCard(this).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
+            await CardPileCmd.Draw(choiceContext, this.DynamicVars.Cards.BaseValue, this.Owner);
         }
         
     }

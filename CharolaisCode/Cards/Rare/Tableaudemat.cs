@@ -7,7 +7,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
-public class Tableaudemat() : CharolaisCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+public class Tableaudemat() : CharolaisCard(1, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DynamicVar("Power", 1M)
@@ -23,6 +23,6 @@ public class Tableaudemat() : CharolaisCard(2, CardType.Power, CardRarity.Rare, 
     
     protected override void OnUpgrade()
     {
-        this.EnergyCost.UpgradeBy(-1);
+        this.AddKeyword(CardKeyword.Innate);
     }
 }

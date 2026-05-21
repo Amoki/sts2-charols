@@ -69,7 +69,7 @@ public class TerraindepetanquePower : CharolaisPower
 
     public override Task AfterCardPlayed(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-      if (cardPlay.Card.Owner.Creature == this.Owner && !cardPlay.IsAutoPlay && cardPlay.IsLastInSeries && cardPlay.Card.Type == CardType.Attack && cardPlay.Card.Tags.Contains(PetanqueTag.Petanque))
+      if (cardPlay.Card.Owner.Creature == this.Owner && !cardPlay.IsAutoPlay && cardPlay.IsLastInSeries && cardPlay.Card.Tags.Contains(PetanqueTag.Petanque))
       {
         ++this.GetInternalData<Data>().CardsPlayedThisTurn;
       }
@@ -99,11 +99,10 @@ public class TerraindepetanquePower : CharolaisPower
       {
         return true;
       }
-
-      var isAttack = card.Type == CardType.Attack;
+      
       var isPetanque = card.Tags.Contains(PetanqueTag.Petanque);
 
-      if (isPetanque && isAttack)
+      if (isPetanque)
       {
         return this.GetInternalData<Data>().CardsPlayedThisTurn >= this.Amount;
 

@@ -27,18 +27,31 @@ public class Lecercle() : CharolaisCard(2,
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var amount = this.DynamicVars["Power"].IntValue;
+        var playerstrength = base.Owner.Creature.GetPowerAmount<StrengthPower>();
+        var playerdexterity = base.Owner.Creature.GetPowerAmount<DexterityPower>();
         var combatState = this.CombatState;
-        if (combatState != null)
+        
+        if (playerstrength > playerdexterity)
         {
-            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
-            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
-            await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, amount, this.Owner.Creature, this);
+            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, 2, this.Owner.Creature, this);
+            await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
+        }
+        else if (playerstrength < playerdexterity)
+        {
+            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, 2, this.Owner.Creature, this);
+            await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
+        }
+
+        else
+        {
+            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, 1, this.Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, 1, this.Owner.Creature, this);
+            await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         }
     }
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars["Power"].UpgradeValueBy(1M);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

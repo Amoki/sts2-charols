@@ -14,7 +14,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         new CalculationBaseVar(0m),
         new ExtraDamageVar(1m),
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
-        new RepeatVar(3)
+        new RepeatVar(4)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -38,19 +38,15 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
 
         var players = base.CombatState?.Players;
         if (players == null) { return; }
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
-        if (alcoolPower > 0)
-        {
-            var randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
-            await Cmd.Wait(0.5f);
-            await DamageCmd.Attack(alcoolPower).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
-                .WithHitFx("vfx/vfx_attack_slash")
-                .Execute(choiceContext);
-        }
+        var randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
+        await Cmd.Wait(0.5f);
+        await DamageCmd.Attack(8).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
+            .WithHitFx("vfx/vfx_attack_slash")
+            .Execute(choiceContext);
     }
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Repeat.UpgradeValueBy(2M);
+        this.DynamicVars.Repeat.UpgradeValueBy(3M);
     }
 }

@@ -6,7 +6,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
-public class Tourbillondeboules() : CharolaisCard(2,
+public class Tourbillondeboules() : CharolaisCard(1,
     CardType.Attack, CardRarity.Rare,
     TargetType.AllEnemies)
 {
@@ -14,7 +14,7 @@ public class Tourbillondeboules() : CharolaisCard(2,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(1M, ValueProp.Move),
+        new DamageVar(2M, ValueProp.Move),
         new RepeatVar(6)
     ];
     
@@ -29,6 +29,6 @@ public class Tourbillondeboules() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(2);
+        this.DynamicVars.Repeat.UpgradeValueBy(3);
     }
 }

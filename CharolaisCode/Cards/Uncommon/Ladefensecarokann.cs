@@ -15,7 +15,8 @@ public class Ladefensecarokann() : CharolaisCard(2,
     public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(12m, ValueProp.Move)
+        new BlockVar(12m, ValueProp.Move),
+        new ChestVar(16)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -26,11 +27,12 @@ public class Ladefensecarokann() : CharolaisCard(2,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
-        await CheckAction.ExecuteCheck(choiceContext, cardPlay);
+        await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target ?? throw new InvalidOperationException(), DynamicVars["Chest"].IntValue, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Block.UpgradeValueBy(4M);
+        this.DynamicVars["Chest"].UpgradeValueBy(5M);
+        this.AddKeyword(CardKeyword.Retain);
     }
 }

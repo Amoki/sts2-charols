@@ -12,13 +12,11 @@ public class Echec() : CharolaisCard(1, CardType.Skill, CardRarity.Basic, Target
 {
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new PowerVar<WeakPower>(1m),
-        new DynamicVar("Power", 1m)
+        new DynamicVar("Power", 2m)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [
         (HoverTipFactory.FromPower<ChestPower>()),
-        (HoverTipFactory.FromPower<WeakPower>()),
         (HoverTipFactory.FromPower<VulnerablePower>())
     ];
     
@@ -33,13 +31,25 @@ public class Echec() : CharolaisCard(1, CardType.Skill, CardRarity.Basic, Target
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await PowerCmd.Apply<WeakPower>(choiceContext, cardPlay.Target ?? throw new InvalidOperationException(), this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
-        await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target ?? throw new InvalidOperationException(), this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
-        await CheckAction.ExecuteCheck(choiceContext, cardPlay);
+        if (this.IsUpgraded)
+        {
+            await PowerCmd.Apply<VulnerablePower>(choiceContext,
+                cardPlay.Target ?? throw new InvalidOperationException(), this.DynamicVars["Power"].IntValue,
+                this.Owner.Creature, this);
+            await CheckmateAction.ExecuteCheckmate(choiceContext, cardPlay);
+        }
+        else
+        {
+            await PowerCmd.Apply<VulnerablePower>(choiceContext,
+                cardPlay.Target ?? throw new InvalidOperationException(), this.DynamicVars["Power"].IntValue,
+                this.Owner.Creature, this);
+            await CheckAction.ExecuteCheck(choiceContext, cardPlay);
+        }
+            
     }
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars["Power"].UpgradeValueBy(1M);
+        
     }
 }

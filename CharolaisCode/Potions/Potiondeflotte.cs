@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Models.Powers;
 using MegaCrit.Sts2.Core.Nodes.Rooms;
 
 namespace Charolais.CharolaisCode.Potions;
@@ -34,5 +35,6 @@ public class Potiondeflotte : CharolaisPotion
         PotionModel.AssertValidForTargetedPotion(target);
         NCombatRoom.Instance?.PlaySplashVfx(target, new Color("45e6d0"));
         await PowerCmd.Apply<PintPower>(choiceContext, target, decimal.Negate(DynamicVars["Power"].BaseValue), this.Owner.Creature, null);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, target, 1, this.Owner.Creature, null);
     }
 }

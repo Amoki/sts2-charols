@@ -14,7 +14,7 @@ public class Legambitduroi() : CharolaisCard(2,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("Power",13M)
+        new DynamicVar("Power",16M)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>

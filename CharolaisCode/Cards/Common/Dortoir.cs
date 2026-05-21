@@ -14,8 +14,8 @@ public class Dortoir() : CharolaisCard(2,
     public override bool GainsBlock => true;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new BlockVar(16m, ValueProp.Move),
-        new DynamicVar("Power", 1M),
+        new BlockVar(14m, ValueProp.Move),
+        new DynamicVar("Power", 2M),
     ];
     
     public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
@@ -23,7 +23,7 @@ public class Dortoir() : CharolaisCard(2,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var random = base.Owner.RunState.Rng.CombatTargets.NextInt(0, 100);
-        if (random >= 50)
+        if (random >= 75)
         {
             await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
             if (cardPlay.Target != null) await CreatureCmd.GainBlock(cardPlay.Target, base.DynamicVars.Block, cardPlay);

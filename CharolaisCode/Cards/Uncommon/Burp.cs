@@ -21,7 +21,11 @@ public class Burp() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, Tar
     
     protected override bool ShouldGlowGoldInternal => base.Owner.Creature.GetPowerAmount<PintPower>() >= 4;
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<WeakPower>())];
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromPower<PintPower>(),
+        HoverTipFactory.FromPower<WeakPower>()
+    ];
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

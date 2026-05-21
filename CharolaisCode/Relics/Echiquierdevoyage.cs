@@ -39,7 +39,7 @@ public class Echiquierdevoyage : CharolaisRelic
       this.Status = RelicStatus.Normal; 
       this.Flash();
         
-      return amount + 8M;
+      return amount + 12M;
     }
     return amount;
   }

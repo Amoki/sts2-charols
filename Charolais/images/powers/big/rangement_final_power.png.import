@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv7ugopmdhpdk"
-path="res://.godot/imported/digesplif.png-ddb5db2b1af76e71b106e5f57ef9dbd5.ctex"
+uid="uid://cqrgpriwnhyuo"
+path="res://.godot/imported/rangement_final_power.png-71a7135442d9e2a6eb80ee882d342034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/big/digesplif.png"
-dest_files=["res://.godot/imported/digesplif.png-ddb5db2b1af76e71b106e5f57ef9dbd5.ctex"]
+source_file="res://Charolais/images/powers/big/rangement_final_power.png"
+dest_files=["res://.godot/imported/rangement_final_power.png-71a7135442d9e2a6eb80ee882d342034.ctex"]
 
 [params]
 

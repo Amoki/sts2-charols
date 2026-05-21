@@ -32,6 +32,6 @@ public class Digesplif() : CharolaisCard(1,
         await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, (powerAmount), this.Owner.Creature, this);
     }
     
-    protected override void OnUpgrade() => this.DynamicVars.HpLoss.UpgradeValueBy(-2M);
+    protected override void OnUpgrade() => this.DynamicVars.HpLoss.UpgradeValueBy(-3M);
     
 }

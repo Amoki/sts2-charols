@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv7ugopmdhpdk"
-path="res://.godot/imported/digesplif.png-ddb5db2b1af76e71b106e5f57ef9dbd5.ctex"
+uid="uid://dp44qiasg8vy2"
+path="res://.godot/imported/douzedouzemaingauche.png-202a4e247b9fdc29920b7fc030e1c3ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/big/digesplif.png"
-dest_files=["res://.godot/imported/digesplif.png-ddb5db2b1af76e71b106e5f57ef9dbd5.ctex"]
+source_file="res://Charolais/images/card_portraits/big/douzedouzemaingauche.png"
+dest_files=["res://.godot/imported/douzedouzemaingauche.png-202a4e247b9fdc29920b7fc030e1c3ae.ctex"]
 
 [params]
 

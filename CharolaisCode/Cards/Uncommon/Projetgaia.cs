@@ -13,6 +13,7 @@ public class Projetgaia() : CharolaisCard(0,
         new CardsVar(2),
     ];
     
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {

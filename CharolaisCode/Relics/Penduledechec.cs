@@ -21,7 +21,7 @@ public class Penduledechec : CharolaisRelic
 
   protected override IEnumerable<DynamicVar> CanonicalVars =>
   [
-    new DynamicVar("Power",3M)
+    new DynamicVar("Power",4M)
   ];
   
   public override decimal ModifyPowerAmountGiven(
