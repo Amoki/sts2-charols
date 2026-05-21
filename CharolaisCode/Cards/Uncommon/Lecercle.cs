@@ -29,16 +29,15 @@ public class Lecercle() : CharolaisCard(2,
     {
         var playerstrength = base.Owner.Creature.GetPowerAmount<StrengthPower>();
         var playerdexterity = base.Owner.Creature.GetPowerAmount<DexterityPower>();
-        var combatState = this.CombatState;
         
         if (playerstrength > playerdexterity)
         {
-            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, 2, this.Owner.Creature, this);
+            await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, 3, this.Owner.Creature, this);
             await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         }
         else if (playerstrength < playerdexterity)
         {
-            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, 2, this.Owner.Creature, this);
+            await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, 3, this.Owner.Creature, this);
             await PowerCmd.Apply<LecerclePower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         }
 
