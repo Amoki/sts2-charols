@@ -33,7 +33,7 @@ public class Lebol() : CharolaisCard(1,
         int selectCount = Math.Min(this.DynamicVars.Cards.IntValue, CardPile.MaxCardsInHand - PileType.Hand.GetPile(this.Owner).Cards.Count);
         if (selectCount <= 0)
             return;
-        await CardPileCmd.Add(await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Discard.GetPile(this.Owner).Cards, this.Owner, new CardSelectorPrefs(this.SelectionScreenPrompt, selectCount)), PileType.Hand);
+        await CardPileCmd.Add(await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Discard.GetPile(this.Owner).Cards, this.Owner, new CardSelectorPrefs(CardSelectorPrefs.DiscardSelectionPrompt, selectCount)), PileType.Hand);
     }
     
     protected override void OnUpgrade()

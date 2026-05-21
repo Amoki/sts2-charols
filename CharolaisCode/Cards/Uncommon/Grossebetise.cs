@@ -19,7 +19,7 @@ public class Grossebetise() : CharolaisCard(3,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         var random = base.Owner.RunState.Rng.CombatTargets.NextInt(0, 100);
-        if (random >= 75)
+        if (random >= 25)
         {
             if (CombatState != null)
                 await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(1)

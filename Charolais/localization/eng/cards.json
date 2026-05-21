@@ -161,7 +161,7 @@
   "CHAROLAIS-TROISFEUILLES.title": "Trois Feuilles",
   "CHAROLAIS-TROPHEEMASTERSCHAROLS.description": "Gagnez {Power:diff()} de [gold]Force[/gold].\nGagnez {Power:diff()} de [gold]Dextérité[/gold].\nChoisissez une carte de votre [gold]Main[/gold]. Elle coûte [blue]0[/blue] pour le restant du combat.",
   "CHAROLAIS-TROPHEEMASTERSCHAROLS.title": "Trophée Masters de Charols",
-  "CHAROLAIS-TYROLIENNE_A_PET.description": "Echangez {Cards:diff()} {Cards:plural:carte|cartes} avec un autre joueur.",
+  "CHAROLAIS-TYROLIENNE_A_PET.description": "Echangez {Cards:diff()} {Cards:plural:carte|cartes} avec un autre joueur.\nRecevez chacun une copie [gold]Éthérée[/gold] et [gold]Épuisée[/gold] de cette carte.",
   "CHAROLAIS-TYROLIENNE_A_PET.title": "Tyrolienne à pet",
   "CHAROLAIS-VERREDEAU.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nPerdez tous vos effets de [gold]Pinte[/gold].",
   "CHAROLAIS-VERREDEAU.title": "Verre d'eau",
