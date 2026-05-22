@@ -1,12 +1,10 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
-using Charolais.CharolaisCode.Cards.Ancient;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Logging;
-using MegaCrit.Sts2.Core.Models;
 
 namespace Charolais.CharolaisCode.Cards;
 

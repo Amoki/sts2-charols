@@ -1,4 +1,6 @@
-﻿using BaseLib.Utils;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using BaseLib.Utils;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;

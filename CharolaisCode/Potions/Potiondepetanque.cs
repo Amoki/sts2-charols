@@ -1,4 +1,7 @@
-﻿using Charolais.CharolaisCode.Cards;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Charolais.CharolaisCode.Cards;
 using Charolais.CharolaisCode.Character;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;

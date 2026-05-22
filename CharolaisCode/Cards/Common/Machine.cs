@@ -1,4 +1,7 @@
-﻿using Charolais.CharolaisCode.Powers;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Players;
@@ -18,7 +21,7 @@ public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, Ta
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>())
     ];
     
-    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    // public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [

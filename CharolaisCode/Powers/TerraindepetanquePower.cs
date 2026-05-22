@@ -1,4 +1,7 @@
-﻿using Charolais.CharolaisCode.Cards;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Charolais.CharolaisCode.Cards;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -79,6 +82,7 @@ public class TerraindepetanquePower : CharolaisPower
     public override Task BeforeSideTurnStart(
       PlayerChoiceContext choiceContext,
       CombatSide side,
+      IReadOnlyList<Creature> participants,
       ICombatState combatState)
     {
       if (side == this.Owner.Side)

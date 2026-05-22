@@ -1,4 +1,6 @@
-﻿using MegaCrit.Sts2.Core.Combat;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Powers;
@@ -22,6 +24,7 @@ public class MusiquelacteePower : CharolaisPower
     public override Task BeforeSideTurnStart(
         PlayerChoiceContext choiceContext,
         CombatSide side,
+        IReadOnlyList<Creature> participants,
         ICombatState combatState)
     {
         if (side == this.Owner.Side)

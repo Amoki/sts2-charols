@@ -1,7 +1,7 @@
 {
   "CHAROLAIS-APERISPLIF.description": "Gagnez {Block:diff()} d'[gold]Armure[/gold].\nAjoutez [gold]Retenue[/gold] à une carte dans votre [gold]Main[/gold].",
   "CHAROLAIS-APERISPLIF.title": "Apérisplif",
-  "CHAROLAIS-BARBECUE.description": "Au début chaque tour, gagnez {Energy:energyIcons()} et ajoutez une [gold]Brûlure[/gold] à votre [gold]Défausse[/gold].",
+  "CHAROLAIS-BARBECUE.description": "Ajoutez une [gold]Brûlure[/gold] à votre [gold]Défausse[/gold].\nAu début de votre tour, gagnez {Energy:energyIcons()}.",
   "CHAROLAIS-BARBECUE.title": "Barbecue",
   "CHAROLAIS-BEER.description": "Infligez {Damage:diff()} dégâts.\nBuvez {Power:diff()} [gold]Pintes[/gold].",
   "CHAROLAIS-BEER.title": "Beer",
@@ -83,7 +83,7 @@
   "CHAROLAIS-LANCERDEFRISBEE.title": "Lancer de Frisbee",
   "CHAROLAIS-LEBOL.description": "Vous ne perdez pas vos pintes à la fin de ce tour.\nBuvez {Power:diff()} [gold]Pintes[/gold].\nPlacez {Cards:diff()} {Cards:plural:carte|cartes} de votre [gold]Défausse[/gold] dans votre [gold]Main[/gold].",
   "CHAROLAIS-LEBOL.title": "Le Bol",
-  "CHAROLAIS-LECERCLE.description": "Si vous avez plus de [gold]Force[/gold] que de [gold]Dextérité[/gold], gagnez 2 de [gold]Dextérité[/gold].\nSi vous avez plus de [gold]Dextérité[/gold] que de [gold]Force[/gold], gagnez 2 de [gold]Force[/gold].\n Si vous avez autant de [gold]Force[/gold] que de [gold]Dextérité[/gold], gagnez 1 de chaque.\nAu début de chaque tour, perdez 1 [gold]Pinte[/gold].",
+  "CHAROLAIS-LECERCLE.description": "Si vous avez plus de [gold]Force[/gold] que de [gold]Dextérité[/gold], gagnez 3 de [gold]Dextérité[/gold].\nSi vous avez plus de [gold]Dextérité[/gold] que de [gold]Force[/gold], gagnez 3 de [gold]Force[/gold].\n Si vous avez autant de [gold]Force[/gold] que de [gold]Dextérité[/gold], gagnez 1 de chaque.\nAu début de chaque tour, perdez 1 [gold]Pinte[/gold].",
   "CHAROLAIS-LECERCLE.title": "Le Cercle",
   "CHAROLAIS-LEGAMBITDELADAME.description": "Infligez {Damage:diff()} dégâts.\nDouble les [gold]Coups d'avance[/gold].",
   "CHAROLAIS-LEGAMBITDELADAME.title": "Le Gambit de la Dame",

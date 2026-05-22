@@ -1,4 +1,6 @@
-﻿using Charolais.CharolaisCode.Cards;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using Charolais.CharolaisCode.Cards;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -23,7 +25,7 @@ public class TournoisdepetanquePower : CharolaisPower
         if (card.Tags.Contains(PetanqueTag.Petanque))
         {
             Flash();
-            await CreatureCmd.GainBlock(this.Owner, 1M, ValueProp.Unpowered, null, true);
+            await CreatureCmd.GainBlock(this.Owner, base.Amount, ValueProp.Unpowered, null, true);
         }
     }
 }

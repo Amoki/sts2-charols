@@ -3,13 +3,13 @@
   "name": "Charolais",
   "author": "Amoki, SweetSkippy & ToMy",
   "description": "Le Charolais",
-  "version": "v0.1.0",
+  "version": "v0.6.9",
   "has_pck": true,
   "has_dll": true,
   "dependencies": [
     {
       "id": "BaseLib",
-      "minVersion": "3.1.2"
+      "minVersion": "3.1.4"
     }
   ],
   "affects_gameplay": true

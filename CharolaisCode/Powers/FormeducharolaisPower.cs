@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -11,15 +12,12 @@ public class FormeducharolaisPower : CharolaisPower
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
     
-    public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
-    // ToDo uninstanced
-    
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
     {
         if (player != base.Owner.Player)
             return;
         Flash();
-        await CreatureCmd.Heal(base.Owner, 1m);
-        await PowerCmd.Apply<PintPower>(choiceContext, base.Owner, 5, base.Owner, (CardModel?)null);
+        await CreatureCmd.Heal(base.Owner, base.Amount);
+        await PowerCmd.Apply<PintPower>(choiceContext, base.Owner, decimal.Multiply(base.Amount, 5), base.Owner, (CardModel?)null);
     }
 }

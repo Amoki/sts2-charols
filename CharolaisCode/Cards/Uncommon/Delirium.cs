@@ -1,4 +1,6 @@
-﻿using Charolais.CharolaisCode.Powers;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -12,7 +14,7 @@ public class Delirium() : CharolaisCard(1,
     TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 1)
+        new DynamicVar("Power", 2)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -27,6 +29,6 @@ public class Delirium() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars["Power"].UpgradeValueBy(1M);
+        this.DynamicVars["Power"].UpgradeValueBy(2M);
     }
 }

@@ -1,8 +1,6 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using Charolais.CharolaisCode.Extensions;
-using Godot;
-using MegaCrit.Sts2.Core.Logging;
 
 namespace Charolais.CharolaisCode.Powers;
 

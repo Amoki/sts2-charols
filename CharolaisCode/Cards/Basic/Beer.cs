@@ -1,4 +1,5 @@
-﻿using BaseLib.Abstracts;
+﻿using System;
+using BaseLib.Abstracts;
 using Charolais.CharolaisCode.Cards.Ancient;
 using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.HoverTips;

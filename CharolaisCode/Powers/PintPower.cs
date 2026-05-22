@@ -1,4 +1,7 @@
-﻿using MegaCrit.Sts2.Core.Entities.Powers;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.ValueProps;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
@@ -46,7 +49,10 @@ public class PintPower : CharolaisPower
         await CreatureCmd.GainBlock(base.Owner, block, ValueProp.Unpowered, null);
     }
     
-    public override async Task BeforeTurnEnd(PlayerChoiceContext choiceContext, CombatSide side)
+    public override async Task BeforeSideTurnEnd(
+        PlayerChoiceContext choiceContext,
+        CombatSide side,
+        IEnumerable<Creature> participants)
     {
         if (side != base.Owner.Side || base.Owner?.Player?.PlayerCombatState == null) return;
         

@@ -1,4 +1,7 @@
-﻿using Charolais.CharolaisCode.Powers;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -22,7 +25,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         HoverTipFactory.FromPower<PintPower>()
     ];
     
-    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    // public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
     
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,

@@ -1,5 +1,6 @@
 ﻿{
   "TO_TRADE": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à [gold]échanger[/gold].",
   "TO_RETAIN": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à [gold]retenir[/gold].",
-  "TO_SETTOFREE": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à passer son coût à 0."
+  "TO_SETTOFREE": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à passer son coût à 0.",
+  "TO_GET": "Choisir {Amount:plural:une carte|[blue]{}[/blue] cartes} à ajouter à votre main."
 }

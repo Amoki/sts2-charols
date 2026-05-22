@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using System.Threading.Tasks;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Players;
 using MegaCrit.Sts2.Core.Entities.Powers;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -11,9 +12,6 @@ public class DeliriumPower : CharolaisPower
     
     public override PowerType Type => PowerType.Buff;
     public override PowerStackType StackType => PowerStackType.Counter;
-
-    public override PowerInstanceType InstanceType => PowerInstanceType.Instanced;
-    // ToDo uninstanced and increment PintPower
     
     public override async Task AfterPlayerTurnStart(
         PlayerChoiceContext choiceContext,
@@ -22,6 +20,6 @@ public class DeliriumPower : CharolaisPower
         if (player != this.Owner.Player)
             return;
         Flash();
-        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, 1, this.Owner, null);
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner, base.Amount, this.Owner, null);
     }
 }

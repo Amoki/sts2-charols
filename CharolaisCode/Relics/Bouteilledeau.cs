@@ -1,8 +1,12 @@
-﻿using BaseLib.Utils;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using BaseLib.Utils;
 using Charolais.CharolaisCode.Character;
 using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Combat;
 using MegaCrit.Sts2.Core.Commands;
+using MegaCrit.Sts2.Core.Entities.Creatures;
 using MegaCrit.Sts2.Core.Entities.Relics;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -26,7 +30,10 @@ public class Bouteilledeau : CharolaisRelic
         HoverTipFactory.FromPower<PintPower>()
     ];
     
-    public override async Task AfterSideTurnStart(CombatSide side, ICombatState combatState)
+    public override async Task AfterSideTurnStart(
+        CombatSide side,
+        IReadOnlyList<Creature> participants,
+        ICombatState combatState)
     {
         if (side != this.Owner.Creature.Side) 
             return;

@@ -1,14 +1,12 @@
-﻿using BaseLib.Abstracts;
+﻿using System.Collections.Generic;
+using BaseLib.Abstracts;
 using BaseLib.Utils.NodeFactories;
 using Charolais.CharolaisCode.Cards.Basic;
-using Charolais.CharolaisCode.Cards.Common;
 using Charolais.CharolaisCode.Extensions;
 using Charolais.CharolaisCode.Relics;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
-using MegaCrit.Sts2.Core.Models.Cards;
-using MegaCrit.Sts2.Core.Models.Relics;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 
 namespace Charolais.CharolaisCode.Character;
