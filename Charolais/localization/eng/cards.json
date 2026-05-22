@@ -23,7 +23,7 @@
   "CHAROLAIS-BOULEENPLASTIQUE.title": "Boule en Plastique",
   "CHAROLAIS-BOULESURLEPIED.description": "Infligez {Damage:diff()} dégâts.\nGagnez {Power:diff()} de [gold]Force[/gold].",
   "CHAROLAIS-BOULESURLEPIED.title": "Boule sur le Pied",
-  "CHAROLAIS-BURGER.description": "Gagnez {VigorPower:diff()} de [gold]Vigueur[/gold].",
+  "CHAROLAIS-BURGER.description": "Gagnez {Power:diff()} de [gold]Vigueur[/gold].",
   "CHAROLAIS-BURGER.title": "Burger",
   "CHAROLAIS-BURP.description": "Infligez {CalculatedDamage:diff()} dégâts{InCombat:| + votre quantité de [gold]Pintes[/gold]}.\n Si vous avez plus de 3 pintes, appliquez [gold]Affaibli[/gold] ({WeakPower:diff()}).",
   "CHAROLAIS-BURP.title": "Burp",
@@ -170,5 +170,7 @@
   "CHAROLAIS-RANGEMENT_FINAL.description": "Obtenez une récompense de {Cards:diff()} cartes supplémentaires d'autres couleurs.",
   "CHAROLAIS-RANGEMENT_FINAL.title": "Rangement Final",
   "CHAROLAIS-DOUZEDOUZEMAINGAUCHE.description": "[gold]Épuisez[/gold] 1 carte{IfUpgraded:show:| au hasard}.\nÉchangez votre [gold]Force[/gold] et votre [gold]Dextérité[/gold].",
-  "CHAROLAIS-DOUZEDOUZEMAINGAUCHE.title": "12-12 Main Gauche"
+  "CHAROLAIS-DOUZEDOUZEMAINGAUCHE.title": "12-12 Main Gauche",
+  "CHAROLAIS-PROXI.description": "Gagnez {Power:diff()} de [gold]Vigueur[/gold].\nPlacez {Cards:diff()} {Cards:plural:carte|cartes} de votre [gold]Défausse[/gold] dans votre [gold]Main[/gold].",
+  "CHAROLAIS-PROXI.title": "Proxi"
 }
