@@ -25,7 +25,7 @@ public class Carreau() : CharolaisCard(1,
         new DynamicVar("Power", 1M)
     ];
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Retain];
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
