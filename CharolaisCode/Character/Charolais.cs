@@ -7,6 +7,7 @@ using Charolais.CharolaisCode.Relics;
 using Godot;
 using MegaCrit.Sts2.Core.Entities.Characters;
 using MegaCrit.Sts2.Core.Models;
+using MegaCrit.Sts2.Core.Nodes.Combat;
 using MegaCrit.Sts2.Core.Nodes.Vfx;
 
 namespace Charolais.CharolaisCode.Character;
@@ -84,4 +85,9 @@ public class Charolais : PlaceholderCharacterModel
     public override string CustomArmPaperTexturePath => "paper.png".CharacterUiPath();
     
     public override string CustomArmScissorsTexturePath => "scissors.png".CharacterUiPath();
+    
+    public override NCreatureVisuals? CreateCustomVisuals()
+    {
+        return NodeFactory<NCreatureVisuals>.CreateFromResource("res://Charolais/images/character/charolais.png");
+    }
 }
