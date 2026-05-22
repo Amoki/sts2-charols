@@ -21,7 +21,7 @@
   "CHAROLAIS-BOULEDEVANTBOULEDARGENT.title": "Boule Devant, Boule d'Argent",
   "CHAROLAIS-BOULEENPLASTIQUE.description": "Infligez {Damage:diff()} dégâts.\nPiochez {Cards:diff()} {Cards:plural:carte|cartes}.{IfUpgraded:show:\nGagnez {Energy:energyIcons()}.|}",
   "CHAROLAIS-BOULEENPLASTIQUE.title": "Boule en Plastique",
-  "CHAROLAIS-BOULESURLEPIED.description": "Infligez {Damage:diff()} dégâts.\nAppliquez [gold]Vulnérable[/gold] ({Power:diff()}) à un ennemi.",
+  "CHAROLAIS-BOULESURLEPIED.description": "Infligez {Damage:diff()} dégâts.\nGagnez {Power:diff()} de [gold]Force[/gold].",
   "CHAROLAIS-BOULESURLEPIED.title": "Boule sur le Pied",
   "CHAROLAIS-BURGER.description": "Gagnez {VigorPower:diff()} de [gold]Vigueur[/gold].",
   "CHAROLAIS-BURGER.title": "Burger",

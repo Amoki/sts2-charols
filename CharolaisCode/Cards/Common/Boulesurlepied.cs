@@ -23,6 +23,8 @@ public class Boulesurlepied() : CharolaisCard(0,
         new DynamicVar("Power", 1M)
     ];
     
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
+    
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<VulnerablePower>()
@@ -34,7 +36,7 @@ public class Boulesurlepied() : CharolaisCard(0,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_flying_slash")
             .Execute(choiceContext);
-        await PowerCmd.Apply<VulnerablePower>(choiceContext, cardPlay.Target, this.DynamicVars["Power"].BaseValue, this.Owner.Creature, this);
+        await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, this.DynamicVars["Power"].BaseValue, this.Owner.Creature, this);
     }
     
     protected override void OnUpgrade()
