@@ -10,6 +10,8 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Ptitblancdedixh() : CharolaisCard(2, CardType.Skill, CardRarity.Rare, TargetType.Self)
 {
+    public override bool CanBeGeneratedInCombat => false;
+    
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new MaxHpVar(2M),
         new AlcoolVar(3)

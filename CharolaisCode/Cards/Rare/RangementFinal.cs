@@ -18,8 +18,9 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class RangementFinal() : CharolaisCard(1,
     CardType.Skill, CardRarity.Rare,
     TargetType.Self)
-{
-    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(2)];
+{ 
+    public override bool CanBeGeneratedInCombat => false;
+    protected override IEnumerable<DynamicVar> CanonicalVars => [new CardsVar(3)];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
