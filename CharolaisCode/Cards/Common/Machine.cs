@@ -21,8 +21,6 @@ public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, Ta
         new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>())
     ];
     
-    // public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
-    
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         HoverTipFactory.FromPower<PintPower>()

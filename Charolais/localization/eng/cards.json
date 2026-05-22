@@ -27,7 +27,7 @@
   "CHAROLAIS-BURGER.title": "Burger",
   "CHAROLAIS-BURP.description": "Infligez {CalculatedDamage:diff()} dégâts{InCombat:| + votre quantité de [gold]Pintes[/gold]}.\n Si vous avez plus de 3 pintes, appliquez [gold]Affaibli[/gold] ({WeakPower:diff()}).",
   "CHAROLAIS-BURP.title": "Burp",
-  "CHAROLAIS-CARREAU.description": "Infligez {Damage:diff()} dégâts.\nGagner {Block:diff()} d'[gold]Armure[/gold].",
+  "CHAROLAIS-CARREAU.description": "Infligez {Damage:diff()} dégâts.\nGagner {Block:diff()} d'[gold]Armure[/gold].\nGagnez {Power:diff()} de [gold]Dextérité[/gold].",
   "CHAROLAIS-CARREAU.title": "Carreau !",
   "CHAROLAIS-CONVULSIONS.description": "Infligez un montant de dégâts égal à la quantité de vos [gold]Pintes[/gold]{InCombat: ({CalculatedDamage:diff()})|} {Repeat:diff()} fois à TOUS les ennemis.\nInfligez 8 dégats à un allié aléatoire.",
   "CHAROLAIS-CONVULSIONS.title": "Convulsions",
