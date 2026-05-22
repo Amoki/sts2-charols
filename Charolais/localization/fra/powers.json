@@ -53,7 +53,10 @@
   "CHAROLAIS-RANGERLEGARAGE_UPGRADED_POWER.description": "Au début de votre tour, ajoutez 1 Compétence Inhabituel ou Rare aléatoire à votre [gold]Main[/gold].",
   "CHAROLAIS-RANGERLEGARAGE_UPGRADED_POWER.smartDescription": "Au début de votre tour, ajoutez 1 Compétence Inhabituel ou Rare aléatoire à votre [gold]Main[/gold].",
   "CHAROLAIS-RANGERLEGARAGE_UPGRADED_POWER.title": "Ranger le Garage+",
-  "CHAROLAIS-RANGEMENT_FINAL_POWER.description": "",
+  "CHAROLAIS-RANGEMENT_FINAL_POWER.description": "Obtenez 1 récompense de cartes supplémentaires d'autres couleurs à la fin du combat",
   "CHAROLAIS-RANGEMENT_FINAL_POWER.smartDescription": "Obtenez [blue]{Amount}[/blue] {Amount:plural:récompense|récompenses} de cartes supplémentaires d'autres couleurs à la fin du combat",
-  "CHAROLAIS-RANGEMENT_FINAL_POWER.title": "Rangement Final"
+  "CHAROLAIS-RANGEMENT_FINAL_POWER.title": "Rangement Final",
+  "CHAROLAIS-LE_BOL_POWER.description": "Annulez la prochaine fois que vos pintes devraient retomber à 0",
+  "CHAROLAIS-LE_BOL_POWER.smartDescription": "Annulez la prochaine fois que vos pintes devraient retomber à 0",
+  "CHAROLAIS-LE_BOL_POWER.title": "LeBolPower"
 }

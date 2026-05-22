@@ -20,8 +20,6 @@ public class PintPower : CharolaisPower
 
     public override bool AllowNegative => false;
 
-    public bool SkipReset = false;
-
     private int _blockRemainder= 0;
     
     public override async Task AfterPlayerTurnStart(PlayerChoiceContext choiceContext, Player player)
@@ -65,13 +63,15 @@ public class PintPower : CharolaisPower
             case >= 18:
                 Flash();
                 await CreatureCmd.Damage(choiceContext, base.Owner, Math.Min(maxHpToRemove, 3), ValueProp.Unblockable | ValueProp.Unpowered, base.Owner);
-                if (!SkipReset)
+                
+                var leBolAmount = base.Owner.GetPowerAmount<LeBolPower>();
+                if (leBolAmount <= 0)
                 {
                     base.SetAmount(0);
                 }
                 else
                 {
-                    SkipReset = false;
+                    await PowerCmd.Apply<LeBolPower>(choiceContext, this.Owner.Player.Creature, -1, this.Owner.Player.Creature, null);
                 }
                 break;
             case >= 12:

@@ -26,25 +26,15 @@ public class Lebol() : CharolaisCard(1,
         HoverTipFactory.FromPower<PintPower>()
     ];
     
-    private static LocString TogetSelectionPrompt => new LocString("card_selection", "TO_GET");
-    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        var pintPower = this.Owner.Creature.GetPower<PintPower>();
-        if (pintPower != null)
-        {
-            pintPower.SkipReset = true;
-        }
+        await PowerCmd.Apply<LeBolPower>(choiceContext, this.Owner.Creature, 1, this.Owner.Creature, this);
         await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, DynamicVars["Power"].IntValue, this.Owner.Creature, this);
         await CreatureCmd.TriggerAnim(this.Owner.Creature, "Cast", this.Owner.Character.CastAnimDelay);
-        int selectCount = Math.Min(this.DynamicVars.Cards.IntValue, CardPile.MaxCardsInHand - PileType.Hand.GetPile(this.Owner).Cards.Count);
-        if (selectCount <= 0)
-            return;
-        await CardPileCmd.Add(await CardSelectCmd.FromSimpleGrid(choiceContext, PileType.Discard.GetPile(this.Owner).Cards, this.Owner, new CardSelectorPrefs(TogetSelectionPrompt, selectCount)), PileType.Hand);
     }
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Retain);
+        this.DynamicVars["Power"].UpgradeValueBy(3);
     }
 }
