@@ -25,7 +25,8 @@ public class Tourbillondeboules() : CharolaisCard(1,
         var combatState = this.CombatState;
         if (combatState != null)
             await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this)
-                .TargetingAllOpponents(combatState).WithHitFx("vfx/vfx_giant_horizontal_slash")
+                .TargetingAllOpponents(combatState)
+                .WithHitFx("vfx/vfx_giant_horizontal_slash")
                 .Execute(choiceContext);
     }
     

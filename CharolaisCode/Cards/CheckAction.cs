@@ -25,8 +25,6 @@ public static class CheckAction
                 .FromCard(cardPlay.Card)
                 .WithHitCount(1)
                 .Targeting(target)
-                .WithAttackerAnim("Cast", 1f)
-                .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, target))
                 .Execute(context);
             
             await PowerCmd.Apply<ChestPower>(context, target, -amount, cardPlay.Card.Owner.Creature, cardPlay.Card);

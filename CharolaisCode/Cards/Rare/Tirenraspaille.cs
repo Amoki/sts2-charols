@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Nodes.Vfx;
 using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
@@ -36,7 +37,8 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
                 await DamageCmd.Attack(base.DynamicVars.CalculatedDamage)
                     .WithHitCount(this.DynamicVars.Repeat.IntValue)
                     .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
-                    .WithHitFx("vfx/vfx_attack_slash")
+                    .WithAttackerAnim("Cast", 1f)
+                    .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, cardPlay.Target))
                     .Execute(choiceContext);
     }
 

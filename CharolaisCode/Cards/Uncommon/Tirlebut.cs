@@ -29,7 +29,8 @@ public class Tirlebut() : CharolaisCard(0,
         await DamageCmd.Attack(energyAmount + 1)
             .WithHitCount(energyAmount + 1).FromCard(this)
             .Targeting(cardPlay.Target)
-            .WithHitVfxNode(t => NStabVfx.Create(t, true, VfxColor.Gold))
+            .WithAttackerAnim("Cast", 0.5f)
+            .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, cardPlay.Target))
             .Execute(choiceContext);
         await PlayerCmd.GainEnergy(this.DynamicVars.Energy.IntValue, this.Owner);
     }
