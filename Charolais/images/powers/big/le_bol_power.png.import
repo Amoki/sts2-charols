@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5yg5j65p28y2"
-path="res://.godot/imported/charolais.png-8f2cda23aa42410424893a68f95ed2f5.ctex"
+uid="uid://bha3mkt2ehhnx"
+path="res://.godot/imported/le_bol_power.png-0a07e188b8823c65e9dabfb11765b781.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/character/charolais.png"
-dest_files=["res://.godot/imported/charolais.png-8f2cda23aa42410424893a68f95ed2f5.ctex"]
+source_file="res://Charolais/images/powers/big/le_bol_power.png"
+dest_files=["res://.godot/imported/le_bol_power.png-0a07e188b8823c65e9dabfb11765b781.ctex"]
 
 [params]
 
