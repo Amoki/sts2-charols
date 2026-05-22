@@ -1,6 +1,6 @@
 {
   "CHAROLAIS-ALCOOL.description": "À la fin du tour, gagnez [blue]1[/blue] d'[gold]Armure[/gold] tous les 2 effet de [gold]Pinte[/gold] et perdez 1 PV tous les 6 effets de [gold]Pinte[/gold]. À partir de 18 effets de [gold]Pinte[/gold], perdez 3 PV ainsi que tous ces effets.",
   "CHAROLAIS-ALCOOL.title": "Pinte",
-  "CHAROLAIS-CHEST.description": "Jouez un [gold]Échec[/gold] pour infliger autant de dégats que de Coups d'avance.",
+  "CHAROLAIS-CHEST.description": "Jouez un [gold]Échec[/gold] pour infliger autant de dégats que de [gold]Coups d'avance[/gold].\nL'ennemi perd ses [gold]Coups d'avance[/gold].\nJouez un [gold]Échec et Mat[/gold] pour que l'ennemi conserve ses [gold]Coups d'avance[/gold].",
   "CHAROLAIS-CHEST.title": "Coups d'avance"
 }

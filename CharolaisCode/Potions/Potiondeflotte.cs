@@ -29,7 +29,8 @@ public class Potiondeflotte : CharolaisPotion
 
     public override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<PintPower>()
+        HoverTipFactory.FromPower<PintPower>(),
+        HoverTipFactory.FromPower<StrengthPower>()
     ];
     
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)

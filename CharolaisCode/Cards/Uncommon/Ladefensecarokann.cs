@@ -22,11 +22,6 @@ public class Ladefensecarokann() : CharolaisCard(2,
         new ChestVar(16)
     ];
     
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<ChestPower>()
-    ];
-    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.GainBlock(base.Owner.Creature, base.DynamicVars.Block, cardPlay);
