@@ -37,11 +37,11 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
                 .Execute(choiceContext);
         }
 
-        var players = base.CombatState?.Players;
-        if (players == null) { return; }
-        var randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
+        var allies = base.CombatState?.Allies.Where(ally => ally.IsAlive);
+        if (allies == null) { return; }
+        var ally = base.Owner.RunState.Rng.CombatTargets.NextItem(allies) ?? throw new InvalidOperationException();
         await Cmd.Wait(0.5f);
-        await DamageCmd.Attack(8).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
+        await DamageCmd.Attack(8).Unpowered().FromCard(this).Targeting(ally)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
