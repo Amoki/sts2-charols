@@ -72,6 +72,8 @@ public class Charolais : PlaceholderCharacterModel
         }
     }
 
+    public override string CustomCharacterSelectBg => "res://Charolais/images/scenes/charolaisscene.tscn";
+
     public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
     public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
