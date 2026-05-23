@@ -34,12 +34,12 @@ public class Machine() : CharolaisCard(1, CardType.Attack, CardRarity.Common, Ta
         await DamageCmd.Attack(base.DynamicVars.CalculatedDamage).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
-        
-        var players = base.CombatState?.Players;
-        if (players == null) { return; }
-        Player randomPlayer = base.Owner.RunState.Rng.CombatTargets.NextItem(players) ?? throw new InvalidOperationException();
+
+        var allies = base.CombatState?.Allies.Where(ally => ally.IsAlive);
+        if (allies == null) { return; }
+        var ally = base.Owner.RunState.Rng.CombatTargets.NextItem(allies) ?? throw new InvalidOperationException();
         await Cmd.Wait(0.5f);
-        await DamageCmd.Attack(5).Unpowered().FromCard(this).Targeting(randomPlayer.Creature)
+        await DamageCmd.Attack(5).Unpowered().FromCard(this).Targeting(ally)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }
