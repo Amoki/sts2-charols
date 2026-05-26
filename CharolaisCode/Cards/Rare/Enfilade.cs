@@ -9,7 +9,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 namespace Charolais.CharolaisCode.Cards.Rare;
 
 
-public class Enfilade() : CharolaisCard(2, CardType.Power, CardRarity.Rare, TargetType.Self)
+public class Enfilade() : CharolaisCard(1, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CardsVar(2)

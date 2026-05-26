@@ -176,5 +176,7 @@
   "CHAROLAIS-COUPTRANQUILLE.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold].\nPiochez {Cards:diff()} carte.",
   "CHAROLAIS-COUPTRANQUILLE.title": "Coup Tranquille",
   "CHAROLAIS-ENFILADE.description": "{IfUpgraded:show:Piochez {Cards:diff()} {Cards:plural:carte|cartes}.\n|}Au début de votre tour, [gold]Transformez[/gold] [blue]1[/blue] carte de votre [gold]Main[/gold] en [gold]Coup tranquille[/gold].",
-  "CHAROLAIS-ENFILADE.title": "Enfilade"
+  "CHAROLAIS-ENFILADE.title": "Enfilade",
+  "CHAROLAIS-METREDESHOOTERS.description": "Pour toutes les 5 cartes que vous jouez en un tour, gagnez {Power:diff()} [gold]Pintes[/gold].",
+  "CHAROLAIS-METREDESHOOTERS.title": "Mètre de Shooters"
 }

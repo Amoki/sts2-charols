@@ -35,8 +35,8 @@
   "CHAROLAIS-PAT_POWER.description": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]6[/blue] dégâts.",
   "CHAROLAIS-PAT_POWER.smartDescription": "Lorsque vous appliquez des [gold]Coups d'avance[/gold] sur un ennemi, TOUS les ennemis subissent [blue]{Amount}[/blue] dégâts.",
   "CHAROLAIS-PAT_POWER.title": "Pat",
-  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.description": "Au début de votre tour, gagnez 5 [gold]Pinte[/gold] et récupérez 1 PV.",
-  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.smartDescription": "Au début de votre tour, gagnez 5 [gold]Pinte[/gold] et récupérez 1 PV.",
+  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.description": "Au début de votre tour, gagnez 5 [gold]Pintes[/gold] et récupérez 1 PV.",
+  "CHAROLAIS-FORMEDUCHAROLAIS_POWER.smartDescription": "Au début de votre tour, gagnez 5 [gold]Pintes[/gold] et récupérez 1 PV.",
   "CHAROLAIS-FORMEDUCHAROLAIS_POWER.title": "Forme du Charolais",
   "CHAROLAIS-TABLEAUDEMAT_POWER.description": "Lorsqu'une attaque vous touche, appliquez [blue]{Amount}[/blue] [gold]Coups d'avance[/gold] en retour.",
   "CHAROLAIS-TABLEAUDEMAT_POWER.smartDescription": "Lorsqu'une attaque vous touche, appliquez [blue]{Amount}[/blue] [gold]Coups d'avance[/gold] en retour.",
@@ -61,5 +61,8 @@
   "CHAROLAIS-LE_BOL_POWER.title": "Le Bol",
   "CHAROLAIS-ENFILADE_POWER.description": "Au début de votre tour, [gold]Transformez[/gold] [blue]{Amount}[/blue] {Amount:plural:carte|cartes} de votre [gold]Main[/gold] en [gold]Coup tranquille[/gold].",
   "CHAROLAIS-ENFILADE_POWER.smartDescription": "Au début de votre tour, [gold]Transformez[/gold] [blue]{Amount}[/blue] {Amount:plural:carte|cartes} de votre [gold]Main[/gold] en [gold]Coup tranquille[/gold].",
-  "CHAROLAIS-ENFILADE_POWER.title": "Enfilade"
+  "CHAROLAIS-ENFILADE_POWER.title": "Enfilade",
+  "CHAROLAIS-METREDESHOOTERS_POWER.description": "Pour toutes les 5 cartes que vous jouez en un tour, gagnez 8 [gold]Pintes[/gold].",
+  "CHAROLAIS-METREDESHOOTERS_POWER.smartDescription": "Pour toutes les 5 cartes que vous jouez en un tour, gagnez 8 [gold]Pintes[/gold].",
+  "CHAROLAIS-METREDESHOOTERS_POWER.title": "Mètre de Shooters"
 }
