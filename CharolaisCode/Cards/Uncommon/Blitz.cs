@@ -30,6 +30,6 @@ public class Blitz() : CharolaisCard(1,
     
     protected override void OnUpgrade()
     {
-        this.EnergyCost.UpgradeBy(-1);
+        this.DynamicVars["Power"].UpgradeValueBy(2M);
     }
 }

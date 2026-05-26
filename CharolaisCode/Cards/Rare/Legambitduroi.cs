@@ -16,7 +16,7 @@ public class Legambitduroi() : CharolaisCard(2,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DynamicVar("Power",16M)
+        new DynamicVar("Power",14M)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -39,5 +39,6 @@ public class Legambitduroi() : CharolaisCard(2,
     protected override void OnUpgrade()
     {
         this.EnergyCost.UpgradeBy(-1);
+        this.DynamicVars["Power"].UpgradeValueBy(4M);
     }
 }

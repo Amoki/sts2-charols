@@ -14,7 +14,7 @@ public class Spritzenfolie() : CharolaisCard(2, CardType.Attack, CardRarity.Rare
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(18M, ValueProp.Move),
-        new AlcoolVar(6),
+        new AlcoolVar(9),
     ];
     
     protected override async Task OnPlay(
@@ -34,6 +34,6 @@ public class Spritzenfolie() : CharolaisCard(2, CardType.Attack, CardRarity.Rare
     protected override void OnUpgrade()
     {
         base.DynamicVars.Damage.UpgradeValueBy(6m);
-        this.DynamicVars["Alcool"].UpgradeValueBy(4M);
+        this.DynamicVars["Alcool"].UpgradeValueBy(3M);
     }
 }

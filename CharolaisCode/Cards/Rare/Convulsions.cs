@@ -48,6 +48,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
 
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Repeat.UpgradeValueBy(3M);
+        this.DynamicVars.Repeat.UpgradeValueBy(2M);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

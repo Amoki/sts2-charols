@@ -27,7 +27,7 @@ public class TableaudematPower : CharolaisPower
         if (dealer != null && dealer != this.Owner)
         {
             this.Flash();
-            await PowerCmd.Apply<ChestPower>(choiceContext, [dealer], 6M * this.Amount, this.Owner, null);
+            await PowerCmd.Apply<ChestPower>(choiceContext, [dealer], this.Amount, this.Owner, null);
         }
     }
 }

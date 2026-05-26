@@ -16,7 +16,7 @@ public class Tournoisdepetanque() : CharolaisCard(2,
     protected override HashSet<CardTag> CanonicalTags => [PetanqueTag.Petanque];
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 1M)
+        new DynamicVar("Power", 2M)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

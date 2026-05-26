@@ -17,7 +17,8 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
     TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DamageVar(11M, ValueProp.Move)
+        new DamageVar(6M, ValueProp.Move),
+        new RepeatVar(2)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ChestPower>())];
@@ -26,7 +27,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
     {
         if (this.IsUpgraded)
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         
@@ -34,7 +35,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
         }
         else
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         

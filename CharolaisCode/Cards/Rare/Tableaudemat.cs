@@ -12,7 +12,7 @@ namespace Charolais.CharolaisCode.Cards.Rare;
 public class Tableaudemat() : CharolaisCard(1, CardType.Power, CardRarity.Rare, TargetType.Self)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 1M)
+        new DynamicVar("Power", 6M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ChestPower>())];
@@ -25,6 +25,6 @@ public class Tableaudemat() : CharolaisCard(1, CardType.Power, CardRarity.Rare, 
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Innate);
+        this.DynamicVars["Power"].UpgradeValueBy(4M);
     }
 }

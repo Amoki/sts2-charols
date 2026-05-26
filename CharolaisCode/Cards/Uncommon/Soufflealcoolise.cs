@@ -40,7 +40,7 @@ public class Soufflealcoolise() : CharolaisCard(2,
         else
         {
             ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
-            await DamageCmd.Attack(decimal.Multiply(3, alcoolPower)).FromCard(this).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(decimal.Multiply(2, alcoolPower)).FromCard(this).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
         }
@@ -48,6 +48,6 @@ public class Soufflealcoolise() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Retain);
+        
     }
 }

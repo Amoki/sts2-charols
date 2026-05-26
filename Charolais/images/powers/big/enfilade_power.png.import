@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgp8ei65uuu25"
-path="res://.godot/imported/plomber.png-883c55d6ba8a9deba7210c346ac48b7d.ctex"
+uid="uid://c3tint4iqeuut"
+path="res://.godot/imported/enfilade_power.png-eef3006dfe3a40aebe778afba4e70cdb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Charolais/images/card_portraits/plomber.png"
-dest_files=["res://.godot/imported/plomber.png-883c55d6ba8a9deba7210c346ac48b7d.ctex"]
+source_file="res://Charolais/images/powers/big/enfilade_power.png"
+dest_files=["res://.godot/imported/enfilade_power.png-eef3006dfe3a40aebe778afba4e70cdb.ctex"]
 
 [params]
 

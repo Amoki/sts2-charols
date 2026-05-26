@@ -17,7 +17,7 @@ public class Bouleenplastique() : CharolaisCard(0,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(3M, ValueProp.Move),
+        new DamageVar(4M, ValueProp.Move),
         new CardsVar(1),
         new EnergyVar(0)
     ];

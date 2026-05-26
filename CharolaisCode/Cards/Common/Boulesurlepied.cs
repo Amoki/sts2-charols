@@ -12,7 +12,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Common;
 
-public class Boulesurlepied() : CharolaisCard(0,
+public class Boulesurlepied() : CharolaisCard(1,
     CardType.Attack, CardRarity.Common,
     TargetType.AnyEnemy)
 {
@@ -20,7 +20,7 @@ public class Boulesurlepied() : CharolaisCard(0,
     
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(5M, ValueProp.Move),
+        new DamageVar(6M, ValueProp.Move),
         new DynamicVar("Power", 1M)
     ];
     

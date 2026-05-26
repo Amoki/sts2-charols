@@ -18,6 +18,8 @@ public class Picolo() : CharolaisCard(1, CardType.Power, CardRarity.Rare, Target
         HoverTipFactory.FromPower<PintPower>()
     ];
     
+    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
+    
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.TriggerAnim(this.Owner.Creature, "Cast", this.Owner.Character.CastAnimDelay);
@@ -26,6 +28,6 @@ public class Picolo() : CharolaisCard(1, CardType.Power, CardRarity.Rare, Target
     
     protected override void OnUpgrade()
     {
-        this.AddKeyword(CardKeyword.Retain);
+        this.RemoveKeyword(CardKeyword.Ethereal);
     }
 }

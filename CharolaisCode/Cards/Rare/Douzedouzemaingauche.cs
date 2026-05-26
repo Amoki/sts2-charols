@@ -31,23 +31,12 @@ public class Douzedouzemaingauche() : CharolaisCard(0, CardType.Skill, CardRarit
     {
         var playerstrength = base.Owner.Creature.GetPowerAmount<StrengthPower>();
         var playerdexterity = base.Owner.Creature.GetPowerAmount<DexterityPower>();
-        if (IsUpgraded)
-        {
-            CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1);
-            CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
-            if (card == null)
+
+        CardSelectorPrefs prefs = new CardSelectorPrefs(CardSelectorPrefs.ExhaustSelectionPrompt, 1);
+        CardModel? card = (await CardSelectCmd.FromHand(choiceContext, Owner, prefs, null, this)).FirstOrDefault();
+        if (card == null)
                 return;
-            await CardCmd.Exhaust(choiceContext, card);
-        }
-        
-        else
-        {
-            var pile = PileType.Hand.GetPile(Owner);
-            var card = Owner.RunState.Rng.CombatCardSelection.NextItem(pile.Cards);
-            if (card == null)
-                return;
-            await CardCmd.Exhaust(choiceContext, card);
-        }
+        await CardCmd.Exhaust(choiceContext, card);
         
         await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, -playerdexterity, this.Owner.Creature, this);
         await PowerCmd.Apply<DexterityPower>(choiceContext, this.Owner.Creature, playerstrength, this.Owner.Creature, this);
@@ -57,6 +46,6 @@ public class Douzedouzemaingauche() : CharolaisCard(0, CardType.Skill, CardRarit
     
     protected override void OnUpgrade()
     {
-        
+        this.AddKeyword(CardKeyword.Retain);
     }
 }

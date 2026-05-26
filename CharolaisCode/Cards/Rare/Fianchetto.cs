@@ -18,7 +18,7 @@ public class Fianchetto() : CharolaisCard(2,
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(9M, ValueProp.Move)
+        new DamageVar(12M, ValueProp.Move)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<ChestPower>())];
@@ -45,6 +45,6 @@ public class Fianchetto() : CharolaisCard(2,
     
     protected override void OnUpgrade()
     {
-        this.DynamicVars.Damage.UpgradeValueBy(3M);
+        this.EnergyCost.UpgradeBy(-1);
     }
 }

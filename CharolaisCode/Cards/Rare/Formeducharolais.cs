@@ -16,8 +16,6 @@ public class Formeducharolais() : CharolaisCard(3, CardType.Power, CardRarity.Ra
         new DynamicVar("Power", 1M)
     ];
     
-    public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Ethereal];
-    
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<PintPower>())];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
@@ -28,6 +26,6 @@ public class Formeducharolais() : CharolaisCard(3, CardType.Power, CardRarity.Ra
     
     protected override void OnUpgrade()
     {
-        this.RemoveKeyword(CardKeyword.Ethereal);
+        this.AddKeyword(CardKeyword.Retain);
     }
 }

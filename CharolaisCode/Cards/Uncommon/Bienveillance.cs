@@ -9,18 +9,21 @@ namespace Charolais.CharolaisCode.Cards.Uncommon;
 
 public class Bienveillance() : CharolaisCard(1,
     CardType.Skill, CardRarity.Uncommon,
-    TargetType.Self)
+    TargetType.AnyAlly)
 {
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new HealVar(2)
     ];
     
+    public override CardMultiplayerConstraint MultiplayerConstraint => CardMultiplayerConstraint.MultiplayerOnly;
+    
     public override IEnumerable<CardKeyword> CanonicalKeywords => [CardKeyword.Exhaust];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await CreatureCmd.Heal(this.Owner.Creature, this.DynamicVars.Heal.BaseValue);
+        await CreatureCmd.Heal(cardPlay.Target!, this.DynamicVars.Heal.BaseValue);
     }
     
     protected override void OnUpgrade()
