@@ -27,7 +27,9 @@ public class Ladefensesicilienne() : CharolaisCard(1,
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
-        HoverTipFactory.FromPower<ChestPower>()
+        HoverTipFactory.FromPower<ChestPower>(),
+        HoverTipFactory.Static(StaticHoverTip.Transform),
+        HoverTipFactory.FromCard<Couptranquille>(this.IsUpgraded)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

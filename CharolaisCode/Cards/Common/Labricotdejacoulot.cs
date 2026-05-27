@@ -18,7 +18,7 @@ public class Labricotdejacoulot() : CharolaisCard(1,
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new BlockVar(1M, ValueProp.Move),
-        new PowerVar<PintPower>(1M),
+        new PowerVar<PintPower>(1M)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips => [(HoverTipFactory.FromPower<PintPower>())];

@@ -37,6 +37,6 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
 
     protected override void OnUpgrade()
     {
-        this.EnergyCost.UpgradeBy(-1);
+        this.DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }

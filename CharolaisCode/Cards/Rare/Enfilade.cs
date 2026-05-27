@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Charolais.CharolaisCode.Cards.Token;
 using Charolais.CharolaisCode.Powers;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
+using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
@@ -13,6 +15,12 @@ public class Enfilade() : CharolaisCard(1, CardType.Power, CardRarity.Rare, Targ
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new CardsVar(2)
+    ];
+    
+    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    [
+        HoverTipFactory.FromCard<Couptranquille>(),
+        HoverTipFactory.Static(StaticHoverTip.Transform)
     ];
     
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)

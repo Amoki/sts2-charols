@@ -12,8 +12,8 @@ namespace Charolais.CharolaisCode.Cards.Token;
 public class Couptranquille() : CharolaisCard(0, CardType.Skill, CardRarity.Token, TargetType.AnyEnemy)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-    new ChestVar(6M),
-    new CardsVar(1)
+        new ChestVar(6M),
+        new CardsVar(1)
     ];
     
     public override IEnumerable<CardKeyword> CanonicalKeywords => [

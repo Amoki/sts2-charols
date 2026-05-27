@@ -18,8 +18,8 @@ public class Poncage() : CharolaisCard(2,
 
     protected override IEnumerable<DynamicVar> CanonicalVars => [
         new DamageVar(16M, ValueProp.Move),
-        new PowerVar<PintPower>(1),
-        new HealVar(2M)
+        new DynamicVar("Power",8),
+        new CardsVar(1)
     ];
     
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -33,16 +33,13 @@ public class Poncage() : CharolaisCard(2,
         await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
             .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
             .Execute(choiceContext);
-        await CreatureCmd.Heal(this.Owner.Creature, this.DynamicVars.Heal.BaseValue);
-        var powerAmount = this.Owner.Creature.GetPowerAmount<PintPower>();
-        if (powerAmount >= 0)
-        {
-            await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, decimal.Negate(powerAmount), this.Owner.Creature, this);
-        }
+        await PowerCmd.Apply<PintPower>(choiceContext, this.Owner.Creature, decimal.Negate(DynamicVars["Power"].IntValue), this.Owner.Creature, this);
+        await CardPileCmd.Draw(choiceContext, this.DynamicVars.Cards.BaseValue, this.Owner);
     }
     
     protected override void OnUpgrade()
     {
         this.DynamicVars.Damage.UpgradeValueBy(6M);
+        this.DynamicVars.Cards.UpgradeValueBy(1M);
     }
 }

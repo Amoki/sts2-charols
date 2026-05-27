@@ -6,12 +6,16 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.ValueProps;
 
 namespace Charolais.CharolaisCode.Cards.Rare;
 
 public class Bierevolante() : CharolaisCard(1, CardType.Attack, CardRarity.Rare, TargetType.AllEnemies)
 {
     protected override IEnumerable<DynamicVar> CanonicalVars => [
+        new CalculationBaseVar(0m),
+        new ExtraDamageVar(1m),
+        new CalculatedDamageVar(ValueProp.Move).WithMultiplier((card, target) => card.Owner.Creature.GetPowerAmount<PintPower>()),
         new RepeatVar(2),
         new CardsVar(1),
     ];
@@ -25,9 +29,8 @@ public class Bierevolante() : CharolaisCard(1, CardType.Attack, CardRarity.Rare,
         PlayerChoiceContext choiceContext,
         CardPlay cardPlay)
     {
-        var alcoolPower = base.Owner.Creature.GetPowerAmount<PintPower>();
         if (CombatState != null)
-            await DamageCmd.Attack(alcoolPower)
+            await DamageCmd.Attack(base.DynamicVars.CalculatedDamage)
                 .WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_giant_horizontal_slash")
                 .Execute(choiceContext);
