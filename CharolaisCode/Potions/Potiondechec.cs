@@ -27,7 +27,7 @@ public class Potiondechec : CharolaisPotion
     public override TargetType TargetType => TargetType.AllEnemies;
     
     protected override IEnumerable<DynamicVar> CanonicalVars => [
-        new DynamicVar("Power", 26)
+        new DynamicVar("Power", 28)
     ];
 
     public override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -37,20 +37,17 @@ public class Potiondechec : CharolaisPotion
     
     protected override async Task OnUse(PlayerChoiceContext choiceContext, Creature? target)
     {
-        PotionModel.AssertValidForTargetedPotion(target);
-        if (CombatSide.Player != this.Owner.Creature.Side)
-            return;
-        
-        foreach (Creature hittableEnemy in (IEnumerable<Creature>) this.Owner.Creature.CombatState!.HittableEnemies)
+        Creature player = this.Owner.Creature;
+        IReadOnlyList<Creature>? targets = player.CombatState!.HittableEnemies;
+        foreach (Creature target1 in (IEnumerable<Creature>) targets)
         {
             NCombatRoom? instance = NCombatRoom.Instance;
             if (instance != null)
-                instance.CombatVfxContainer.AddChildSafely((Node) NSmokePuffVfx.Create(hittableEnemy, NSmokePuffVfx.SmokePuffColor.Purple)!);
+                instance.CombatVfxContainer.AddChildSafely((Node) NSmokePuffVfx.Create(target1, NSmokePuffVfx.SmokePuffColor.Purple)!);
         }
         await Cmd.CustomScaledWait(0.2f, 0.4f);
-        foreach (Creature hittableEnemy in (IEnumerable<Creature>) this.Owner.Creature.CombatState.HittableEnemies)
-        {
-            await PowerCmd.Apply<ChestPower>(choiceContext, hittableEnemy, (Decimal) this.DynamicVars["Power"].IntValue, this.Owner.Creature, null);
-        }
+        IEnumerable<ChestPower> powerResults = await PowerCmd.Apply<ChestPower>(choiceContext, (IEnumerable<Creature>) targets, (Decimal) this.DynamicVars["Power"].IntValue, player, null);
+        player = (Creature) null!;
+        targets = (IReadOnlyList<Creature>) null!;
     }
 }
