@@ -173,7 +173,7 @@
   "CHAROLAIS-DOUZEDOUZEMAINGAUCHE.title": "12-12 Main Gauche",
   "CHAROLAIS-PROXI.description": "Gagnez {Power:diff()} de [gold]Vigueur[/gold].\nPlacez {Cards:diff()} {Cards:plural:carte|cartes} de votre [gold]Défausse[/gold] dans votre [gold]Main[/gold].",
   "CHAROLAIS-PROXI.title": "Proxi",
-  "CHAROLAIS-COUPTRANQUILLE.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold].\nPiochez {Cards:diff()} carte.",
+  "CHAROLAIS-COUPTRANQUILLE.description": "Appliquez {Chest:diff()} [gold]Coups d'avance[/gold].\nPiochez {Cards:diff()} carte.\nÀ la fin du tour, augmenter les [gold]Coups d'avance[/gold] de {IfUpgraded:show:3|2}.",
   "CHAROLAIS-COUPTRANQUILLE.title": "Coup Tranquille",
   "CHAROLAIS-ENFILADE.description": "{IfUpgraded:show:Piochez {Cards:diff()} {Cards:plural:carte|cartes}.\n|}Au début de votre tour, [gold]Transformez[/gold] [blue]1[/blue] carte de votre [gold]Main[/gold] en [gold]Coup tranquille[/gold].",
   "CHAROLAIS-ENFILADE.title": "Enfilade",
