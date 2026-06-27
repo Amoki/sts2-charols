@@ -26,7 +26,7 @@ public class Echiquierdevoyage : CharolaisRelic
     HoverTipFactory.FromPower<ChestPower>()
   ];
   
-  public override decimal ModifyPowerAmountGiven(
+  public override decimal ModifyPowerAmountGivenAdditive(
     PowerModel power,
     Creature giver,
     decimal amount,
@@ -41,8 +41,8 @@ public class Echiquierdevoyage : CharolaisRelic
       this.Status = RelicStatus.Normal; 
       this.Flash();
         
-      return amount + 12M;
+      return 12m;
     }
-    return amount;
+    return 0m;
   }
 }

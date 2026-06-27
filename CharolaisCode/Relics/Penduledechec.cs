@@ -26,7 +26,7 @@ public class Penduledechec : CharolaisRelic
     new DynamicVar("Power",4M)
   ];
   
-  public override decimal ModifyPowerAmountGiven(
+  public override decimal ModifyPowerAmountGivenAdditive(
     PowerModel power,
     Creature giver,
     decimal amount,
@@ -35,10 +35,10 @@ public class Penduledechec : CharolaisRelic
   {
     if (power is not ChestPower || giver != this.Owner.Creature)
     {
-      return amount;
+      return 0m;
     }
 
-    return amount + this.DynamicVars["Power"].IntValue;
+    return this.DynamicVars["Power"].IntValue;
 
   }
 
