@@ -22,7 +22,7 @@ public static class CheckmateAction
         {
             await DamageCmd.Attack(amount)
                 .Unpowered()
-                .FromCard(cardPlay.Card)
+                .FromCard(cardPlay.Card, cardPlay)
                 .WithHitCount(1)
                 .Targeting(target)
                 .WithAttackerAnim("Cast", 1f)
@@ -41,7 +41,7 @@ public static class CheckmateAction
             {
                 await DamageCmd.Attack(amount)
                     .Unpowered()
-                    .FromCard(cardPlay.Card)
+                    .FromCard(cardPlay.Card, cardPlay)
                     .WithHitCount(1)
                     .Targeting(creature)
                     .WithAttackerAnim("Cast", 1f)

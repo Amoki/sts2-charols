@@ -30,7 +30,7 @@ public class Louvertureitalienne() : CharolaisCard(1,
         {
             var target = cardPlay.Target;
             var amount = target.GetPowerAmount<ChestPower>();
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_starry_impact", "blunt_attack.mp3")
                 .Execute(choiceContext);
             if (amount > 0)

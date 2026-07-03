@@ -32,7 +32,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         if (CombatState != null)
         {
             await DamageCmd.Attack(this.DynamicVars.CalculatedDamage)
-                .WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this).TargetingAllOpponents(CombatState)
+                .WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this, cardPlay).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_giant_horizontal_slash")
                 .Execute(choiceContext);
         }
@@ -41,7 +41,7 @@ public class Convulsions() : CharolaisCard(3, CardType.Attack, CardRarity.Rare, 
         if (allies == null) { return; }
         var ally = base.Owner.RunState.Rng.CombatTargets.NextItem(allies) ?? throw new InvalidOperationException();
         await Cmd.Wait(0.5f);
-        await DamageCmd.Attack(8).Unpowered().FromCard(this).Targeting(ally)
+        await DamageCmd.Attack(8).Unpowered().FromCard(this, cardPlay).Targeting(ally)
             .WithHitFx("vfx/vfx_attack_slash")
             .Execute(choiceContext);
     }

@@ -29,7 +29,7 @@ public class Digesplif() : CharolaisCard(1,
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
-        await CreatureCmd.Damage(choiceContext, this.Owner.Creature, this.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this);
+        await CreatureCmd.Damage(choiceContext, this.Owner.Creature, this.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, this, cardPlay);
         var powerAmount = this.Owner.Creature.GetPowerAmount<StrengthPower>();
         await PowerCmd.Apply<StrengthPower>(choiceContext, this.Owner.Creature, (powerAmount), this.Owner.Creature, this);
     }

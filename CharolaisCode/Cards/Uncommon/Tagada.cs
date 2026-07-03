@@ -27,7 +27,7 @@ public class Tagada() : CharolaisCard(1, CardType.Attack, CardRarity.Uncommon, T
         if (CombatState != null)
         {
             await DamageCmd.Attack(this.DynamicVars.CalculatedDamage)
-                .FromCard(this).TargetingAllOpponents(CombatState)
+                .FromCard(this, cardPlay).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
             await CardPileCmd.Draw(choiceContext, this.DynamicVars.Cards.BaseValue, this.Owner);

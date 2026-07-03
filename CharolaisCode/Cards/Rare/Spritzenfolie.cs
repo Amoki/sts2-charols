@@ -24,7 +24,7 @@ public class Spritzenfolie() : CharolaisCard(2, CardType.Attack, CardRarity.Rare
         if (CombatState != null)
         {
             await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue)
-                .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+                .FromCard(this, cardPlay).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         }

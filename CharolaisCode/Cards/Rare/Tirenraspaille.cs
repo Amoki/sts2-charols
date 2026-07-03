@@ -36,7 +36,7 @@ public class Tirenraspaille() : CharolaisCard(1, CardType.Attack, CardRarity.Rar
         if (combatState != null)
                 await DamageCmd.Attack(base.DynamicVars.CalculatedDamage)
                     .WithHitCount(this.DynamicVars.Repeat.IntValue)
-                    .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+                    .FromCard(this, cardPlay).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                     .WithAttackerAnim("Cast", 1f)
                     .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, cardPlay.Target))
                     .Execute(choiceContext);

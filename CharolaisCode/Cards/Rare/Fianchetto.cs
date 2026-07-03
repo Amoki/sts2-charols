@@ -31,13 +31,13 @@ public class Fianchetto() : CharolaisCard(2,
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         if (amount > 0)
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(4).FromCard(this).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(4).FromCard(this, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(context);
         }
         else
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this).Targeting(cardPlay.Target)
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(1).FromCard(this, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_slash")
                 .Execute(context);
         }

@@ -24,7 +24,7 @@ public class Legambitdeladame() : CharolaisCard(2,
     {
         ArgumentNullException.ThrowIfNull(cardPlay.Target);
         var powerAmount = cardPlay.Target.IsAlive ? cardPlay.Target.GetPowerAmount<ChestPower>() : 0;
-        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this).Targeting(cardPlay.Target)
+        await DamageCmd.Attack(DynamicVars.Damage.BaseValue).FromCard(this, cardPlay).Targeting(cardPlay.Target)
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         await PowerCmd.Apply<ChestPower>(choiceContext, cardPlay.Target ?? throw new InvalidOperationException(), powerAmount, this.Owner.Creature, this);

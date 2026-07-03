@@ -37,7 +37,7 @@ public class Tetedepioche() : CharolaisCard(2, CardType.Skill, CardRarity.Uncomm
         if (this.DynamicVars.ContainsKey("CalculatedDamage"))
         {
             DamageVar damage = new DamageVar(this.DynamicVars.CalculatedDamage.Calculate(null), ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move);
-            await CreatureCmd.Damage(choiceContext, cardPlay.Target, damage, (CardModel)this);
+            await CreatureCmd.Damage(choiceContext, cardPlay.Target, damage, this, cardPlay);
         }
     }
     

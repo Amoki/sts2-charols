@@ -27,7 +27,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
     {
         if (this.IsUpgraded)
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this, cardPlay).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         
@@ -35,7 +35,7 @@ public class Lafourchetteducavalier() : CharolaisCard(1,
         }
         else
         {
-            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
+            await DamageCmd.Attack(DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this, cardPlay).Targeting(cardPlay.Target ?? throw new InvalidOperationException())
                 .WithHitFx("vfx/vfx_attack_blunt", tmpSfx: "blunt_attack.mp3")
                 .Execute(choiceContext);
         

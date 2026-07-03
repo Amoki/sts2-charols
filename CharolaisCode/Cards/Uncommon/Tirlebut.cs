@@ -27,7 +27,7 @@ public class Tirlebut() : CharolaisCard(0,
         var energyAmount = this.ResolveEnergyXValue();
         ArgumentNullException.ThrowIfNull(cardPlay.Target, "cardPlay.Target");
         await DamageCmd.Attack(energyAmount + 1)
-            .WithHitCount(energyAmount + 1).FromCard(this)
+            .WithHitCount(energyAmount + 1).FromCard(this, cardPlay)
             .Targeting(cardPlay.Target)
             .WithAttackerAnim("Cast", 0.5f)
             .WithAttackerFx(() => NMinionDiveBombVfx.Create(cardPlay.Card.Owner.Creature, cardPlay.Target))

@@ -33,6 +33,6 @@ public class PatPower : CharolaisPower
         
         Flash();
         VfxCmd.PlayOnCreatureCenters(this.CombatState.HittableEnemies, "vfx/vfx_attack_slash");
-        await CreatureCmd.Damage(choiceContext, this.CombatState.HittableEnemies, this.Amount, ValueProp.Unpowered, this.Owner, null);
+        await CreatureCmd.Damage(choiceContext, this.CombatState.HittableEnemies, this.Amount, ValueProp.Unpowered, applier, cardSource, null);
     }
 }

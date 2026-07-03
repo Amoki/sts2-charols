@@ -25,12 +25,12 @@ public class Grossebetise() : CharolaisCard(3,
         {
             if (CombatState != null)
                 await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(1)
-                    .FromCard((CardModel)this).TargetingAllOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash")
+                    .FromCard(this, cardPlay).TargetingAllOpponents(CombatState).WithHitFx("vfx/vfx_attack_slash")
                     .Execute(choiceContext);
         }
         else
         {
-            await CreatureCmd.Damage(choiceContext, this.Owner.Creature, this.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move, (CardModel) this);
+            await CreatureCmd.Damage(choiceContext, this.Owner.Creature, this.DynamicVars.HpLoss.BaseValue, ValueProp.Unblockable | ValueProp.Unpowered | ValueProp.Move,this, cardPlay);
         }
     }
     

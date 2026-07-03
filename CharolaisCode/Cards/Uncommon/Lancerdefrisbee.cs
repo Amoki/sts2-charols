@@ -21,7 +21,7 @@ public class Lancerdefrisbee() : CharolaisCard(1,
     {
         var combatState = this.CombatState;
         if (combatState != null)
-            await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this)
+            await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(DynamicVars.Repeat.IntValue).FromCard(this, cardPlay)
                 .TargetingRandomOpponents(combatState).WithHitFx("vfx/vfx_attack_slash").Execute(choiceContext);
     }
     

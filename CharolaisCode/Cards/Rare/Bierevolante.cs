@@ -31,7 +31,7 @@ public class Bierevolante() : CharolaisCard(1, CardType.Attack, CardRarity.Rare,
     {
         if (CombatState != null)
             await DamageCmd.Attack(base.DynamicVars.CalculatedDamage)
-                .WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this).TargetingAllOpponents(CombatState)
+                .WithHitCount(this.DynamicVars.Repeat.IntValue).FromCard(this, cardPlay).TargetingAllOpponents(CombatState)
                 .WithHitFx("vfx/vfx_giant_horizontal_slash")
                 .Execute(choiceContext);
         var pile = PileType.Hand.GetPile(base.Owner);

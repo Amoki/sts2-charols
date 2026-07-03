@@ -28,7 +28,7 @@ public class Plomber() : CharolaisCard(2,
         var combatState = this.CombatState;
         if (combatState != null)
             await DamageCmd.Attack(this.DynamicVars.Damage.BaseValue).WithHitCount(this.DynamicVars.Repeat.IntValue)
-                .FromCard(this).Targeting(cardPlay.Target ?? throw new InvalidOperationException()).WithHitFx("vfx/vfx_attack_slash")
+                .FromCard(this, cardPlay).Targeting(cardPlay.Target ?? throw new InvalidOperationException()).WithHitFx("vfx/vfx_attack_slash")
                 .Execute(choiceContext);
     }
     

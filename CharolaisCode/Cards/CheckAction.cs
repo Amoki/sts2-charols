@@ -22,7 +22,7 @@ public static class CheckAction
         {
             await DamageCmd.Attack(amount)
                 .Unpowered()
-                .FromCard(cardPlay.Card)
+                .FromCard(cardPlay.Card, cardPlay)
                 .WithHitCount(1)
                 .Targeting(target)
                 .Execute(context);

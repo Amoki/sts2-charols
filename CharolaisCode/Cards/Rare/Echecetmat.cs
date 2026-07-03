@@ -30,7 +30,7 @@ public class Echecetmat() : CharolaisCard(1,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay cardPlay)
     {
         await DamageCmd.Attack(this.DynamicVars.Damage.IntValue)
-            .FromCard(this).TargetingAllOpponents(CombatState ?? throw new InvalidOperationException())
+            .FromCard(this, cardPlay).TargetingAllOpponents(CombatState ?? throw new InvalidOperationException())
             .WithHitFx("vfx/vfx_giant_horizontal_slash")
             .Execute(choiceContext);
         
